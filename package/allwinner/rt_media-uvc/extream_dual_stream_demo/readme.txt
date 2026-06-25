@@ -1,0 +1,2 @@
+解析MJPEG中码流demo，调用extract_dual_stream接口传入jpeg图像、jpeg图像大小、插入码流信息结构体，
+解析获取插入码流在mpeg图像中的偏移和插入码流图像的长度。

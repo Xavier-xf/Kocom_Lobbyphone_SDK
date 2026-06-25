@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="tl_record">Enregistrer en vidéo</string>
+  <string name="tl_takepic">Prendre une photo</string>
+  <string name="tl_slowrec">Photographie lente</string>
+  <string name="tl_playback">Lecture de fichiers</string>
+  <string name="tl_setting">Paramètres</string>
+  <string name="tl_shutdown">Arrêt</string> 
+  <string name="ml_record_resolution">Résolution vidéo</string>
+  <string-array name="ml_record_resolution">
+    <item>4K30FPS</item> 
+    <item>2.7K30FPS</item> 
+    <item>1080P120FPS</item>
+    <item>1080P60FPS</item>
+    <item>1080P30FPS</item>
+    <item>720P240FPS</item>
+    <item>720P120FPS</item> 
+    <item>720P60FPS</item>
+    <item>720P30FPS</item>
+  </string-array>
+  <string name="ml_record_encodingtype">主录像编码类型</string>
+  <string-array name="ml_record_encodingtype">
+    <item>H264</item>
+    <item>H265</item>
+  </string-array>
+  <string name="ml_record_loop">Enregistrement en boucle</string>
+  <string-array name="ml_record_loop">
+    <item>Désactivation</item>
+    <item>2 minutes</item>
+    <item>3 minutes</item>
+    <item>5 minutes</item>
+  </string-array>
+  <string name="ml_record_timelapse">Enregistrement à l'intervallomètre</string>
+  <string-array name="ml_record_timelapse">
+    <item>Désactivation</item>
+    <item>0.5s</item>
+    <item>1s</item>
+    <item>2s</item>
+    <item>5s</item>
+    <item>10s</item>
+    <item>30s</item>
+    <item>60s</item>
+  </string-array> 
+  <string name="ml_record_volume">Son de la vidéo</string>
+  <string-array name="ml_record_volume">
+    <item>Désactivation</item>
+    <item>Activation</item>
+    </string-array>
+   <string name="ml_record_eis">Stabilisation électronique de l'image</string>
+  <string-array name="ml_record_eis">
+    <item>Désactivation</item>
+    <item>Activation</item>
+    </string-array>
+  <string name="ml_record_slowmotion">Photographie lente</string>
+  <string-array name="ml_record_slowmotion">
+    <item>1080P120FPS</item>
+    <item>1080P60FPS</item>
+    <item>720P240FPS</item>
+    <item>720P120FPS</item>
+  </string-array>
+  <string name="ml_photo_resolution">Paramétrage pixels</string>
+  <string-array name="ml_photo_resolution">
+    <item>8M</item>
+    <item>13M</item>
+    <item>16M</item>
+  </string-array>
+   <string name="ml_photo_timed">Intervallom</string>
+  <string-array name="ml_photo_timed">
+    <item>Désactivation</item>
+    <item>3S</item>
+    <item>5S</item>
+    <item>10S</item>
+    <item>20S</item>
+  </string-array>
+   <string name="ml_photo_auto">Prise de vues automatique</string>
+  <string-array name="ml_photo_auto">
+    <item>Désactivation</item>
+    <item>3S</item>
+    <item>10S</item>
+    <item>15S</item>
+    <item>20S</item>
+    <item>30S</item>
+  </string-array>
+   <string name="ml_photo_dramashot">Suivi de mvt</string>
+  <string-array name="ml_photo_dramashot">
+    <item>Désactivation</item>
+    <item>3P/S</item>
+    <item>5P/S</item>
+    <item>10P/S</item>
+  </string-array>
+  <string name="ml_camera_exposure">Réglages de l'exposition</string>
+  <string-array name="ml_camera_exposure">
+    <item>-3</item>
+    <item>-2</item>
+    <item>-1</item>
+    <item>0</item>
+    <item>1</item>
+    <item>2</item>
+    <item>3</item>
+  </string-array>
+  <string name="ml_camera_whitebalance">Balance des blancs</string>
+  <string-array name="ml_camera_whitebalance">
+    <item>Automatique</item>
+    <item>Ensoleillé</item>
+    <item>Couvert</item>
+    <item>Tungstène</item>
+    <item>Fluorescent</item>
+  </string-array>
+   <string name="ml_camera_imagerotation">Rotation de l'image</string>
+  <string-array name="ml_camera_imagerotation">
+    <item>Désactivation</item>
+    <item>Activation</item>
+  </string-array>
+   <string name="ml_camera_lightsourcefrequency">Fréquence de la source lumineuse</string>
+  <string-array name="ml_camera_lightsourcefrequency">
+    <item>Automatique</item>
+    <item>50Hz</item>
+    <item>60Hz</item>
+  </string-array>
+  <string name="ml_camera_ledindicator">Voyant LED</string>
+  <string-array name="ml_camera_ledindicator">
+    <item>Désactivation</item>
+    <item>Activation</item>
+  </string-array>
+   <string name="ml_camera_autoscreensaver">Économiseur d'écran automatique</string>
+  <string-array name="ml_camera_autoscreensaver">
+    <item>Désactivation</item>
+    <item>30S</item>
+    <item>1 minutes</item> 
+    <item>2 minutes</item>
+  </string-array> 
+   <string name="ml_camera_timedshutdown">Extinction automatique</string>
+  <string-array name="ml_camera_timedshutdown">
+    <item>Désactivation</item>
+    <item>3 minutes</item>
+    <item>5 minutes</item> 
+    <item>10 minutes</item>
+  </string-array>
+  <string name="ml_camera_timewatermark">Filigrane date et heure</string>
+  <string-array name="ml_camera_timewatermark">
+    <item>Désactivation</item>
+    <item>Activation</item>
+  </string-array>
+  <string name="ml_camera_distortioncalibration">Correction de distorsion</string>
+  <string-array name="ml_camera_distortioncalibration">
+    <item>Désactivation</item>
+    <item>Activation</item>
+  </string-array>
+  <string name="ml_camera_wifi">WiFi</string>
+  <string-array name="ml_camera_wifi">
+    <item>Désactivation</item>
+    <item>Activation</item>
+  </string-array>
+  <string name="ml_device_language">La langue</string>
+  <string-array name="ml_device_language">
+    <item>简体中文</item>
+    <item>繁體中文</item>
+    <item>English</item>
+    <item>日本語</item>
+    <item>한국의</item>
+    <item>Pусский</item>
+    <item>Deutsch</item>
+    <item>Français</item>
+    <item>Italiano</item>
+    <item>Español</item>
+    <item>Português</item>
+    <item>ไทย</item>    
+  </string-array> 
+  <string name="ml_device_datetime">Date - heure</string>
+  <string-array name="ml_device_datetime">
+    <item>/</item>
+    <item>/</item>
+    <item>:</item>
+    <item>:</item>
+  </string-array>
+    <string name="ml_device_voicestatus">Son</string>
+  <string-array name="ml_device_voicestatus">
+    <item>Désactivation</item>
+    <item>30%</item>
+    <item>50%</item>
+    <item>80%</item>
+    <item>100%</item>
+  </string-array>
+   <string name="ml_device_resetfactory">Réinitialiser</string>
+  <string-array name="ml_device_resetfactory">
+    <item>D'accord</item> 
+    <item>Annuler</item>
+  </string-array>
+     <string name="ml_device_resetselection">Voulez-vous vraiment réinitialiser ?</string>
+   <string name="ml_confirm_reboot">是否重启？</string>
+    <string name="ml_device_format">Formater</string>
+  <string-array name="ml_device_format">
+    <item>OK</item> 
+    <item>Annuler</item>
+  </string-array>
+   <string name="ml_device_format_doing">Formatage en cours...</string>
+  <string name="ml_device_format_failed">Le formatage a échoué</string> 
+  <string name="ml_device_format_success">Le formatage a été effectué avec succès</string> 
+  <string name="ml_device_deviceinfo">Informations sur l'appareil</string>
+  <string-array name="ml_device_deviceinfo">
+    <item>V7</item>
+    <item>SunChip</item>
+    <item>v0.2</item>
+  </string-array>  
+ <string name="ml_quit_exit">Appuyez sur OK pour lancer</string>     
+   <string name="ml_camera_wifiswitch">Informations sur la WiFi</string>
+   <string name="ml_camera_wifiswitch_ssid">Nom de la WiFi: </string>
+   <string name="ml_camera_wifiswitch_passwd">Mot de passe de la WiFi:   </string>
+   <string name="ml_camera_wifiswitch_tip">Appuyez longuement sur le bouton pour quitter la WiFi</string>
+   <string name="ml_prompt">Invite</string>  
+   <string name="ml_prompt_tf_null">Pas de carte TF détectée Insérez une carte TF.</string> 
+   <string name="ml_prompt_tf_full">Espace de stockage insuffisant sur la carte TF.</string>
+   <string name="ml_prompt_tf_fs_error">Système du fichier non pris en charge. Voulez-vous vraiment formater ?</string>
+   <string name="ml_prompt_bat_full">La batterie est chargée à fond.</string> 
+  <string name="ml_prompt_database_full">La base de données est pleine. Les enregistrements les plus anciens vont être écrasés.</string> 
+  <string name="ml_prompt_camera_error">图像采集异常,摄像头将重新初始化!</string>
+  <string name="ml_prompt_unsupported_func">当前模式无法开启该功能!</string>
+   <string name="ml_prompt_bat_low">Batterie faible. L'appareil va bientôt s'éteindre.</string>   
+  <string name="info_dialog">Informations</string>
+  <string name="confirm">OK</string>
+  <string name="cancel">Annuler</string> 
+  <string name="tl_playlist">Choisissez le fichier à lire</string>
+  <string name="delete_dialog">Effacer</string>
+  <string name="delete_info">Voulez-vous vraiment effacer le fichier actuel ?</string>
+  <string name="tl_usb_charge">Mode de charge</string>
+  <string name="tl_usb_mass_storage">Mode de mémoire de masse</string>
+  <string name="tl_usb_webcam">Mode appareil photo</string>
+  <string name="update_dialog_title">Mise à niveau du système</string>   
+   <string name="ml_device_deviceinfo_mode">Modèle du produit : </string>
+   <string name="ml_device_deviceinfo_version">Version du logiciel : </string> 
+   <string name="ml_device_deviceinfo_update">Mis à jour le : </string> 
+   <string name="ml_device_deviceinfo_manufacturer">Fabricant : </string>
+   <string name="ml_device_deviceinfo_manufacturer1">Sunchip</string>
+   <string name="all_letters">abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ</string>
+   <string name="all_digit_num">0123456789</string>
+   <string name="all_symbol"> !@#$%^&*():;"',/?[]</string>
+</resources>

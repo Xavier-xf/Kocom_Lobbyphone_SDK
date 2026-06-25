@@ -1,0 +1,11 @@
+menu "AIISP Devices"
+
+config DRIVERS_AIISP
+	bool "enable aiisp lib"
+        default n
+
+config HAL_TEST_AIISP
+	bool "enable aiisp demo test command"
+	depends on DRIVERS_AIISP
+	default n
+endmenu

@@ -1,0 +1,21 @@
+#!/bin/bash
+
+if [ ! -d /mnt/extsd/facehumandemo_source/pdet_test ]; then
+	echo not such directory[/mnt/extsd/facehumandemo_source/pedt_test]
+	exit
+fi
+
+
+if [ ! -f /mnt/extsd/facehumandemo_source/pdet_test/human.nb ]; then
+	echo not such directory[/mnt/extsd/facehumandemo_source/pedt_test/human.nb]
+	exit
+fi
+
+if [ ! -f /mnt/extsd/facehumandemo_source/pdet_test/human.yuv ]; then
+	echo not such directory[/mnt/extsd/facehumandemo_source/pedt_test/human.yuv ]
+	exit
+fi
+
+echo ========run pdet test==========
+/usr/bin/facehumandemo pdet /mnt/extsd/facehumandemo_source/pdet_test/human.nb /mnt/extsd/facehumandemo_source/pdet_test/human.yuv -1
+echo ===============================

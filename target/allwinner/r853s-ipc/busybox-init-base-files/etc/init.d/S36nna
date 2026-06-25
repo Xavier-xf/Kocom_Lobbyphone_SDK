@@ -1,0 +1,34 @@
+#/bin/sh
+#
+# Load mmc modules....
+#
+
+MODULES_DIR="/lib/modules/`uname -r`"
+
+start() {
+    printf "Load nna  modules\n"
+    insmod $MODULES_DIR/vipcore.ko
+}
+
+stop() {
+    printf "Unload nna modules\n"
+    rmmod $MODULES_DIR/vipcore.ko
+}
+
+case "$1" in
+    start)
+	start
+	;;
+    stop)
+	stop
+	;;
+    restart|reload)
+	stop
+	start
+	;;
+  *)
+	echo "Usage: $0 {start|stop|restart}"
+	exit 1
+esac
+
+exit $?

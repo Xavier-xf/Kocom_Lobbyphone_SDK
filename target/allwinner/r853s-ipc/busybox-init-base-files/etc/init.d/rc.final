@@ -1,0 +1,129 @@
+#!/bin/sh
+
+echo "------run rc.final file-----"
+#echo "insmod wifi modules"
+#insmod  /lib/modules/3.4.39/8723ds.ko
+#insmod  /lib/modules/3.4.39/bcmdhd.ko
+#insmod  /lib/modules/3.4.39/xradio_mac.ko
+#insmod  /lib/modules/3.4.39/xradio_core.ko
+#insmod  /lib/modules/3.4.39/xradio_wlan.ko
+
+export LD_LIBRARY_PATH=/usr/lib/eyesee-mpp:${LD_LIBRARY_PATH}
+ulimit -c unlimited
+echo /mnt/extsd/coredump-%e-%p-%s-%t > /proc/sys/kernel/core_pattern
+ln -sf /usr/share/zoneinfo/Asia/Shanghai /data/localtime
+echo 1 > /proc/sys/vm/overcommit_memory
+
+for i in /etc/init.d/S??* ;do
+
+     # Ignore dangling symlinks (if any).
+     [ ! -f "$i" ] && continue
+
+     case "$i" in
+    *.sh)
+        # Source shell script for speed.
+        (
+        trap - INT QUIT TSTP
+        set start
+        . $i
+        )
+        ;;
+    *)
+        # No sh extension, so fork subprocess.
+        $i start
+        ;;
+    esac
+done
+
+if [ -z "$(grep '\<vfat\>' /proc/mounts)" ]; then
+    ! /bin/mount -t vfat /dev/mmcblk0 /mnt/extsd 2>/dev/null &&
+    /bin/mount -t vfat /dev/mmcblk0p1 /mnt/extsd
+fi
+echo 228 > /sys/class/gpio/export
+echo 229 > /sys/class/gpio/export
+echo high > /sys/class/gpio/gpio229/direction
+echo high > /sys/class/gpio/gpio228/direction
+echo low > /sys/class/gpio/gpio229/direction
+echo 2 > /sys/class/pwm/pwmchip0/export
+echo 1000000 > /sys/class/pwm/pwmchip0/pwm2/period
+echo 1 > /sys/class/pwm/pwmchip0/pwm2/duty_cycle
+
+# use sd sn_check.txt burn in flash private
+if [ -f /mnt/extsd/sn_check.txt ]; then
+	factorytest CMCC_CLEAN_PRIVATE_DATA
+	i=0
+	cat /mnt/extsd/sn_check.txt | while read line
+	do
+		echo "****************************"
+		echo $line
+		if [ $i -eq 0 ]; then
+			echo "0000"
+			factorytest CMCC_WRITE_MAC_ADDR $line
+		fi
+
+		if [ $i -eq 1 ]; then
+			echo "1111"
+			factorytest CMCC_WRITE_SN $line
+		fi
+
+		if [ $i -eq 2 ]; then
+			echo "2222"
+			factorytest CMCC_WRITE_LOGIN_PASSWORD $line
+		fi
+
+		if [ $i -eq 3 ]; then
+			echo "3333"
+			factorytest CMCC_WRITE_MEDIA_ENC_PASSWORD $line
+		fi
+
+		if [ $i -eq 4 ]; then
+			echo "4444"
+			factorytest CMCC_WRITE_DEVICE_ID $line
+		fi
+
+		i=$(busybox expr $i + 1)
+		echo past total cycle test: $i times done.
+		echo "****************************"
+	done
+
+fi
+
+# check env fallback_version value
+version_fallback=`fw_printenv | grep version_fallback | awk 'BEGIN{FS="="} {print $2}'`
+fallback_version=`fw_printenv | grep fallback_version | awk 'BEGIN{FS="="} {print $2}'`
+current_version=`fw_printenv | grep current_version | awk 'BEGIN{FS="="} {print $2}'`
+
+if [ ${version_fallback} -eq 1 ]; then
+	echo "fallback cmcc version by fixed /data/DeviceConf.ini firmware_model"
+	sed -i -e "s/firmware_model:${current_version}/firmware_model:${fallback_version}/" /data/DeviceConf.ini
+	fw_setenv current_version ${fallback_version}
+	fw_setenv version_fallback 0
+fi
+
+mac_addr=`dd if=/dev/by-name/private of=/tmp/dump.txt ibs=32 count=1 && cat /tmp/dump.txt`
+
+if [ -f /mnt/extsd/netadb ]; then
+	ifconfig eth0 up
+	echo "set eth0 ip 192.168.1.11"
+	ifconfig eth0 192.168.1.11
+else
+	ifconfig eth0 down
+	ifconfig eth0 hw ether $mac_addr
+	ifconfig eth0 up
+	while ! ifconfig | grep -q "eth0"
+	do
+	    echo "not find eth0, wait"
+	    sleep 1
+	done
+	sleep 1
+	echo "begin udhcpc -i eth0 in the background"
+	udhcpc -i eth0 &
+	echo "end udhcpc -i eth0"
+fi
+
+#ifconfig wlan0 down
+#ifconfig wlan0 hw ether <your mac address>
+#ifconfig wlan0 up
+
+/usr/bin/cmccIpc /data/DeviceConf.ini &
+

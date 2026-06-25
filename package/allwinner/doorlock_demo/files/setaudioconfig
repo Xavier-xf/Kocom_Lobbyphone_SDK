@@ -1,0 +1,57 @@
+#!/bin/sh
+
+name=`basename $0`
+
+usage() {
+  echo "$name Usage:"
+  echo ""
+  echo "$name [function]"
+  echo "function: mic :	 config mic function"
+  echo "          spk :	 config spk function"
+  echo "          mic,spk : config mic and spk function"
+  echo "example:"
+  echo "$name mic,spk"
+  echo ""
+}
+enable_mic() {
+	amixer -D hw:audiocodec cset name='MIC1 Input Select' 0
+	amixer -D hw:audiocodec cset name='MIC2 Input Select' 0
+	amixer -D hw:audiocodec cset name='MIC1 Switch' 1
+	amixer -D hw:audiocodec cset name='MIC2 Switch' 0
+	amixer -D hw:audiocodec cset name='MIC1 gain volume' 30
+	amixer -D hw:audiocodec cset name='MIC2 gain volume' 30
+	#amixer -D hw:audiocodec cset name='ADCHPF' 1
+	#amixer -D hw:audiocodec cset name='ADCDRC' 1
+}
+
+
+enable_spk() {
+	amixer -D hw:audiocodec cset name='LINEOUT Output Select' 1
+	amixer -D hw:audiocodec cset name='LINEOUT Switch' 1
+	amixer -D hw:audiocodec cset name='SPK Switch' 1 
+	amixer -D hw:audiocodec cset name='LINEOUT volume' 30
+	#amixer -D hw:audiocodec cset name='DACHPF' 1
+	#amixer -D hw:audiocodec cset name='DACDRC' 1
+}
+
+if [ $# -lt 1 ]; then
+  echo "Lack of arg!"
+  usage
+  exit
+fi
+
+if [ $1 == "mic" ]; then
+	enable_mic
+	exit
+fi
+
+if [ $1 == "spk" ]; then
+	enable_spk
+	exit
+fi
+
+if [ $1 == "mic,spk" -o $1 == "spk,mic" ]; then
+	enable_mic
+	enable_spk
+	exit
+fi

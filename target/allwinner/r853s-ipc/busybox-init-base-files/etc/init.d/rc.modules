@@ -1,0 +1,16 @@
+#!/bin/sh
+
+echo "------run rc.modules file-----"
+cat /sys/devices/platform/soc/usbc0/usb_host
+insmod /lib/modules/4.9.191/ssv6x5x.ko stacfgpath="/lib/firmware/ssv6x5x-wifi.cfg"
+
+#insmod sound modules
+#echo "insmod sound modules"
+#/sbin/insmod /lib/modules/3.4.39/snd-seq-device.ko
+#/sbin/insmod /lib/modules/3.4.39/snd-mixer-oss.ko
+#/sbin/insmod /lib/modules/3.4.39/snd-pcm-oss.ko
+insmod /lib/modules/4.9.191/wireless_switch.ko
+insmod /lib/modules/4.9.191/xradio_mac.ko
+insmod /lib/modules/4.9.191/xradio_core.ko
+insmod /lib/modules/4.9.191/xradio_wlan.ko
+

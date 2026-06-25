@@ -1,0 +1,42 @@
+#!/bin/bash
+
+if [ ! -d /mnt/extsd/lenet-board-test ]; then
+	echo =================error====================
+	echo no such dirctory[lenet-board-test]!!!
+	echo =================error====================
+	exit
+fi
+
+if [ ! -f /mnt/extsd/lenet-board-test/vpm_run ]; then
+	echo =================error====================
+	echo no such file[vpm_fun]!!!
+	echo =================error====================
+	exit
+fi
+
+if [ ! -f /mnt/extsd/lenet-board-test/lenet.nb ]; then
+	echo =================error====================
+	echo no such file[lenet.nb]!!!
+	echo =================error====================
+	exit
+fi
+
+if [ ! -f /mnt/extsd/lenet-board-test/input_0.dat ]; then
+	echo =================error====================
+	echo no such file[input_0.dat]!!!
+	echo =================error====================
+	exit
+fi
+
+if [ ! -f /mnt/extsd/lenet-board-test/sample.txt ]; then
+	echo =================error====================
+	echo no such file[sample.txt]!!!
+	echo =================error====================
+	exit
+fi
+
+echo =================info====================
+echo start vpm testcase
+echo =================info====================
+sleep 3
+/mnt/extsd/lenet-board-test/vpm_run /mnt/extsd/lenet-board-test/sample.txt -1

@@ -1,0 +1,52 @@
+#!/bin/sh
+#
+# Load usb modules....
+#
+
+MODULES_DIR="/lib/modules/`uname -r`"
+
+start() {
+	printf "Load usb modules\n"
+	insmod	$MODULES_DIR/usb-common.ko
+	insmod	$MODULES_DIR/usbcore.ko
+	insmod	$MODULES_DIR/sunxi_hci.ko
+	insmod	$MODULES_DIR/ehci-hcd.ko 
+	insmod	$MODULES_DIR/ohci-hcd.ko
+	insmod	$MODULES_DIR/usbnet.ko
+	insmod	$MODULES_DIR/asix.ko
+	insmod	$MODULES_DIR/udc-core.ko
+	insmod	$MODULES_DIR/sunxi_usb_udc.ko
+	insmod	$MODULES_DIR/sunxi_usbc.ko
+}
+
+stop() {
+	printf "Unload usb modules\n"
+	rmmod $MODULES_DIR/sunxi_usbc.ko
+	rmmod $MODULES_DIR/sunxi_usb_udc.ko
+	rmmod $MODULES_DIR/udc-core.ko
+	rmmod $MODULES_DIR/asix.ko
+	rmmod $MODULES_DIR/usbnet.ko
+	rmmod $MODULES_DIR/ohci-hcd.ko
+	rmmod $MODULES_DIR/ehci-hcd.ko 
+	rmmod $MODULES_DIR/sunxi_hci.ko
+	rmmod $MODULES_DIR/usbcore.ko
+	rmmod $MODULES_DIR/usb-common.ko
+}
+
+case "$1" in
+    start)
+	start
+	;;
+    stop)
+	stop
+	;;
+    restart|reload)
+	stop
+	start
+	;;
+  *)
+	echo "Usage: $0 {start|stop|restart}"
+	exit 1
+esac
+
+exit $?

@@ -1,0 +1,17 @@
+<RCC>
+    <qresource prefix="/usr/share/minigui/res/images">
+		<file>home.png</file>
+		<file>home_on.png</file>
+		<file>return.png</file>
+		<file>return_on.png</file>
+		<file>device_view.png</file>
+		<file>device_view_on.png</file>
+		<file>adas_view.png</file>
+		<file>adas_view_on.png</file>
+		<file>general_view.png</file>
+		<file>general_view_on.png</file>
+        <file>switch.png</file>
+        <file>sublist_switch_off.png</file>
+        <file>sublist_switch_on.png</file>
+</qresource>
+</RCC>

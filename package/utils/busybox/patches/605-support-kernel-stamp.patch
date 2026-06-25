@@ -1,0 +1,51 @@
+diff --git a/sysklogd/syslogd.c b/sysklogd/syslogd.c
+index d64ff27..df77823 100644
+--- a/sysklogd/syslogd.c
++++ b/sysklogd/syslogd.c
+@@ -816,6 +816,7 @@ static void timestamp_and_log(int pri, char *msg, int len)
+ 	char *timestamp;
+ 	time_t now;
+ 
++#ifndef SYSLOG_STAMP_KERNEL_FORMAT
+ 	/* Jan 18 00:11:22 msg... */
+ 	/* 01234567890123456 */
+ 	if (len < 16 || msg[3] != ' ' || msg[6] != ' '
+@@ -829,6 +830,38 @@ static void timestamp_and_log(int pri, char *msg, int len)
+ 		msg += 16;
+ 	}
+ 	timestamp[15] = '\0';
++#else
++	char buf[32] = {0};
++	struct timespec time_mon = {0};
++	clockid_t clkid = CLOCK_MONOTONIC;
++
++#ifdef SYSLOG_STAMP_USE_CLOCK_REALTIME
++	clkid = CLOCK_REALTIME;
++#endif
++#ifdef SYSLOG_STAMP_USE_CLOCK_MONOTONIC
++	clkid = CLOCK_MONOTONIC;
++#endif
++#ifdef SYSLOG_STAMP_USE_CLOCK_MONOTONIC_RAW
++	clkid = CLOCK_MONOTONIC_RAW;
++#endif
++#ifdef SYSLOG_STAMP_USE_CLOCK_BOOTTIME
++	clkid = CLOCK_BOOTTIME;
++#endif
++
++	if (len < 16 || msg[3] != ' ' || msg[6] != ' '
++	 || msg[9] != ':' || msg[12] != ':' || msg[15] != ' '
++	) {
++	} else {
++		msg += 16;
++	}
++
++	if (clock_gettime(clkid, &time_mon)) {
++		timestamp = "[format time error] ";
++	} else {
++		snprintf(buf, sizeof(buf), "[%8d.%06d] ", time_mon.tv_sec, time_mon.tv_nsec/1000);
++		timestamp = (char *)buf;
++	}
++#endif
+ 
+ 	if (option_mask32 & OPT_kmsg) {
+ 		log_to_kmsg(pri, msg);

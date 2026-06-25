@@ -1,0 +1,11 @@
+prefix=_REPLACE_HOST_BUILD_DIR_/out/host
+exec_prefix=_REPLACE_HOST_BUILD_DIR_/out/host
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: uuid
+Description: Universally unique id library
+Version: 1.45.4
+Requires: 
+Cflags: -I${includedir}/uuid -I${includedir}
+Libs: -L${libdir} -luuid

@@ -1,0 +1,9 @@
+if PACKAGE_rt_media
+
+config rt_media_support_venc_param_debug
+	bool "support rt-media venc param debug"
+	default y
+	help
+	  venc debugging will use ext xml file to config rt-media venc params.
+
+endif

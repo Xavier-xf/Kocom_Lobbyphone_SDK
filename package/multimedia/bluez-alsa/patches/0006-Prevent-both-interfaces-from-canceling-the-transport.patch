@@ -1,0 +1,40 @@
+From 4055d4ee587aad0d2f99c1cb976451e5f8ef6031 Mon Sep 17 00:00:00 2001
+From: luoyuyi <luoyuyi@allwinnertech.com>
+Date: Tue, 11 Apr 2023 16:43:08 +0800
+Subject: [PATCH] Prevent both interfaces from canceling the transport thread
+ at the same time
+
+---
+ src/transport.c | 8 ++++++++
+ 1 file changed, 8 insertions(+)
+
+diff --git a/src/transport.c b/src/transport.c
+index ea757c5..0afc202 100644
+--- a/src/transport.c
++++ b/src/transport.c
+@@ -1028,14 +1028,22 @@ int transport_release_pcm(struct ba_pcm *pcm) {
+  * Synchronous transport thread cancellation. */
+ void transport_pthread_cancel(pthread_t thread) {
+ 
++	static pthread_t canceling_thread = 0;
+ 	if (pthread_equal(thread, config.main_thread))
+ 		return;
+ 
++	/* Prevent both interfaces from canceling the transport thread at the same time */
++	if (thread == canceling_thread) {
++		debug("The transport thread canceling:%d, return", canceling_thread);
++		return;
++	}
++	canceling_thread = thread;
+ 	int err;
+ 	if ((err = pthread_cancel(thread)) != 0)
+ 		warn("Couldn't cancel transport thread: %s", strerror(err));
+ 	if ((err = pthread_join(thread, NULL)) != 0)
+ 		warn("Couldn't join transport thread: %s", strerror(err));
++	canceling_thread = 0;
+ }
+ 
+ /**
+-- 
+2.29.0
+

@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="tl_record">Запись видео</string>
+  <string name="tl_takepic">Сделать снимок</string>
+  <string name="tl_slowrec">Замедленный снимок</string>
+  <string name="tl_playback">Воспроизвести файл</string>
+  <string name="tl_setting">Настройки</string>
+  <string name="tl_shutdown">Выключение</string> 
+  <string name="ml_record_resolution">Разрешение видео</string>
+  <string-array name="ml_record_resolution">
+    <item>4K30FPS</item> 
+    <item>2.7K30FPS</item> 
+    <item>1080P120FPS</item>
+    <item>1080P60FPS</item>
+    <item>1080P30FPS</item>
+    <item>720P240FPS</item>
+    <item>720P120FPS</item> 
+    <item>720P60FPS</item>
+    <item>720P30FPS</item>
+  </string-array>
+  <string name="ml_record_encodingtype">主录像编码类型</string>
+  <string-array name="ml_record_encodingtype">
+    <item>H264</item>
+    <item>H265</item>
+  </string-array>
+  <string name="ml_record_loop">Циклическая запись</string>
+  <string-array name="ml_record_loop">
+    <item>Выключить</item>
+    <item>2 минуты</item>
+    <item>3 минуты</item>
+    <item>5 минуты</item>
+  </string-array>
+  <string name="ml_record_timelapse">Запись с интервалами</string>
+  <string-array name="ml_record_timelapse">
+    <item>Выключить</item>
+    <item>0.5 секунды</item>
+    <item>1 секунды</item>
+    <item>2 секунды</item>
+    <item>5 секунды</item>
+    <item>10 секунды</item>
+    <item>30 секунды</item>
+    <item>60 секунды</item>
+  </string-array> 
+  <string name="ml_record_volume">Звук видео</string>
+  <string-array name="ml_record_volume">
+    <item>Выключить</item>
+    <item>Включить</item>
+    </string-array>
+   <string name="ml_record_eis">Электронная стабилизация изображения</string>
+  <string-array name="ml_record_eis">
+    <item>Выключить</item>
+    <item>Включить</item>
+    </string-array>
+  <string name="ml_record_slowmotion">Замедленный снимок</string>
+  <string-array name="ml_record_slowmotion">
+    <item>1080P120FPS</item>
+    <item>1080P60FPS</item>
+    <item>720P240FPS</item>
+    <item>720P120FPS</item>
+  </string-array>
+  <string name="ml_photo_resolution">Настройки разрешения</string>
+  <string-array name="ml_photo_resolution">
+    <item>8M</item>
+    <item>13M</item>
+    <item>16M</item>
+  </string-array>
+   <string name="ml_photo_timed">Снимки с интервалами</string>
+  <string-array name="ml_photo_timed">
+    <item>Выключить</item>
+    <item>3 секунд</item>
+    <item>5 секунд</item>
+    <item>10 секунд</item>
+    <item>20 секунд</item>
+  </string-array>
+   <string name="ml_photo_auto">Автоматич. съемка</string>
+  <string-array name="ml_photo_auto">
+    <item>Выключить</item>
+    <item>3 секунд</item>
+    <item>10 секунд</item>
+    <item>15 секунд</item>
+    <item>20 секунд</item>
+    <item>30 секунд</item>
+  </string-array>
+   <string name="ml_photo_dramashot">Снимки с отслеживанием движения</string>
+  <string-array name="ml_photo_dramashot">
+    <item>Выключить</item>
+    <item>3P/S</item>
+    <item>5P/S</item>
+    <item>10P/S</item>
+  </string-array>
+  <string name="ml_camera_exposure">Настройки экспозиции</string>
+  <string-array name="ml_camera_exposure">
+    <item>-3</item>
+    <item>-2</item>
+    <item>-1</item>
+    <item>0</item>
+    <item>1</item>
+    <item>2</item>
+    <item>3</item>
+  </string-array>
+  <string name="ml_camera_whitebalance">Баланс белого</string>
+  <string-array name="ml_camera_whitebalance">
+    <item>Авто</item>
+    <item>Солнечно</item>
+    <item>Облачность</item>
+    <item>Лампа накаливания</item>
+    <item>Люминесцентный</item>
+  </string-array>
+   <string name="ml_camera_imagerotation">Поворот изображения</string>
+  <string-array name="ml_camera_imagerotation">
+    <item>Выключить</item>
+    <item>Включить</item>
+  </string-array>
+   <string name="ml_camera_lightsourcefrequency">Частота подсветки</string>
+  <string-array name="ml_camera_lightsourcefrequency">
+    <item>Авто</item>
+    <item>50Hz</item>
+    <item>60Hz</item>
+  </string-array>
+  <string name="ml_camera_ledindicator">Светодиодный индикатор</string>
+  <string-array name="ml_camera_ledindicator">
+    <item>Выключить</item>
+    <item>Включить</item>
+  </string-array>
+   <string name="ml_camera_autoscreensaver">Автоматич. заставка экрана</string>
+  <string-array name="ml_camera_autoscreensaver">
+    <item>Выключить</item>
+    <item>30 секунд</item>
+    <item>1 минуты</item> 
+    <item>2 минуты</item>
+  </string-array> 
+   <string name="ml_camera_timedshutdown">Автоотключ. питания</string>
+  <string-array name="ml_camera_timedshutdown">
+    <item>Выключить</item>
+    <item>3 минуты</item>
+    <item>5 минуты</item> 
+    <item>10 минуты</item>
+  </string-array>
+  <string name="ml_camera_timewatermark">Отметка времени</string>
+  <string-array name="ml_camera_timewatermark">
+    <item>Выключить</item>
+    <item>Включить</item>
+  </string-array>
+  <string name="ml_camera_distortioncalibration">Коррекция искажений</string>
+  <string-array name="ml_camera_distortioncalibration">
+    <item>Выключить</item>
+    <item>Включить</item>
+  </string-array>
+  <string name="ml_camera_wifi">WI-FI</string>
+  <string-array name="ml_camera_wifi">
+    <item>Выключить</item>
+    <item>Включить</item>
+  </string-array>
+  <string name="ml_device_language">Язык</string>
+  <string-array name="ml_device_language">
+    <item>简体中文</item>
+    <item>繁體中文</item>
+    <item>English</item>
+    <item>日本語</item>
+    <item>한국의</item>
+    <item>Pусский</item>
+    <item>Deutsch</item>
+    <item>Français</item>
+    <item>Italiano</item>
+    <item>Español</item>
+    <item>Português</item>
+    <item>ไทย</item>    
+  </string-array> 
+  <string name="ml_device_datetime">Дата и время</string>
+  <string-array name="ml_device_datetime">
+    <item>/</item>
+    <item>/</item>
+    <item>:</item>
+    <item>:</item>
+  </string-array>
+    <string name="ml_device_voicestatus">Звук</string>
+  <string-array name="ml_device_voicestatus">
+    <item>Выключить</item>
+    <item>30%</item>
+    <item>50%</item>
+    <item>80%</item>
+    <item>100%</item>
+  </string-array>
+   <string name="ml_device_resetfactory">Сброc</string>
+  <string-array name="ml_device_resetfactory">
+    <item>OK</item> 
+    <item>Отмена</item>
+  </string-array>
+     <string name="ml_device_resetselection">Вы уверены?</string>
+   <string name="ml_confirm_reboot">是否重启？</string>
+    <string name="ml_device_format">Форматировать</string>
+  <string-array name="ml_device_format">
+    <item>OK</item> 
+    <item>Отмена</item>
+  </string-array>
+   <string name="ml_device_format_doing">Форматирование...</string>
+  <string name="ml_device_format_failed">Ошибка форматирования</string> 
+  <string name="ml_device_format_success">Форматирование выполнено</string> 
+  <string name="ml_device_deviceinfo">Сведения об устройстве</string>
+  <string-array name="ml_device_deviceinfo">
+    <item>V7</item>
+    <item>SunChip</item>
+    <item>v0.2</item>
+  </string-array>  
+    <string name="ml_quit_exit">Нажмите OK для загрузки</string>   
+   <string name="ml_camera_wifiswitch">Сведения о WI-FI:</string>
+   <string name="ml_camera_wifiswitch_ssid">Имя WI-FI:  </string>
+   <string name="ml_camera_wifiswitch_passwd">Пароль WI-FI:   </string>
+   <string name="ml_camera_wifiswitch_tip">Нажмите и удерживайте кнопку для выхода из режима WI-FI</string>
+   <string name="ml_prompt">Подсказка</string>  
+   <string name="ml_prompt_tf_null">TF-карта не найдена. Вставьте TF-карту!</string> 
+   <string name="ml_prompt_tf_full">Недостаточно памяти на TF-карте!</string>
+   <string name="ml_prompt_tf_fs_error">Файловая система не поддерживается. Вы уверены?</string>
+   <string name="ml_prompt_bat_full">Аккумулятор полностью заряжен!</string> 
+  <string name="ml_prompt_database_full">База данных заполнена. Более ранние записи будут перезаписаны!</string> 
+  <string name="ml_prompt_camera_error">图像采集异常,摄像头将重新初始化!</string>
+  <string name="ml_prompt_unsupported_func">当前模式无法开启该功能!</string>
+   <string name="ml_prompt_bat_low">Низкое напряжение аккумулятора. Требуется выключение!</string>   
+  <string name="info_dialog">Справка</string>
+  <string name="confirm">OK</string>
+  <string name="cancel">Отмена</string> 
+  <string name="tl_playlist">Выберите файл для воспроизведения</string>
+  <string name="delete_dialog">Удалить</string>
+  <string name="delete_info">Удалить текущий файл?</string>
+  <string name="tl_usb_charge">Режим зарядки</string>
+  <string name="tl_usb_mass_storage">Режим устройства хранения</string>
+  <string name="tl_usb_webcam">Режим камеры</string>
+  <string name="update_dialog_title">Обновление системы</string>   
+   <string name="ml_device_deviceinfo_mode">Модель продукта: </string>
+   <string name="ml_device_deviceinfo_version">Версия ПО: </string> 
+   <string name="ml_device_deviceinfo_update">Обновлено: </string> 
+   <string name="ml_device_deviceinfo_manufacturer">Изготовитель: </string>
+   <string name="ml_device_deviceinfo_manufacturer1">Sunchip</string>
+   <string name="all_letters">abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ</string>
+   <string name="all_digit_num">0123456789</string>
+   <string name="all_symbol"> !@#$%^&*():;"',/?[]</string>
+</resources>

@@ -1,0 +1,755 @@
+if PACKAGE_eyesee-mpp-middleware
+
+config mpp_support_fastboot
+	bool "support fastboot"
+	default n
+	help
+	  mpp middleware support fastboot.
+
+config mpp_support_fastboot_tdm_offline_handle_raw
+	bool "support tdm offline handle raw for fastboot"
+	depends on mpp_support_fastboot
+	default n
+	help
+	  mpp middleware support tdm offline handle raw for fastboot.
+
+config select_sensor
+	bool "select sensor"
+	default y
+	help
+	  tell eyesee-mpp-middleware the used sensor type.
+	  multiple sensors can be selected in multiple mipi scenarios.
+
+config mpp_enable_aiisp
+	bool "mpp use isp config for aiisp"
+	depends on select_sensor
+	default n
+	help
+	  use isp config for aiisp.
+
+config imx386
+	bool "use sensor imx386"
+	depends on select_sensor
+	default n
+	help
+	  imx386 is used commonly in sdv product.
+
+config gc4663
+	bool "use sensor gc4663"
+	depends on select_sensor
+	default y
+	help
+	  gc4663 is for ipc.
+
+config gc1084
+	bool "use sensor gc1084"
+	depends on select_sensor
+	default n
+	help
+	  gc1084 is for ipc.
+
+config gc1084_8bit
+	bool "use sensor gc1084 8bit"
+	depends on gc1084
+	default n
+	help
+	  gc1084 bit is for aiisp.
+
+config gc2053
+	bool "use sensor gc2053"
+	depends on select_sensor
+	default y
+	help
+	  gc2053 is for ipc.
+
+config gc2053_8bit
+	bool "use sensor gc2053 8bit"
+	depends on gc2053
+	default n
+	help
+	  gc2053 8bit is for aiisp.
+
+config gc0406
+	bool "use sensor gc0406"
+	depends on select_sensor
+	default n
+	help
+	  gc0406 is for ipc.
+
+config gc2083
+	bool "use sensor gc2083"
+	depends on select_sensor
+	default n
+	help
+	  gc2083 is for ipc.
+
+config f37p
+	bool "use sensor f37p"
+	depends on select_sensor
+	default n
+	help
+	  f37p is for ipc.
+
+config f355p
+	bool "use sensor f355p"
+	depends on select_sensor
+	default n
+	help
+	  f355p is for ipc.
+
+config mis2008
+	bool "use sensor mis2008"
+	depends on select_sensor
+	default n
+	help
+	  mis2008 is for ipc.
+
+config sc1346
+	bool "use sensor sc1346"
+	depends on select_sensor
+	default n
+	help
+	  sc1346 is for ipc.
+
+config sc2336
+	bool "use sensor sc2336"
+	depends on select_sensor
+	default n
+	help
+	  sc2336 is for ipc.
+
+config sc2355
+	bool "use sensor sc2355"
+	depends on select_sensor
+	default n
+	help
+	  sc2355 is for ipc.
+
+config sc3336
+	bool "use sensor sc3336"
+	depends on select_sensor
+	default n
+	help
+	  sc3336 is for ipc.
+
+config sc3336p
+	bool "use sensor sc3336p"
+	depends on select_sensor
+	default n
+	help
+	  sc3336p is for ipc.
+
+config sc4336
+	bool "use sensor sc4336"
+	depends on select_sensor
+	default n
+	help
+	  sc4336 is for ipc.
+
+config sc4336p
+	bool "use sensor sc4336p"
+	depends on select_sensor
+	default n
+	help
+	  sc4336p is for ipc.
+
+config sc5336
+	bool "use sensor sc5336"
+	depends on select_sensor
+	default n
+	help
+	  sc5336 is for ipc.
+
+config sc530ai
+	bool "use sensor sc530ai"
+	depends on select_sensor
+	default n
+	help
+	  sc530ai is for ipc.
+
+config sc200ai
+	bool "use sensor sc200ai"
+	depends on select_sensor
+	default n
+	help
+	  sc200ai is for ipc.
+
+config sc200ai_8bit
+	bool "use sensor sc200ai 8bit"
+	depends on sc200ai
+	default n
+	help
+	  sc200ai 8bit is for aiisp.
+
+config os02g10
+	bool "use sensor os02g10"
+	depends on select_sensor
+	default n
+	help
+	  os02g10 is for ipc.
+
+choice
+	prompt "select log level for compile"
+	default mpp_log_level_debug
+config mpp_log_level_close
+	bool "close"
+	help
+	  close log.
+config mpp_log_level_error
+	bool "error"
+	help
+	  compile error message.
+config mpp_log_level_warn
+	bool "warn"
+	help
+	  compile warning/error message.
+config mpp_log_level_debug
+	bool "debug"
+	help
+	  compile debug/warning/error message.
+config mpp_log_level_verbose
+	bool "verbose"
+	help
+	  compile verbose/debug/warning/error message.
+endchoice
+
+choice
+	prompt "select fwrite method"
+	default mpp_fwrite_method_vfs
+	help
+	  when writing file in recording, recorder can use vfs mode
+	  or directIO mode. vfs mode is common and we recommend it,
+	  directIO mode has its special advantage: don't use memory as
+	  file buffer, so it is useful when system memory is very low,
+	  but we don't recommend it unless there is no other solutions.
+
+config mpp_fwrite_method_vfs
+	bool "vfs"
+	help
+	  It is a common method, recommend it.
+
+config mpp_fwrite_method_directIO
+	bool "directIO"
+	help
+	  It can run in small memory, but do not recommend using this mode.
+	  Be careful to select it.
+
+endchoice
+
+config mpp_hw_display
+	bool "use hw display method"
+	help
+	  hw_display method is used to show video frame directly on hw layer.
+	  It will bypass gpu.
+
+config mpp_vi
+	bool "enable vi component"
+	help
+	  vi(video input) captures csi frame.
+
+config mpp_isp_awTuningApp_use_libcedarc
+	bool "enable isp awTuningApp use libcedarc"
+	depends on mpp_vi
+	depends on mpp_venc
+	default n
+	help
+	  use the same libcedarc library as the application for isp awTuningApp.
+
+config mpp_vo
+	bool "enable vo component"
+	help
+	  vo(video output) is used to display video frame.
+
+config mpp_textenc
+	bool "enable textenc component"
+	help
+	  textenc is used to make subtitle when record video file.
+
+config mpp_venc
+	bool "enable venc component"
+	help
+	  venc is used to encode video frame.
+
+config mpp_venc_h264
+	bool "support venc h264"
+	depends on mpp_venc
+	default y
+	help
+	  support video encode h264.
+
+config mpp_venc_h265
+	bool "support venc h265"
+	depends on mpp_venc
+	default y
+	help
+	  support video encode h265.
+
+config mpp_venc_jpeg
+	bool "support venc jpeg"
+	depends on mpp_venc
+	default y
+	help
+	  support video encode jpeg.
+
+config mpp_venc_support_venc_param_debug
+	bool "support mpp venc param debug"
+	depends on mpp_venc
+	default y
+	help
+	  venc debugging will use ext xml file to config mpp venc params.
+
+config mpp_vdec
+	bool "enable vdec component"
+	help
+	  vdec is used to decode video frame.
+
+config mpp_vdec_h264
+	bool "support vdec h264"
+	depends on mpp_vdec
+	default y
+	help
+	  support video decode h264.
+
+config mpp_vdec_h265
+	bool "support vdec h265"
+	depends on mpp_vdec
+	default y
+	help
+	  support video decode h265.
+
+config mpp_vdec_jpeg
+	bool "support vdec jpeg"
+	depends on mpp_vdec
+	default y
+	help
+	  support video decode jpeg.
+
+config mpp_aio
+	bool "enable ai/ao component"
+	default y
+	help
+	  ai(audio input) captures audio pcm data.
+	  ao(audio output) play audio pcm data.
+
+config mpp_aenc
+	bool "enable aenc component"
+	default y
+	help
+	  aenc is used to encode audio frame.
+
+config mpp_aenc_pcm
+	bool "support aenc pcm"
+	depends on mpp_aenc
+	default y
+	help
+	  support encode pcm.
+
+config mpp_aenc_g711
+	bool "support aenc g711a/u"
+	depends on mpp_aenc
+	default n
+	help
+	  support encode g711a and g711u.
+
+config mpp_aenc_g726
+	bool "support aenc g726"
+	depends on mpp_aenc
+	default n
+	help
+	  support encode g726.
+
+config mpp_aenc_aac
+	bool "support aenc aac"
+	depends on mpp_aenc
+	default y
+	help
+	  support encode aac.
+
+config mpp_aenc_mp3
+	bool "support aenc mp3"
+	depends on mpp_aenc
+	default n
+	help
+	  support encode mp3.
+
+config mpp_aenc_opus
+	bool "support aenc opus"
+	depends on mpp_aenc
+	default n
+	help
+	  support encode opus.
+
+config mpp_adec
+	bool "enable adec component"
+	default y
+	help
+	  adec is used to decode audio frame.
+
+config mpp_adec_wav
+	bool "support adec pcm,g711a/u"
+	depends on mpp_adec
+	default y
+	help
+	  support decode pcm,g711a/u.
+
+config mpp_adec_g726
+	bool "support adec g726a/u"
+	depends on mpp_adec
+	default n
+	help
+	  support decode g726a/u.
+
+config mpp_adec_aac
+	bool "support adec aac"
+	depends on mpp_adec
+	default y
+	help
+	  support decode aac
+
+config mpp_adec_mp3
+	bool "support adec mp3"
+	depends on mpp_adec
+	default n
+	help
+	  support decode mp3
+
+config mpp_adec_amr
+	bool "support adec amr"
+	depends on mpp_adec
+	default n
+	help
+	  support decode amr
+
+config mpp_adec_ape
+	bool "support adec ape"
+	depends on mpp_adec
+	default n
+	help
+	  support decode ape
+
+config mpp_adec_flac
+	bool "support adec flac"
+	depends on mpp_adec
+	default n
+	help
+	  support decode flac
+
+config mpp_adec_ogg
+	bool "support adec ogg-vorbis"
+	depends on mpp_adec
+	default n
+	help
+	  support decode vorbis
+
+config mpp_adec_opus
+	bool "support adec opus"
+	depends on mpp_adec
+	default n
+	help
+	  support decode opus
+
+config mpp_muxer
+	bool "enable muxer component"
+	help
+	  muxer is used to wrap video frame and audio frame.
+
+choice
+	prompt "select gps pack method in mp4 file"
+	depends on mpp_muxer
+	default mpp_gps_pack_in_mdat
+
+	config mpp_gps_pack_in_track
+		bool "pack in track"
+		help
+		  pack gps data in track of mp4 file, gps data is seen as a track.
+
+	config mpp_gps_pack_in_mdat
+		bool "pack in mdat"
+		help
+		  pack gps data in mdat of mp4 file.
+endchoice
+
+config mpp_demuxer
+	bool "enable demuxer component"
+	help
+	  demuxer is used to demux video file to video stream, audio stream and subtitle stream.
+
+config mpp_parser_aac
+	bool "support parser aac"
+	depends on mpp_demuxer
+	default y
+	help
+	  support parser aac.
+config mpp_parser_amr
+	bool "support parser amr"
+	depends on mpp_demuxer
+	default n
+	help
+	  support parser amr.
+config mpp_parser_ape
+	bool "support parser ape"
+	depends on mpp_demuxer
+	default n
+	help
+	  support parser ape.
+config mpp_parser_flac
+	bool "support parser flac"
+	depends on mpp_demuxer
+	default n
+	help
+	  support parser flac.
+config mpp_parser_id3v2
+	bool "support parser id3v2"
+	depends on mpp_demuxer
+	default n
+	help
+	  support parser id3v2.
+config mpp_parser_mov
+	bool "support parser mov"
+	depends on mpp_demuxer
+	default y
+	help
+	  support parser mov.
+config mpp_parser_mp3
+	bool "support parser mp3"
+	depends on mpp_demuxer
+	select mpp_parser_id3v2
+	default n
+	help
+	  support parser mp3.
+config mpp_parser_mpg
+	bool "support parser mpg"
+	depends on mpp_demuxer
+	default n
+	help
+	  support parser mpg.
+config mpp_parser_ogg
+	bool "support parser ogg"
+	depends on mpp_demuxer
+	default n
+	help
+	  support parser ogg.
+config mpp_parser_ts
+	bool "support parser ts"
+	depends on mpp_demuxer
+	default y
+	help
+	  support parser ts.
+config mpp_parser_wav
+	bool "support parser wav"
+	depends on mpp_demuxer
+	select mpp_parser_mp3
+	default y
+	help
+	  support parser wav.
+
+config mpp_stream_http
+	bool "support stream http/https"
+	depends on mpp_demuxer
+	default n
+	help
+	  support stream http and https.
+config mpp_stream_tcp
+	bool "support stream tcp"
+	depends on mpp_demuxer
+	default n
+	help
+	  support stream tcp.
+
+config mpp_ise
+	bool "enable ise component"
+	depends on PLATFORM_v316 || PLATFORM_v536 || PLATFORM_v313 || PLATFORM_v833 || PLATFORM_v831
+	help
+	  ise is Image Stitching Engine.
+
+choice
+	prompt "select mpp_ise lib"
+	depends on mpp_ise
+	default mpp_ise_gdc
+	help
+	  mpp_ise libraries are available,select one
+
+	config mpp_ise_mo
+		bool "enable ise mo"
+		depends on mpp_ise
+		help
+		  enable ise mo module
+	config mpp_ise_gdc
+		bool "enable ise gdc"
+		depends on mpp_ise
+		help
+		  enable ise gdc module
+endchoice
+config mpp_eis
+	bool "enable eis component"
+	depends on PLATFORM_v316 || PLATFORM_v536 || PLATFORM_v313 || PLATFORM_v833 || PLATFORM_v831
+	help
+	  eis is Electronic Image Stabilization.
+
+config mpp_mod
+	bool "enable mod"
+	depends on PLATFORM_v5
+	help
+	  mod is Motion Object Detection.
+
+config mpp_motion_detect_soft
+	bool "enable soft motion detect"
+	depends on PLATFORM_v316 || PLATFORM_v536 || PLATFORM_v313 || PLATFORM_v533
+	help
+	  motion detect is detect something motion in video, software implementation.
+
+config mpp_vlpr
+	bool "enable vlpr"
+	depends on PLATFORM_v5
+	help
+	  vlpr is Vehicle License Plate Recognition.
+
+config mpp_adas_detect
+	bool "enable adas detect"
+	help
+	  adas detect is detect someting adas in video.
+config mpp_adas_detect_v2
+	bool "enable adas_v2 detect"
+	help
+	  adas_v2 detect is detect someting adas_v2 in video.
+config mpp_hcnt
+	bool "enable hcnt"
+	depends on PLATFORM_v5
+	help
+	  hcnt is Human CouNT.
+
+config mpp_bdii
+	bool "enable bdii"
+	depends on PLATFORM_v5
+	help
+	  bdii is Binocular Depth Information Image.
+
+config mpp_eveface
+	bool "enable eveface"
+	depends on PLATFORM_v5
+	help
+	  eveface is Face Detection basing on eve.
+
+config mpp_aec
+	bool "enable aec"
+	help
+	  aec is acoustic echo cancellation.
+choice
+	prompt "select specified aec library"
+	depends on mpp_aec
+	default mpp_aec_libwebrtc
+	help
+	  aec libraries are available,select one
+
+	config mpp_aec_libwebrtc
+		bool "enable aec library of webrtc"
+		help
+		  use aec libraty from webrtc
+	config mpp_aec_libuvoice
+		bool "enable aec library of uvoice"
+		help
+		  use aec libraty from uvoice
+endchoice
+
+config mpp_softdrc
+	bool "enable soft drc"
+	help
+	  support soft drc.
+config mpp_agc
+	bool "enable agc"
+	help
+	  support agc.
+choice
+	prompt "select specified agc library"
+	depends on mpp_agc
+	default mpp_agc_libwebrtc
+	help
+	  agc libraries are available,select one
+
+	config mpp_agc_libwebrtc
+		bool "enable agc library of webrtc"
+		help
+		  use agc libraty from webrtc
+	config mpp_agc_libagcfloat
+		bool "enable agcfloat library"
+		help
+		  use agcfloat libraty
+endchoice
+
+#config mpp_ai_agc
+#	bool "enable ai agc"
+#	help
+#	  support ai agc.
+
+config mpp_ans
+	bool "enable ans"
+	help
+	  ans is acoustic noise suppression.
+choice
+	prompt "select specified ans library"
+	depends on mpp_ans
+	default mpp_ans_libwebrtc
+	help
+	  two ans libraries are available,select one
+
+	config mpp_ans_libwebrtc
+		bool "enable ans library of webrtc"
+		help
+		  use ans libraty from webrtc
+	config mpp_ans_liblstm
+		bool "enable ans library of lstm"
+		help
+		  use ans library from lstm
+	config mpp_ans_libnosc
+		bool "enable ans library nosc"
+		help
+		  use ans library nosc
+endchoice
+config mpp_uvc
+	bool "support usb video camera, enable uvc component"
+	help
+	  enable support for usb video camera.
+
+config mpp_iommu
+	bool "enable iommu"
+	depends on PLATFORM_v853 || PLATFORM_v851se || PLATFORM_v853s || PLATFORM_r853s || PLATFORM_v851s || PLATFORM_qg3101 \
+		|| PLATFORM_v833 || PLATFORM_v831 || PLATFORM_v533 || PLATFORM_v837s || PLATFORM_v851s3 || PLATFORM_v553
+	default y
+	help
+	  iommu can help improve memory usage.
+
+choice
+	prompt "select compile mpp as static/dynamic library"
+	default mpp_compile_static_lib
+
+config mpp_compile_static_lib
+	bool "compile static lib"
+	help
+	  compile static lib of all capable modules.
+
+config mpp_compile_dynamic_lib
+	bool "compile dynamic lib"
+	help
+	  compile dynamic lib of all capable modules.
+endchoice
+
+config mpp_systrace
+	bool "use aw systrace to analyse"
+	help
+	  awsystrace will use ftrace to collect system running info.
+	  It need to enable kernel ftrace first.
+
+config mpp_filerepair
+	bool "enable filerepair"
+	default y
+	help
+	  repair damaged files.
+
+config mpp_sample_configfileparser
+	bool "select mpp sample configfileparser"
+	default n
+	help
+	  parse conf file.
+
+endif
+

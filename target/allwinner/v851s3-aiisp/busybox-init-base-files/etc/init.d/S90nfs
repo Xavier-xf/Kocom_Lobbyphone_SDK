@@ -1,0 +1,41 @@
+#!/bin/sh
+#
+# Load nfs modules....
+#
+
+MODULES_DIR="/lib/modules/`uname -r`"
+
+start() {
+    printf "Load nfs modules\n"
+    insmod $MODULES_DIR/sunrpc.ko
+    insmod $MODULES_DIR/grace.ko
+    insmod $MODULES_DIR/lockd.ko
+    insmod $MODULES_DIR/nfs.ko
+    insmod $MODULES_DIR/nfsv3.ko
+}
+
+stop() {
+    printf "Unload nfs modules\n"
+    rmmod $MODULES_DIR/nfsv3.ko
+    rmmod $MODULES_DIR/nfs.ko
+    rmmod $MODULES_DIR/grace.ko
+    rmmod $MODULES_DIR/sunrpc.ko
+}
+
+case "$1" in
+    start)
+	start
+	;;
+    stop)
+	stop
+	;;
+    restart|reload)
+	stop
+	start
+	;;
+  *)
+	echo "Usage: $0 {start|stop|restart}"
+	exit 1
+esac
+
+exit $?

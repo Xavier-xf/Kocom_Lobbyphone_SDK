@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>PreviewWindow</class>
+ <widget class="QDialog" name="PreviewWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1280</width>
+    <height>320</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QGraphicsView" name="bottom_bg_icon">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>386</y>
+     <width>854</width>
+     <height>58</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="debug_info">
+   <property name="geometry">
+    <rect>
+     <x>1000</x>
+     <y>60</y>
+     <width>200</width>
+     <height>150</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>调试信息</string>
+   </property>
+  </widget>
+  <widget class="QGraphicsView" name="shut_down_logo">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1280</width>
+     <height>320</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QGraphicsView" name="rec_hint_icon">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>15</y>
+     <width>20</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QGraphicsView" name="reverse_line_icon">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>0</y>
+     <width>854</width>
+     <height>320</height>
+    </rect>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

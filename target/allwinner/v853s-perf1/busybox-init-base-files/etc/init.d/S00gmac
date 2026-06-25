@@ -1,0 +1,37 @@
+#!/bin/sh
+#
+# Load mpp modules....
+#
+
+MODULES_DIR="/lib/modules/`uname -r`"
+
+start() {
+    printf "Load mpp modules\n"
+    insmod $MODULES_DIR/mii.ko
+    insmod $MODULES_DIR/sunxi_gmac.ko
+
+}
+
+stop() {
+    printf "Unload mpp modules\n"
+    rmmod $MODULES_DIR/sunxi_gmac.ko
+    rmmod $MODULES_DIR/mii.ko
+}
+
+case "$1" in
+    start)
+	start
+	;;
+    stop)
+	stop
+	;;
+    restart|reload)
+	stop
+	start
+	;;
+  *)
+	echo "Usage: $0 {start|stop|restart}"
+	exit 1
+esac
+
+exit $?

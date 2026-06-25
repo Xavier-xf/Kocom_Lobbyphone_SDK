@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>StatusBarWindow</class>
+ <widget class="QDialog" name="StatusBarWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1280</width>
+    <height>45</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>StatusBarWindow</string>
+  </property>
+  <widget class="QGraphicsView" name="rec_hint_icon">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>15</y>
+     <width>20</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="rec_time_label">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>16</y>
+     <width>80</width>
+     <height>33</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>文件录制时间</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="time_label">
+   <property name="geometry">
+    <rect>
+     <x>490</x>
+     <y>10</y>
+     <width>300</width>
+     <height>60</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>显示系统时间</string>
+   </property>
+  </widget>
+  <widget class="QGraphicsView" name="wifi_icon">
+   <property name="geometry">
+    <rect>
+     <x>1040</x>
+     <y>10</y>
+     <width>30</width>
+     <height>30</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QGraphicsView" name="gps_icon">
+   <property name="geometry">
+    <rect>
+     <x>1040</x>
+     <y>10</y>
+     <width>30</width>
+     <height>30</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QGraphicsView" name="tf_icon">
+   <property name="geometry">
+    <rect>
+     <x>1080</x>
+     <y>10</y>
+     <width>30</width>
+     <height>30</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QGraphicsView" name="voice_ctrl_icon">
+   <property name="geometry">
+    <rect>
+     <x>960</x>
+     <y>10</y>
+     <width>30</width>
+     <height>30</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QGraphicsView" name="voice_icon">
+   <property name="geometry">
+    <rect>
+     <x>920</x>
+     <y>10</y>
+     <width>30</width>
+     <height>30</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QGraphicsView" name="battery_icon">
+   <property name="geometry">
+    <rect>
+     <x>1120</x>
+     <y>10</y>
+     <width>30</width>
+     <height>30</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QGraphicsView" name="lock_icon">
+   <property name="geometry">
+    <rect>
+     <x>1000</x>
+     <y>10</y>
+     <width>30</width>
+     <height>30</height>
+    </rect>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

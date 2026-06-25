@@ -1,0 +1,77 @@
+#include "ui_lvgl.h"
+lv_obj_t *ui_Screen1;
+lv_obj_t *label;
+lv_obj_t *win;
+int ui_init(int argc, const char *argv[])
+{
+    /*LittlevGL init*/
+    lv_init();
+
+    uint32_t rotated = LV_DISP_ROT_NONE;
+
+    /*Linux frame buffer device init*/
+    sunxifb_init(rotated);
+
+    /*A buffer for LittlevGL to draw the screen's content*/
+    static uint32_t width, height;
+    sunxifb_get_sizes(&width, &height);
+
+    static lv_color_t *buf;
+    buf = (lv_color_t*) sunxifb_alloc(width * height * sizeof(lv_color_t),
+            "lv_examples");
+
+    if (buf == NULL) {
+        sunxifb_exit();
+        printf("malloc draw buffer fail\n");
+        return 0;
+    }
+
+    /*Initialize a descriptor for the buffer*/
+    static lv_disp_draw_buf_t disp_buf;
+    lv_disp_draw_buf_init(&disp_buf, buf, NULL, width * height);
+
+    /*Initialize and register a display driver*/
+    static lv_disp_drv_t disp_drv;
+    lv_disp_drv_init(&disp_drv);
+    disp_drv.draw_buf   = &disp_buf;
+    disp_drv.flush_cb   = sunxifb_flush;
+    disp_drv.hor_res    = width;
+    disp_drv.ver_res    = height;
+    disp_drv.rotated    = rotated;
+#ifndef USE_SUNXIFB_G2D_ROTATE
+    if (rotated != LV_DISP_ROT_NONE)
+        disp_drv.sw_rotate = 1;
+#endif
+    lv_disp_drv_register(&disp_drv);
+
+    evdev_init();
+    static lv_indev_drv_t indev_drv;
+    lv_indev_drv_init(&indev_drv);                /*Basic initialization*/
+    indev_drv.type =LV_INDEV_TYPE_POINTER;        /*See below.*/
+    indev_drv.read_cb = evdev_read;               /*See below.*/
+    /*Register the driver in LVGL and save the created input device object*/
+    lv_indev_t * evdev_indev = lv_indev_drv_register(&indev_drv);
+
+    lv_obj_set_style_bg_opa(lv_scr_act(), LV_OPA_TRANSP, LV_PART_MAIN);
+    return 0;
+}
+
+
+uint32_t custom_tick_get(void) {
+    static uint64_t start_ms = 0;
+    if (start_ms == 0) {
+        struct timeval tv_start;
+        gettimeofday(&tv_start, NULL);
+        start_ms = ((uint64_t) tv_start.tv_sec * 1000000
+                + (uint64_t) tv_start.tv_usec) / 1000;
+    }
+
+    struct timeval tv_now;
+    gettimeofday(&tv_now, NULL);
+    uint64_t now_ms;
+    now_ms = ((uint64_t) tv_now.tv_sec * 1000000 + (uint64_t) tv_now.tv_usec)
+            / 1000;
+
+    uint32_t time_ms = now_ms - start_ms;
+    return time_ms;
+}

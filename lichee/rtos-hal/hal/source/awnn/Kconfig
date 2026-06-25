@@ -1,0 +1,11 @@
+menu "AWNN LIBRARY"
+
+config LIB_AWNN
+    bool "enable awnn lib"
+        default n
+
+config HAL_TEST_AWNN
+    bool "enable awnn test command"
+    depends on LIB_AWNN
+        default n
+endmenu

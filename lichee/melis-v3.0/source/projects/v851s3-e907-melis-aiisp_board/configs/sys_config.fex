@@ -1,0 +1,58 @@
+;---------------------------------------------------------------------------------------------------------
+; 说明： 脚本中的字符串区分大小写，用户可以修改"="后面的数值，但是不要修改前面的字符串
+; 描述gpio的形式：Port:端口+组内序号<功能分配><内部电阻状态><驱动能力><输出电平状态>
+;---------------------------------------------------------------------------------------------------------
+
+;----------------------------------------------------------------------------------
+;i2c configuration
+;----------------------------------------------------------------------------------
+[twi0]
+twi0_scl          = port:PE04<8><1><default><default>
+twi0_sda          = port:PE05<8><1><default><default>
+
+[twi1]
+twi1_scl          = port:PE02<8><1><default><default>
+twi1_sda          = port:PE03<8><1><default><default>
+
+;[twi2]
+;twi2_scl         = port:PH05<4><1><default><default>
+;twi2_sda         = port:PH06<4><1><default><default>
+
+;[twi3]
+;twi3_scl         = port:PI03<4><1><default><default>
+;twi3_sda         = port:PI04<4><1><default><default>
+
+;[twi4]
+;twi4_scl         = port:PI01<4><1><default><default>
+;twi4_sda         = port:PI02<4><1><default><default>
+
+;----------------------------------------------------------------------------------
+;uart configuration
+;----------------------------------------------------------------------------------
+;[uart0]
+;uart_tx         = port:PB08<5><1><default><default>
+;uart_rx         = port:PB09<5><1><default><default>
+
+;[uart1]
+;uart_tx         = port:PB10<5><1><default><default>
+;uart_rx         = port:PB11<5><1><default><default>
+
+;[uart2]
+;uart_tx         = port:PH05<5><1><default><default>
+;uart_rx         = port:PH06<5><1><default><default>
+
+[uart3]
+uart_tx         = port:PE00<7><1><default><default>
+uart_rx         = port:PE01<7><1><default><default>
+
+[sensor0]
+used0           = 1
+reset0		    = port:PE06<1><1><default><default>
+pwdn0		    = port:PE07<1><1><default><default>
+mclk0		    = port:PE12<5><1><default><default>
+
+;[sensor1]
+;used1           = 1
+;reset1		= port:PE08<1><1><default><default>
+;pwdn1		= port:PE09<1><1><default><default>
+;mclk1		= port:PE13<5><1><default><default>

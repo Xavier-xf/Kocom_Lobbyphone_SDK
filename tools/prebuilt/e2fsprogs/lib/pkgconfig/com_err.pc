@@ -1,0 +1,12 @@
+prefix=_REPLACE_HOST_BUILD_DIR_/out/host
+exec_prefix=_REPLACE_HOST_BUILD_DIR_/out/host
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: com_err
+Description: Common error description library
+Version: 1.45.4
+Requires:
+Cflags: -I${includedir}/et -I${includedir}
+Libs: -L${libdir} -lcom_err
+Libs.private: -lpthread

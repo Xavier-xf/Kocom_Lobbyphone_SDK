@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="tl_record">동영상 녹화</string>
+  <string name="tl_takepic">사진 촬영</string>
+  <string name="tl_slowrec">저속 촬영</string>
+  <string name="tl_playback">파일 재생</string>
+  <string name="tl_setting">설정</string>
+  <string name="tl_shutdown">종료</string> 
+  <string name="ml_record_resolution">동영상 화질</string>
+  <string-array name="ml_record_resolution">
+    <item>4K30FPS</item> 
+    <item>2.7K30FPS</item> 
+    <item>1080P120FPS</item>
+    <item>1080P60FPS</item>
+    <item>1080P30FPS</item>
+    <item>720P240FPS</item>
+    <item>720P120FPS</item> 
+    <item>720P60FPS</item>
+    <item>720P30FPS</item>
+  </string-array>
+  <string name="ml_record_encodingtype">主录像编码类型</string>
+  <string-array name="ml_record_encodingtype">
+    <item>H264</item>
+    <item>H265</item>
+  </string-array>
+  <string name="ml_record_loop">루프 녹화</string>
+  <string-array name="ml_record_loop">
+    <item>끄기</item>
+    <item>2분</item>
+    <item>3록</item>
+    <item>5록</item>
+  </string-array>
+  <string name="ml_record_timelapse">타임 랩스 녹화</string>
+  <string-array name="ml_record_timelapse">
+    <item>끄기</item>
+    <item>0.5초</item>
+    <item>1초</item>
+    <item>2초</item>
+    <item>5초</item>
+    <item>10초</item>
+    <item>30초</item>
+    <item>60초</item>
+  </string-array> 
+  <string name="ml_record_volume">동영상 사운드</string>
+  <string-array name="ml_record_volume">
+    <item>끄기</item>
+    <item>켜기</item>
+    </string-array>
+   <string name="ml_record_eis">전자 이미지 안정화</string>
+  <string-array name="ml_record_eis">
+    <item>끄기</item>
+    <item>켜기</item>
+    </string-array>
+  <string name="ml_record_slowmotion">저속 촬영</string>
+  <string-array name="ml_record_slowmotion">
+    <item>1080P120FPS</item>
+    <item>1080P60FPS</item>
+    <item>720P240FPS</item>
+    <item>720P120FPS</item>
+  </string-array>
+  <string name="ml_photo_resolution">픽셀 설정</string>
+  <string-array name="ml_photo_resolution">
+    <item>8M</item>
+    <item>13M</item>
+    <item>16M</item>
+  </string-array>
+   <string name="ml_photo_timed">타임 랩스 촬영</string>
+  <string-array name="ml_photo_timed">
+    <item>끄기</item>
+    <item>3S</item>
+    <item>5S</item>
+    <item>10S</item>
+    <item>20S</item>
+  </string-array>
+   <string name="ml_photo_auto">자동 촬영</string>
+  <string-array name="ml_photo_auto">
+    <item>끄기</item>
+    <item>3초</item>
+    <item>10초</item>
+    <item>15초</item>
+    <item>20초</item>
+    <item>30초</item>
+  </string-array>
+   <string name="ml_photo_dramashot">모션 트랙 촬영</string>
+  <string-array name="ml_photo_dramashot">
+    <item>끄기</item>
+    <item>3P/S</item>
+    <item>5P/S</item>
+    <item>10P/S</item>
+  </string-array>
+  <string name="ml_camera_exposure">노출 설정</string>
+  <string-array name="ml_camera_exposure">
+    <item>-3</item>
+    <item>-2</item>
+    <item>-1</item>
+    <item>0</item>
+    <item>1</item>
+    <item>2</item>
+    <item>3</item>
+  </string-array>
+  <string name="ml_camera_whitebalance">화이트 밸런스</string>
+  <string-array name="ml_camera_whitebalance">
+    <item>자동</item>
+    <item>맑은 날</item>
+    <item>흐린 날</item>
+    <item>백열등</item>
+    <item>형광등</item>
+  </string-array>
+   <string name="ml_camera_imagerotation">이미지 회전</string>
+  <string-array name="ml_camera_imagerotation">
+    <item>끄기</item>
+    <item>켜기</item>
+  </string-array>
+   <string name="ml_camera_lightsourcefrequency">광원 빈도</string>
+  <string-array name="ml_camera_lightsourcefrequency">
+    <item>자동</item>
+    <item>50Hz</item>
+    <item>60Hz</item>
+  </string-array>
+  <string name="ml_camera_ledindicator">LED 표시등</string>
+  <string-array name="ml_camera_ledindicator">
+    <item>끄기</item>
+    <item>켜기</item>
+  </string-array>
+   <string name="ml_camera_autoscreensaver">자동 화면보호기</string>
+  <string-array name="ml_camera_autoscreensaver">
+    <item>끄기</item>
+    <item>30초</item>
+    <item>1록</item> 
+    <item>2록</item>
+  </string-array> 
+   <string name="ml_camera_timedshutdown">자동 전원 끄기</string>
+  <string-array name="ml_camera_timedshutdown">
+    <item>끄기</item>
+    <item>3록</item>
+    <item>5록</item> 
+    <item>10록</item>
+  </string-array>
+  <string name="ml_camera_timewatermark">시간 워터마크</string>
+  <string-array name="ml_camera_timewatermark">
+    <item>끄기</item>
+    <item>켜기</item>
+  </string-array>
+  <string name="ml_camera_distortioncalibration">왜곡 교정</string>
+  <string-array name="ml_camera_distortioncalibration">
+    <item>끄기</item>
+    <item>켜기</item>
+  </string-array>
+  <string name="ml_camera_wifi">WiFi</string>
+  <string-array name="ml_camera_wifi">
+    <item>끄기</item>
+    <item>켜기</item>
+  </string-array>
+  <string name="ml_device_language">언어</string>
+  <string-array name="ml_device_language">
+    <item>简体中文</item>
+    <item>繁體中文</item>
+    <item>English</item>
+    <item>日本語</item>
+    <item>한국의</item>
+    <item>Pусский</item>
+    <item>Deutsch</item>
+    <item>Français</item>
+    <item>Italiano</item>
+    <item>Español</item>
+    <item>Português</item>
+     <item>ไทย</item>   
+  </string-array> 
+  <string name="ml_device_datetime">날짜 - 시간</string>
+  <string-array name="ml_device_datetime">
+    <item>/</item>
+    <item>/</item>
+    <item>:</item>
+    <item>:</item>
+  </string-array>
+    <string name="ml_device_voicestatus">사운드</string>
+  <string-array name="ml_device_voicestatus">
+    <item>끄기</item>
+    <item>30%</item>
+    <item>50%</item>
+    <item>80%</item>
+    <item>100%</item>
+  </string-array>
+   <string name="ml_device_resetfactory">재설정</string>
+  <string-array name="ml_device_resetfactory">
+    <item>승인</item> 
+    <item>취소</item>
+  </string-array>
+     <string name="ml_device_resetselection">정말 재설정 할까요?</string>
+   <string name="ml_confirm_reboot">是否重启？</string>
+    <string name="ml_device_format">포맷하기</string>
+  <string-array name="ml_device_format">
+    <item>확인</item> 
+    <item>취소</item>
+  </string-array>
+   <string name="ml_device_format_doing">포맷 중…</string>
+  <string name="ml_device_format_failed">포맷 실패</string> 
+  <string name="ml_device_format_success">포맷 완료</string> 
+  <string name="ml_device_deviceinfo">장치 정보</string>
+  <string-array name="ml_device_deviceinfo">
+    <item>V7</item>
+    <item>SunChip</item>
+    <item>v0.2</item>
+  </string-array>  
+  <string name="ml_quit_exit">실행하려면 확인을 누르세요</string>    
+   <string name="ml_camera_wifiswitch">WiFi 정보</string>
+   <string name="ml_camera_wifiswitch_ssid">WiFi 이름: </string>
+   <string name="ml_camera_wifiswitch_passwd">WiFi 암호: </string>
+   <string name="ml_camera_wifiswitch_tip">WiFi를 종료하려면 버튼을 꾹 누르세요</string>
+   <string name="ml_prompt">프롬트</string>  
+   <string name="ml_prompt_tf_null">TF 카드를 찾을 수 없습니다. TF 카드를 삽입하세요!</string> 
+   <string name="ml_prompt_tf_full">TF 카드 저장 공간이 부족합니다!</string>
+   <string name="ml_prompt_tf_fs_error">지원되지 않는 파일 시스템입니다. 정말 포맷할까요?</string>
+   <string name="ml_prompt_bat_full">배터리 충전이 완료되었습니다!</string> 
+  <string name="ml_prompt_database_full">데이터베이스가 꽉 찼습니다. 오래된 기록부터 덮어쓰기됩니다!</string> 
+  <string name="ml_prompt_camera_error">图像采集异常,摄像头将重新初始化!</string>
+  <string name="ml_prompt_unsupported_func">当前模式无法开启该功能!</string>
+   <string name="ml_prompt_bat_low">배터리 전압이 낮습니다. 곧 종료합니다!</string>   
+  <string name="info_dialog">정보</string>
+  <string name="confirm">승인</string>
+  <string name="cancel">취소</string> 
+  <string name="tl_playlist">재생할 파일을 선택하세요</string>
+  <string name="delete_dialog">삭제</string>
+  <string name="delete_info">현재 파일을 정말 삭제할까요?</string>
+  <string name="tl_usb_charge">충전 모드</string>
+  <string name="tl_usb_mass_storage">대용량 저장 모드</string>
+  <string name="tl_usb_webcam">카메라 모드</string>
+  <string name="update_dialog_title">시스템 업그레이드</string>   
+   <string name="ml_device_deviceinfo_mode">제품 모델: </string>
+   <string name="ml_device_deviceinfo_version">소프트웨어 버전: </string> 
+   <string name="ml_device_deviceinfo_update">업데이트 날짜: </string> 
+   <string name="ml_device_deviceinfo_manufacturer">제조사: </string>
+   <string name="ml_device_deviceinfo_manufacturer1">Sunchip</string>
+   <string name="all_letters">abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ</string>
+   <string name="all_digit_num">0123456789</string>
+   <string name="all_symbol"> !@#$%^&*():;"',/?[]</string>
+</resources>

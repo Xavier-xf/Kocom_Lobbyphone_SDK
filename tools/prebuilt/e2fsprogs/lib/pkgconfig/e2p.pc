@@ -1,0 +1,11 @@
+prefix=_REPLACE_HOST_BUILD_DIR_/out/host
+exec_prefix=_REPLACE_HOST_BUILD_DIR_/out/host
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: e2p
+Description: Ext2fs userspace programs utility library
+Version: 1.45.4
+Requires: 
+Cflags: -I${includedir}/e2p -I${includedir}
+Libs: -L${libdir} -le2p

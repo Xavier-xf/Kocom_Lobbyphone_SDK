@@ -1,0 +1,4 @@
+sunxi_flash write logo 204800
+sunxi_flash write boot 4481024
+sunxi_flash write env 131072
+sunxi_flash write UDISK 0

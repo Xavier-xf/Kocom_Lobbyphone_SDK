@@ -1,0 +1,9 @@
+#
+#  Touchscreen driver configuration
+#
+config  TOUCHSCREEN_ILITEK2511
+	tristate  "ilitek2511  touchscreen driver"
+	depends on INPUT && I2C
+	default m
+	help
+	  ilitek2511 touchscreen new driver, optimize anti-shake

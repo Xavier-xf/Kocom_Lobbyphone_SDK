@@ -1,0 +1,15 @@
+<RCC>
+    <qresource prefix="/usr/share/minigui/res/images">
+		<file>return.png</file>
+		<file>return_on.png</file>
+		<file>file_lock.png</file>
+		<file>playback_lock.png</file>
+		<file>playback_pause.png</file>
+		<file>playback_play.png</file>
+		<file>playback_delete.png</file>
+		<file>start_play.png</file>
+		<file>file_video_A.png</file>
+		<file>file_video_B.png</file>
+		<file>file_photo.png</file>
+    </qresource>
+</RCC>

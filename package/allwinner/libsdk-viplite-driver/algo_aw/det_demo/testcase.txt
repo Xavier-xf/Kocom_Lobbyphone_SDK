@@ -1,0 +1,24 @@
+# example:
+# [network]
+# network type thresh loop
+# input1 width height
+# input2 width height
+# input3 width height
+#
+# network: nbg path
+# type: 1(humanoidv1.0),3(humanoidv3.0),4(face)
+# thresh: postprocess thresh
+# loop: loop count
+# input: multi test case each in oneline
+
+[network]
+models/1.0.1_Gamma.nb 1 0.25 1
+body_640x360.nv12 640 360
+
+[network]
+models/3.0.1_Beta.nb 3 0.25 1
+body_384x216.nv12 384 216
+
+#[network]
+#models/Facedet_480_288_nv12.nb 4 0.6 1
+#face_480x270.nv12 480 270

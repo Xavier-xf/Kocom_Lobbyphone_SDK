@@ -1,0 +1,14 @@
+obj-$(CONFIG_HAL_TEST_CLK) += ccmu/
+obj-$(CONFIG_HAL_TEST_GPIO) += gpio/
+obj-$(CONFIG_HAL_TEST_DMA) += dma/
+obj-$(CONFIG_HAL_TEST_UART) += uart/
+obj-$(CONFIG_HAL_TEST_TWI) += twi/
+obj-$(CONFIG_HAL_TEST_SPI) += spi/
+obj-$(CONFIG_HAL_TEST_PWM) += pwm/
+obj-$(CONFIG_HAL_TEST_RTC) += rtc/
+obj-$(CONFIG_HAL_TEST_MSGBOX) += msgbox/
+obj-$(CONFIG_HAL_TEST_GPADC) += gpadc/
+obj-$(CONFIG_HAL_TEST_G2D) += g2d/
+obj-$(CONFIG_HAL_TEST_NPU) += npu/
+obj-$(CONFIG_HAL_TEST_AWNN) += awnn/
+obj-$(CONFIG_HAL_TEST_AIISP) += aiisp/

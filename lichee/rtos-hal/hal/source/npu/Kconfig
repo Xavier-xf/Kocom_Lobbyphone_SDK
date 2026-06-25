@@ -1,0 +1,16 @@
+menu "NPU Devices"
+
+config DRIVERS_NPU
+    bool "enable npu driver"
+        default n
+
+config NPU_RPMSG
+    bool "enable npu rpmsg init for linux"
+    depends on DRIVERS_NPU
+        default n
+
+config HAL_TEST_NPU
+    bool "enable npu vpm_run demo test command"
+    depends on DRIVERS_NPU
+        default n
+endmenu

@@ -1,0 +1,34 @@
+
+vpm_run is a framework for testing VIPLite driver. 
+
+#You may put comment by starting with a '#'.
+#####################################################A separator makes the list clear.
+[network]
+/mnt/extsd/lenet-board-test/lenet.nb
+[input]
+/mnt/extsd/lenet-board-test/input_0.dat
+[golden]
+/mnt/extsd/lenet-board-test/output0_10_1.dat
+#[output]   comment out [output] field to stop dumping output into a file.
+#./NN/test_out_alex.dat
+######
+[network]
+/mnt/extsd/lenet-board-test/lenet.nb
+[input]
+/mnt/extsd/lenet-board-test/input_0.dat
+[golden]
+/mnt/extsd/lenet-board-test/output0_10_1.dat
+[output]
+/mnt/extsd/lenet-board-test/actual_output_tensor.dat
+[network]
+/mnt/extsd/lenet-board-test/lenet.nb
+[input]
+/mnt/extsd/lenet-board-test/input_0.dat
+[golden]
+/mnt/extsd/lenet-board-test/output0_10_1.dat
+[network]
+/mnt/extsd/lenet-board-test/lenet.nb
+[input]
+/mnt/extsd/lenet-board-test/input_0.dat
+[golden]
+/mnt/extsd/lenet-board-test/output0_10_1.dat

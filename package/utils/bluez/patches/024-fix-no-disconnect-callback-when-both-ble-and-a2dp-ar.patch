@@ -1,0 +1,62 @@
+From 9c9c8bf84af96cc111a87a42ed47f0831ac5576e Mon Sep 17 00:00:00 2001
+From: luoyuyi <luoyuyi@allwinnertech.com>
+Date: Sat, 28 Oct 2023 17:06:01 +0800
+Subject: [PATCH] fix no disconnect callback when both ble and a2dp are
+ connected
+
+---
+ src/adapter.c | 8 ++++++++
+ src/device.c  | 4 ++--
+ 2 files changed, 10 insertions(+), 2 deletions(-)
+
+diff --git a/src/adapter.c b/src/adapter.c
+index 58f0fd3..2f65bb8 100644
+--- a/src/adapter.c
++++ b/src/adapter.c
+@@ -8327,6 +8327,9 @@ static void disconnected_callback(uint16_t index, uint16_t length,
+ 		return;
+ 	}
+ 
++	if (ev->addr.type != BDADDR_BREDR)
++		return;
++
+ 	if (length < sizeof(*ev))
+ 		reason = MGMT_DEV_DISCONN_UNKNOWN;
+ 	else
+@@ -8357,6 +8360,9 @@ static void connected_callback(uint16_t index, uint16_t length,
+ 		return;
+ 	}
+ 
++	if (ev->addr.type != BDADDR_BREDR)
++		return;
++
+ 	ba2str(&ev->addr.bdaddr, addr);
+ 
+ 	DBG("hci%u device %s connected eir_len %u", index, addr, eir_len);
+@@ -8369,6 +8375,8 @@ static void connected_callback(uint16_t index, uint16_t length,
+ 		return;
+ 	}
+ 
++
++
+ 	memset(&eir_data, 0, sizeof(eir_data));
+ 	if (eir_len > 0)
+ 		eir_parse(&eir_data, ev->eir, eir_len);
+diff --git a/src/device.c b/src/device.c
+index 69f98e4..67aa5df 100644
+--- a/src/device.c
++++ b/src/device.c
+@@ -2861,8 +2861,8 @@ void device_remove_connection(struct btd_device *device, uint8_t bdaddr_type)
+ 							"Paired");
+ 	}
+ 
+-	if (device->bredr_state.connected || device->le_state.connected)
+-		return;
++	// if (device->bredr_state.connected || device->le_state.connected)
++	// 	return;
+ 
+ 	g_dbus_emit_property_changed(dbus_conn, device->path,
+ 						DEVICE_INTERFACE, "Connected");
+-- 
+2.29.0
+

@@ -1,0 +1,22 @@
+menu "ARCH Support"
+
+config  RISCV
+	bool "Support riscv ISA processors"
+	default y
+
+if RISCV
+source "ekernel/arch/riscv/Kconfig"
+endif
+
+config PANIC_CLI
+	bool "Enter CLI When Crash"
+	default y
+
+if PANIC_CLI
+config PANIC_CLI_PWD
+	bool "Panic CLI Password"
+	default y
+
+endif
+
+endmenu

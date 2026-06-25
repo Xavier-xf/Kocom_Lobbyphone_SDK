@@ -1,0 +1,17 @@
+*.o
+*.o.d
+*.a
+*.so
+demo/bin/
+demo/sample_Camera/sample_Camera
+demo/sample_EncodeResolutionChange/sample_EncodeResolutionChange
+demo/sample_RecorderCallbackOut/sample_RecorderCallbackOut
+demo/sample_RecorderSegment/sample_RecorderSegment
+demo/sample_RecordLowDelay/sample_RecordLowDelay
+demo/sample_RecordMultiStream/sample_RecordMultiStream
+demo/sample_RecordSwitchFileNormal/sample_RecordSwitchFileNormal
+demo/sample_ThumbRetriever/sample_ThumbRetriever
+demo/sample_OSD/sample_OSD
+demo/sample_Player/sample_Player
+demo/sample_CDREmergency/sample_CDREmergency
+demo/sample_USBCamera/sample_USBCamera

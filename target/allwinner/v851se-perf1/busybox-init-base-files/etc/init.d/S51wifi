@@ -1,0 +1,46 @@
+#!/bin/sh
+#
+# Load mpp modules....
+#
+
+MODULES_DIR="/lib/modules/`uname -r`"
+
+start() {
+    printf "Load wifi modules\n"
+    insmod $MODULES_DIR/cfg80211.ko
+    insmod $MODULES_DIR/sunxi-wlan.ko
+    insmod $MODULES_DIR/sunxi-bluetooth.ko
+    insmod $MODULES_DIR/wireless_switch.ko
+    insmod $MODULES_DIR/xradio_mac.ko
+    insmod $MODULES_DIR/xradio_core.ko
+    insmod $MODULES_DIR/xradio_wlan.ko
+
+}
+
+stop() {
+    printf "Unload wifi modules\n"
+    rmmod $MODULES_DIR/xradio_wlan.ko
+    rmmod $MODULES_DIR/xradio_core.ko
+    rmmod $MODULES_DIR/xradio_mac.ko
+    rmmod $MODULES_DIR/sunxi-bluetooth.ko
+    rmmod $MODULES_DIR/sunxi-wlan.ko
+    rmmod $MODULES_DIR/cfg80211.ko
+}
+
+case "$1" in
+    start)
+	start
+	;;
+    stop)
+	stop
+	;;
+    restart|reload)
+	stop
+	start
+	;;
+  *)
+	echo "Usage: $0 {start|stop|restart}"
+	exit 1
+esac
+
+exit $?

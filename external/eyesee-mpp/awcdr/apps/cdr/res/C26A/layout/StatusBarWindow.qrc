@@ -1,0 +1,26 @@
+<RCC>
+    <qresource prefix="/usr/share/minigui/res/images">
+        <file>rec_hint.png</file>
+		<file>status_top_voice_off.png</file>
+		<file>status_top_voice_on.png</file>
+		<file>status_top_lock.png</file>
+		<file>status_top_unlock.png</file>
+		<file>status_top_sd_on.png</file>	
+		<file>status_top_sd_off.png</file>
+		<file>status_top_wifi_on.png</file>	
+		<file>status_top_wifi_off.png</file>
+		<file>status_top_voice_ctrl_on.png</file>
+		<file>status_top_voice_ctrl_off.png</file>
+		<file>status_top_GPS_level_0.png</file>
+		<file>status_top_GPS_level_1.png</file>
+		<file>status_top_GPS_level_2.png</file>
+		<file>status_top_GPS_level_3.png</file>
+		<file>status_top_battery_level_0.png</file>
+		<file>status_top_battery_level_1.png</file>
+		<file>status_top_battery_level_2.png</file>
+		<file>status_top_battery_level_3.png</file>
+		<file>status_top_charging.png</file>
+		<file>status_top_connect_pc.png</file>
+		<file>status_top_app_connect.png</file>		
+    </qresource>
+</RCC>

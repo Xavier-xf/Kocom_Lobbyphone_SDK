@@ -1,0 +1,6 @@
+# UAPI Header export list
+
+header-y += rt-media/
+header-y += vcodec_base.h
+header-y += vencoder_base.h
+header-y += vin_video_base.h

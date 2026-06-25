@@ -1,0 +1,52 @@
+From dba4dd99116f301f22fbc46f9fdb7a4e4b236aca Mon Sep 17 00:00:00 2001
+From: chenshite <chenshite@allwinnertech.com>
+Date: Thu, 26 May 2022 20:14:55 +0800
+Subject: [PATCH] wpa:add try set wep key function
+
+Signed-off-by: chenshite <chenshite@allwinnertech.com>
+---
+ wpa_supplicant/events.c         | 13 ++++++++++++-
+ wpa_supplicant/wpa_supplicant.c |  3 +--
+ 2 files changed, 13 insertions(+), 3 deletions(-)
+
+diff --git a/wpa_supplicant/events.c b/wpa_supplicant/events.c
+index e3b1f83..9ed458b 100644
+--- a/wpa_supplicant/events.c
++++ b/wpa_supplicant/events.c
+@@ -3228,7 +3228,18 @@ static void wpa_supplicant_event_assoc(struct wpa_supplicant *wpa_s,
+ 	    wpa_s->current_ssid &&
+ 	    (wpa_s->drv_flags & WPA_DRIVER_FLAGS_SET_KEYS_AFTER_ASSOC_DONE)) {
+ 		/* Set static WEP keys again */
+-		wpa_set_wep_keys(wpa_s, wpa_s->current_ssid);
++		int ret = 0, times = 1;
++		for(;times < 5; times++) {
++			printf("******set wep keys,try %d time*******\n",times);
++			ret = wpa_set_wep_keys(wpa_s, wpa_s->current_ssid);
++			if(ret < 0) {
++				printf("******set wep keys failed*******\n");
++				usleep(1000000);
++			} else {
++				printf("******set wep keys success*******\n");
++				break;
++			}
++		}
+ 	}
+ #endif /* CONFIG_WEP */
+ 
+diff --git a/wpa_supplicant/wpa_supplicant.c b/wpa_supplicant/wpa_supplicant.c
+index ea11e7c..a19e5da 100644
+--- a/wpa_supplicant/wpa_supplicant.c
++++ b/wpa_supplicant/wpa_supplicant.c
+@@ -188,8 +188,7 @@ int wpa_set_wep_keys(struct wpa_supplicant *wpa_s, struct wpa_ssid *ssid)
+ 		if (ssid->wep_key_len[i] == 0)
+ 			continue;
+ 
+-		set = 1;
+-		wpa_drv_set_key(wpa_s, WPA_ALG_WEP, NULL,
++		set = wpa_drv_set_key(wpa_s, WPA_ALG_WEP, NULL,
+ 				i, i == ssid->wep_tx_keyidx, NULL, 0,
+ 				ssid->wep_key[i], ssid->wep_key_len[i],
+ 				i == ssid->wep_tx_keyidx ?
+-- 
+2.29.0
+

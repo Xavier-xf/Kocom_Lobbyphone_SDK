@@ -1,0 +1,42 @@
+#!/bin/bash
+
+if [ ! -d /mnt/extsd/resnet50_vpm_run ]; then
+	echo =================error====================
+	echo no such dirctory[resnet50_vpm_run]!!!
+	echo =================error====================
+	exit
+fi
+
+if [ ! -f /mnt/extsd/resnet50_vpm_run/vpm_run ]; then
+	echo =================error====================
+	echo no such file[vpm_fun]!!!
+	echo =================error====================
+	exit
+fi
+
+if [ ! -f /mnt/extsd/resnet50_vpm_run/resnet50.nb ]; then
+	echo =================error====================
+	echo no such file[resnet50.nb]!!!
+	echo =================error====================
+	exit
+fi
+
+if [ ! -f /mnt/extsd/resnet50_vpm_run/input_0.dat ]; then
+	echo =================error====================
+	echo no such file[input_0.dat]!!!
+	echo =================error====================
+	exit
+fi
+
+if [ ! -f /mnt/extsd/resnet50_vpm_run/sample.txt ]; then
+	echo =================error====================
+	echo no such file[sample.txt]!!!
+	echo =================error====================
+	exit
+fi
+
+echo =================info====================
+echo start vpm testcase
+echo =================info====================
+sleep 3
+/mnt/extsd/resnet50_vpm_run/vpm_run /mnt/extsd/resnet50_vpm_run/sample.txt -1

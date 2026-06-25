@@ -1,0 +1,224 @@
+/*
+ * =====================================================================================
+ *
+ * Copyright (c) 2008-2016 Allwinner Technology Co. Ltd.
+ * All rights reserved.
+ *
+ *       Filename:  ve_interface.h
+ *
+ *    Description:
+ *
+ *        Version:  1.0
+ *        Created:  2020-04-15
+ *       Revision:  none
+ *       Compiler:  gcc
+ *
+ *         Author:  jilinglin, <jilinglin@allwinnertech.com>
+ *        Company:
+ *
+ * =====================================================================================
+ */
+
+#ifndef VE_INTERFACE_H
+#define VE_INTERFACE_H
+
+#include "cdc_log.h"
+#include "ve_common.h"
+enum VE_TYPE {
+	VE_OPS_TYPE_NORMAL = 0,
+	VE_TYPE_GOOGLE,
+};
+
+enum CODEC_TYPE {
+	VIDEO_CODEC_H264,
+	VIDEO_CODEC_VP8,
+	VIDEO_CODEC_AVS,
+	VIDEO_CODEC_WMV3,
+	VIDEO_CODEC_RX,
+	VIDEO_CODEC_H265,
+	VIDEO_CODEC_MJPEG,
+	VIDEO_CODEC_AVS2,
+	VIDEO_CODEC_VP9,
+};
+
+enum RESET_VE_MODE {
+	RESET_VE_NORMAL  = 0,
+	RESET_VE_SPECIAL = 1, // for dtmb, we should reset ve not reset decode
+};
+
+typedef struct CsiOnlineRelatedInfo {
+	unsigned int csi_frame_start_cnt;
+	unsigned int csi_frame_done_cnt;
+	unsigned int csi_cur_frame_addr;
+	unsigned int csi_pre_frame_addr;
+	unsigned int csi_line_start_cnt;
+	unsigned int csi_line_done_cnt;
+} CsiOnlineRelatedInfo;
+
+typedef struct ve_channel_proc_info {
+	unsigned char *base_info_data;
+	unsigned int   base_info_size;
+	unsigned char *advance_info_data;
+	unsigned int   advance_info_size;
+	unsigned int   channel_id;
+} ve_channel_proc_info;
+
+typedef struct page_buf_info {
+    /* total_size = header + data + ext */
+    unsigned int header_size;
+    unsigned int data_size;
+    unsigned int ext_size;
+    unsigned int phy_addr_0;
+    unsigned int phy_addr_1;
+    unsigned int buf_id;
+    unsigned int vir_addr_0;
+    unsigned int vir_addr_1;
+} page_buf_info;
+
+struct ve_interface {
+	void (*reset)(struct ve_interface *);
+	int (*wait_interrupt)(struct ve_interface *);
+
+	void (*set_ddr_mode)(struct ve_interface *, int);
+	int (*set_ve_freq)(struct ve_interface *, int);
+	void *(*get_reg_group_addr)(struct ve_interface *, int);
+	unsigned long long (*get_ic_version)(struct ve_interface *);
+	unsigned int (*get_phy_offset)(struct ve_interface *);
+
+	void (*enable_ve)(struct ve_interface *);
+	void (*disable_ve)(struct ve_interface *);
+
+	void (*lock)(struct ve_interface *);
+	void (*unlock)(struct ve_interface *);
+
+	void (*force_reset)(struct ve_interface *);
+	int (*get_csi_online_info)(struct ve_interface *, CsiOnlineRelatedInfo *);
+	int (*set_lbc_parameter)(struct ve_interface *, unsigned int, unsigned int);
+	int (*set_proc_info)(void *, struct ve_channel_proc_info *);
+	int (*stop_proc_info)(struct ve_interface *, unsigned char);
+
+    int  (*allocPageBuf)(struct ve_interface *, struct page_buf_info *);
+    int  (*recPageBuf)(struct ve_interface *, struct page_buf_info *);
+    int  (*freePageBuf)(struct ve_interface *, struct page_buf_info *);
+
+    void (*setOnlineChannel)(struct ve_interface *, unsigned int);
+	void *(*get_reg_markid_addr)(struct ve_interface *);
+	int (*setMode)(struct ve_interface *, enum VE_MODE);
+};
+
+static inline void ve_reset(struct ve_interface *p)
+{
+	p->reset(p);
+}
+static inline void ve_force_reset(struct ve_interface *p)
+{
+	p->reset(p);
+}
+static inline int ve_get_csi_online_info(struct ve_interface *p, CsiOnlineRelatedInfo *csi_online_info)
+{
+	return p->get_csi_online_info(p, csi_online_info);
+}
+static inline void ve_set_lbc_parameter(struct ve_interface *p, unsigned int lbc_mode, unsigned int w)
+{
+	p->set_lbc_parameter(p, lbc_mode, w);
+}
+
+static inline int ve_set_proc_info(struct ve_interface *p, struct ve_channel_proc_info *ch_proc_info)
+{
+	return p->set_proc_info(p, ch_proc_info);
+}
+
+static inline int ve_stop_proc_info(struct ve_interface *p, unsigned char cChannelNum)
+{
+	return p->stop_proc_info(p, cChannelNum);
+}
+
+static inline void ve_lock(struct ve_interface *p)
+{
+	p->lock(p);
+}
+static inline void ve_unlock(struct ve_interface *p)
+{
+	p->unlock(p);
+}
+
+static inline int ve_wait_interrupt(struct ve_interface *p)
+{
+	return p->wait_interrupt(p);
+}
+
+static inline void *ve_get_group_reg_addr(struct ve_interface *p, int id)
+{
+	if (p && p->get_reg_group_addr)
+		return p->get_reg_group_addr(p, id);
+	loge("fatal error! p %p", p);
+	return NULL;
+}
+
+static inline void *ve_get_markid_reg_addr(struct ve_interface *p)
+{
+	if (p && p->get_reg_markid_addr)
+		return p->get_reg_markid_addr(p);
+	loge("fatal error! p %p", p);
+	return NULL;
+}
+
+static inline void ve_set_ddr_mode(struct ve_interface *p, int ddr_mode)
+{
+	p->set_ddr_mode(p, ddr_mode);
+}
+
+static inline unsigned long long ve_get_ic_version(struct ve_interface *p)
+{
+	return p->get_ic_version(p);
+}
+
+static inline unsigned int ve_get_phy_offset(struct ve_interface *p)
+{
+	return p->get_phy_offset(p);
+}
+
+static inline void ve_enable_ve(struct ve_interface *p)
+{
+	p->enable_ve(p);
+}
+
+static inline void ve_disable_ve(struct ve_interface *p)
+{
+	p->disable_ve(p);
+}
+
+static inline int ve_set_ve_freq(struct ve_interface *p, int freq)
+{
+	return p->set_ve_freq(p, freq);
+}
+
+static inline unsigned int CdcVeAllocPageBuf(struct ve_interface *p, struct page_buf_info *page_buf)
+{
+    return p->allocPageBuf(p, page_buf);
+}
+
+static inline unsigned int CdcVeRecPageBuf(struct ve_interface *p, struct page_buf_info *page_buf)
+{
+    return p->recPageBuf(p, page_buf);
+}
+
+static inline unsigned int CdcVeFreePageBuf(struct ve_interface *p, struct page_buf_info *page_buf)
+{
+    return p->freePageBuf(p, page_buf);
+}
+
+static inline void CdcVeSetOnlineChannel(struct ve_interface *p, unsigned int bIsOnlineChannel)
+{
+    return p->setOnlineChannel(p, bIsOnlineChannel);
+}
+
+static inline int CdcVeMode(struct ve_interface *p, enum VE_MODE mode)
+{
+	return p->setMode(p, mode);
+}
+
+struct ve_interface *ve_create(int type, VeConfig config);
+void ve_destory(int type, struct ve_interface *p);
+
+#endif

@@ -1,0 +1,174 @@
+<demo>
+<!--
+* xml文件默认路径是/etc目录，用户可以自己修改路径，方法如下
+1、在tmp目录下创建文件ve_param_file_path.conf，eg. touch ve_param_file_path.conf
+2、把xml路径和前缀输入到conf文件中，如 echo /tmp/ve_param_ > ve_param_file_path.conf，注意不需要输入完整的文件名，只输入前缀，这样是为了能够匹配到所有通道
+这样就可以改变所有通道匹配的路径了。
+
+* 文件名中的后缀_0\_4等，快起和非快起区别如下：
+1、在长电方案即非快起，表示第几通道，只是简单的増序id(非vipp num)，如ve_param_4.xml表示要设置第四个通道的参数；
+2、在快起方案，表示第几通道，同时也代表了是哪个vipp num，如ve_param_4.xml表示第4通道，同时也表示vipp_num是4。
+
+* ve_param_0.xml中的tag
+1、tag在static范围内的内容，在编码初始化的时候才会进行解析，会把用户设置的参数修改为xml中的内容
+2、tag在dynamic范围内的内容，在编码过程中进行解析，解析完后会自动给文件名添加后缀_used，表示已经解析过了，eg: ve_param_0_used.xml
+   如需再次设置请重新push xml文件到/etc目录或者自己修改的目录中，或者直接mv ve_param_0_used.xml ve_param_0.xml后再次使用
+   
+* 每个tag都有一个status属性
+1、on，表示要设置该tag中的参数
+2、off，表示不需要设置
+
+* 如何在代码中自己添加参数设置，请搜索关键函数check_ve_param_file去查看例子，简单概述如下：
+1、xml文件添加tag和键值对；
+2、代码start_parse_tag函数中添加相应的tag字符串比对，并把值赋值给对应添加的参数成员，同时设置参数到编码器中。
+具体请查看对应函数代码
+
+ch_id：仅用于标识
+-->  
+    <static ch_id = "0">
+
+        <frame_rate status = "off" value = "30"/>
+        <bit_rate status = "off" value = "6291456"/>
+        <vbv_size status = "off" value = "8388608"/>
+
+        <pixel_format status = "off"
+            pxl_format     = "VENC_PIXEL_YUV420SP"
+            out_pxl_format = "1"
+        />
+
+        <resolution status = "off"
+            src_width  = "1920"
+            src_height = "1080"
+            dst_width  = "1920"
+            dst_height = "1080"
+        />
+
+        <qp_range status = "off"
+            i_qp_min     = "25"
+            i_qp_max     = "45"
+            p_qp_min     = "25"
+            p_qp_max     = "45"
+            qp_init      = "25"
+            mb_qp_limit  = "0"
+        />
+    </static>
+
+    <dynamic ch_id = "0">
+        <frame_rate status = "off" value = "30"/>
+        <bit_rate status = "off" value = "6291456"/>
+
+        <force_conf_win status = "off"
+            u8_en_force_conf              = "0"
+            u32_lefet_offset              = "0"
+            u32_right_offset              = "0"
+            u32_top_offset                = "0"
+            u32_bottom_offset             = "0"
+        />
+        
+        <s32_jpeg_quality status = "off" value = "80"/>
+        <qp_range status = "off"
+            i_qp_min     = "25"
+            i_qp_max     = "45"
+            p_qp_min     = "25"
+            p_qp_max     = "45"
+            qp_init      = "25"
+            mb_qp_limit  = "0"
+        />
+        
+        <fix_qp status = "off"
+            u8_en_fix_qp = "0"
+            s32_fix_i_qp = "35"
+            s32_fix_p_qp = "35"
+        />
+        
+        <target_bits_clip status = "off"
+            u8_bits_clip_dis_default      = "1"
+            s32_bits_clip_mode            = "0"
+            f32_bits_clip_coef_0_0      = "-0.5"
+            f32_bits_clip_coef_0_1      = "-0.2"
+            f32_bits_clip_coef_1_0      = "-0.3"
+            f32_bits_clip_coef_1_1      = "-0.1"
+            f32_bits_clip_coef_2_0      = "-0.3"
+            f32_bits_clip_coef_2_1      = "0"
+            f32_bits_clip_coef_3_0      = "-0.5"
+            f32_bits_clip_coef_3_1      = "0.1"
+            f32_bits_clip_coef_4_0      = "0.4"
+            f32_bits_clip_coef_4_1      = "0.7"
+            u8_bits_clip_gop_ratio_en     = "0"
+            f32_bits_clip_gop_ratio_th_0 = "0.58"
+            f32_bits_clip_gop_ratio_th_1 = "0.64"
+            f32_bits_clip_gop_ratio_th_2 = "1.25"
+        />
+        
+        <vbr_param status = "off"
+            s32_quality                   = "10"
+            s32_p_bits_coef               = "10"
+            s32_i_bits_coef               = "10"
+        />
+        
+        <d2d_filter status = "off"
+            u8_d2d_en                     = "1"
+            u8_d2d_strength_uv            = "127"
+            u8_d2d_strength_y             = "127"
+            u8_d2d_th_uv                  = "11"
+            u8_d2d_th_y                   = "7"
+        />
+        
+        <d3d_filter status = "off"
+            u8_d3d_en                     = "1"
+            u8_d3d_max_mv_th              = "5"
+            u8_d3d_max_mad_th             = "48"
+            u8_d3d_pix_level_en           = "0"
+            u8_d3d_pix_diff_th            = "6"
+            u8_d3d_smooth_en              = "0"
+            u8_min_coef                   = "0"
+            u8_max_coef                   = "16"
+        />
+        
+        <region_d3d status = "off"
+            u8_en_region_d3d              = "1"
+            u8_dis_default_para           = "0"
+            s32_result_num                = "3"
+            s32_hor_region_num            = "2"
+            s32_ver_region_num            = "2"
+            s32_hor_expand_num            = "2"
+            s32_ver_expand_num            = "2"
+            u8_motion_coef_3             = "16"
+            u8_motion_coef_2             = "15"
+            u8_motion_coef_1             = "14"
+            u8_motion_coef_0             = "13"
+            f32_zero_mv_rate_th_2        = "98"
+            f32_zero_mv_rate_th_1        = "96"
+            f32_zero_mv_rate_th_0        = "95"
+            u8_static_coef_2             = "7"
+            u8_static_coef_1             = "6"
+            u8_static_coef_0             = "5"
+            u8_chroma_offset              = "1"
+            s32_lv_weak_th_8             = "1100"
+            s32_lv_weak_th_7             = "900"
+            s32_lv_weak_th_6             = "700"
+            s32_lv_weak_th_5             = "500"
+            s32_lv_weak_th_4             = "400"
+            s32_lv_weak_th_3             = "300"
+            s32_lv_weak_th_2             = "200"
+            s32_lv_weak_th_1             = "100"
+            s32_lv_weak_th_0             = "0"
+        />
+        
+        <mb_rc_level status = "off" value = "0"/>
+        <f32_weak_text_th status = "off" value = "40"/>
+        <h264_video_timing status = "off"
+            u8_timing_info_present_flag   = "0"
+            u8_fixed_frame_rate_flag      = "1"
+            u32_num_units_in_tick         = "1000"
+            u32_time_scale                = "0"
+        />
+        <h265_video_timing status = "off"
+            u32_timing_info_present_flag  = "0"
+            u32_h265_num_units_in_tick    = "1000"
+            u32_h265_time_scale           = "0"
+            num_ticks_poc_diff_one_minus1 = "1000"
+        />
+        
+    </dynamic>
+</demo>

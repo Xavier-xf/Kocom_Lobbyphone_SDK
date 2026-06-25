@@ -1,0 +1,2045 @@
+Archive member included to satisfy reference by file (symbol)
+
+/home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/tools/toolchain/gcc-linaro-7.2.1-2017.11-x86_64_arm-linux-gnueabi/bin/../lib/gcc/arm-linux-gnueabi/7.2.1/libgcc.a(_udivsi3.o)
+                              /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a (__aeabi_uidiv)
+/home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/tools/toolchain/gcc-linaro-7.2.1-2017.11-x86_64_arm-linux-gnueabi/bin/../lib/gcc/arm-linux-gnueabi/7.2.1/libgcc.a(_divsi3.o)
+                              /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a (__aeabi_idiv)
+/home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/tools/toolchain/gcc-linaro-7.2.1-2017.11-x86_64_arm-linux-gnueabi/bin/../lib/gcc/arm-linux-gnueabi/7.2.1/libgcc.a(_arm_addsubsf3.o)
+                              /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a (__aeabi_fsub)
+/home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/tools/toolchain/gcc-linaro-7.2.1-2017.11-x86_64_arm-linux-gnueabi/bin/../lib/gcc/arm-linux-gnueabi/7.2.1/libgcc.a(_arm_muldivsf3.o)
+                              /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a (__aeabi_fmul)
+/home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/tools/toolchain/gcc-linaro-7.2.1-2017.11-x86_64_arm-linux-gnueabi/bin/../lib/gcc/arm-linux-gnueabi/7.2.1/libgcc.a(_arm_fixsfsi.o)
+                              /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a (__aeabi_f2iz)
+/home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/tools/toolchain/gcc-linaro-7.2.1-2017.11-x86_64_arm-linux-gnueabi/bin/../lib/gcc/arm-linux-gnueabi/7.2.1/libgcc.a(_dvmd_lnx.o)
+                              /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/tools/toolchain/gcc-linaro-7.2.1-2017.11-x86_64_arm-linux-gnueabi/bin/../lib/gcc/arm-linux-gnueabi/7.2.1/libgcc.a(_udivsi3.o) (__aeabi_idiv0)
+
+Discarded input sections
+
+ .text.timer_get_us
+                0x0000000000000000       0x14 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.__msdelay
+                0x0000000000000000        0x4 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.timer_init
+                0x0000000000000000        0x4 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.sdelay   0x0000000000000000        0x6 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.timer_exit
+                0x0000000000000000        0x2 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.enable_smp
+                0x0000000000000000        0xe /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.neon_enable
+                0x0000000000000000       0x20 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.invalidate_dcache_range
+                0x0000000000000000        0x2 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.flush_dcache_range
+                0x0000000000000000        0x2 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.__jump_kernel
+                0x0000000000000000       0x5c /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.boot0_jump_kernel
+                0x0000000000000000        0xa /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.optee_jump_kernel
+                0x0000000000000000        0x4 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.get_group_bit_offset
+                0x0000000000000000       0x22 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.sunxi_assert_arisc
+                0x0000000000000000       0x2c /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.sunxi_deassert_arisc
+                0x0000000000000000       0x2c /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.sunxi_clock_init_key
+                0x0000000000000000       0x28 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.sunxi_clock_exit_key
+                0x0000000000000000       0x14 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.sunxi_clock_init_gpadc
+                0x0000000000000000       0x3c /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.strcpy   0x0000000000000000       0x10 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.strncpy  0x0000000000000000       0x18 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.strcat   0x0000000000000000       0x1e /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.strncat  0x0000000000000000       0x28 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.strcmp   0x0000000000000000       0x16 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.strchr   0x0000000000000000       0x18 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.strrchr  0x0000000000000000       0x20 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.strnlen  0x0000000000000000       0x18 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.strspn   0x0000000000000000       0x20 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.memcmp   0x0000000000000000       0x1e /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.memmove  0x0000000000000000       0x28 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.memscan  0x0000000000000000       0x16 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.strstr   0x0000000000000000       0x40 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.memchr   0x0000000000000000       0x1c /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.simple_strtoul
+                0x0000000000000000       0x84 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.vprintf  0x0000000000000000       0x1c /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.sunxi_get_printf_debug_mode
+                0x0000000000000000        0xc /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.puts     0x0000000000000000        0xc /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.snprintf
+                0x0000000000000000       0x2c /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.print_sys_tick
+                0x0000000000000000       0x18 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.verify_addsum_for_kernel
+                0x0000000000000000       0x60 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.set_uboot_func_mask
+                0x0000000000000000       0x10 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.__aeabi_unwind_cpp_pr0
+                0x0000000000000000        0x2 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.realloc  0x0000000000000000       0x6c /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.sunxi_get_lw32_addr
+                0x0000000000000000        0x2 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.u8_to_string_hex
+                0x0000000000000000       0x1c /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.ndump    0x0000000000000000       0x6c /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.__assert_fail
+                0x0000000000000000       0x10 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.LzmaDec_InitDicAndState
+                0x0000000000000000       0x1c /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.LzmaDec_DecodeToBuf
+                0x0000000000000000       0x9c /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.LzmaDec_Free
+                0x0000000000000000       0x18 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.LzmaDec_Allocate
+                0x0000000000000000       0x5c /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.elf_find_segment
+                0x0000000000000000       0x3c /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.elf_find_segment_offset
+                0x0000000000000000       0x10 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.elf_find_segment_addr
+                0x0000000000000000        0xc /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.exist_uboot_jmp_cardproduct
+                0x0000000000000000       0x28 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.android_image_get_ramdisk
+                0x0000000000000000       0x24 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.sunxi_mem_info
+                0x0000000000000000       0x2c /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.load_bimage
+                0x0000000000000000      0x12c /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.load_uimage
+                0x0000000000000000       0x40 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.sunxi_switch_rootfs
+                0x0000000000000000      0x12c /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.get_switch_flag
+                0x0000000000000000        0x4 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.get_switch_kernel_flag
+                0x0000000000000000       0x14 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.get_switch_rootfs_flag
+                0x0000000000000000       0x14 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.sunxi_update_fdt_para_for_kernel
+                0x0000000000000000       0x4c /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.fdt_enable_node
+                0x0000000000000000       0x3c /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.sunxi_gpio_set_cfgbank
+                0x0000000000000000       0x22 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.sunxi_gpio_set_cfgpin
+                0x0000000000000000       0x28 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.sunxi_gpio_get_cfgbank
+                0x0000000000000000       0x16 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.sunxi_gpio_get_cfgpin
+                0x0000000000000000       0x20 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.sunxi_gpio_set_drv
+                0x0000000000000000       0x48 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.sunxi_gpio_set_pull
+                0x0000000000000000       0x48 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.io_pow_mode_disable
+                0x0000000000000000       0x1c /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.io_get_volt_val
+                0x0000000000000000       0x20 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.io_set_pow_mode
+                0x0000000000000000       0x58 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.sunxi_io_set_pow_mode_on_actual_val
+                0x0000000000000000       0x1a /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.sunxi_io_set_pow_mode_to_default
+                0x0000000000000000        0x6 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.rtc_clear_data
+                0x0000000000000000        0x4 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.rtc_set_data
+                0x0000000000000000       0x1e /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.rtc_set_fel_flag
+                0x0000000000000000       0x20 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.rtc_set_hash_entry
+                0x0000000000000000       0x1c /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.spi_mem_exec_op
+                0x0000000000000000       0xe0 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.axp_i2c_write
+                0x0000000000000000       0x16 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.axp_i2c_read
+                0x0000000000000000       0x12 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.i2c_exit
+                0x0000000000000000       0xa4 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.pmic_bus_setbits
+                0x0000000000000000       0x28 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.pmic_bus_clrbits
+                0x0000000000000000       0x2a /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.get_boot_dram_training_enable_flag
+                0x0000000000000000        0x8 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.get_boot_dram_update_flag
+                0x0000000000000000        0x6 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.get_pmu_exist
+                0x0000000000000000       0x14 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.dram_udelay
+                0x0000000000000000        0x4 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.sid_read_ldoB_cal
+                0x0000000000000000       0x38 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.dram_vol_set
+                0x0000000000000000       0x34 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.paraconfig
+                0x0000000000000000        0xc /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.bit_delay_compensation
+                0x0000000000000000       0x78 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.ccm_get_sscg
+                0x0000000000000000       0x84 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.mctl_init
+                0x0000000000000000       0x94 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text._get_pll4_periph1_clk
+                0x0000000000000000        0x8 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text._Getpll6Clk
+                0x0000000000000000        0x6 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text._close_ndfc_clk_v1
+                0x0000000000000000       0x30 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text._close_ndfc_ahb_gate_and_reset_v1
+                0x0000000000000000       0x3c /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.NAND_SetClk
+                0x0000000000000000       0xc0 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.NAND_GetClk
+                0x0000000000000000       0x7c /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.NAND_EnRbInt
+                0x0000000000000000        0x2 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.NAND_ClearRbInt
+                0x0000000000000000        0x2 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.NAND_WaitRbReady
+                0x0000000000000000        0x4 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.NAND_RbInterrupt
+                0x0000000000000000        0x2 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.NFC_InitDDRParam
+                0x0000000000000000       0x10 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.NFC_Is_Toggle_Interface
+                0x0000000000000000       0x1c /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text._vender_pre_condition
+                0x0000000000000000        0x4 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text._add_cmd_list
+                0x0000000000000000       0x22 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text._cal_real_chip
+                0x0000000000000000        0x4 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text._cal_real_rb
+                0x0000000000000000        0x4 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text._random_seed_init
+                0x0000000000000000        0x2 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text._cal_random_seed
+                0x0000000000000000       0x10 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.PHY_SimpleRead_1K
+                0x0000000000000000        0x6 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.Spic_set_master_slave
+                0x0000000000000000       0x18 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.Spic_set_transmit_LSB
+                0x0000000000000000       0x18 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.Spic_set_ss_level
+                0x0000000000000000       0x18 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.Spic_set_sample_mode
+                0x0000000000000000       0x18 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.Spic_set_sample
+                0x0000000000000000       0x18 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.Spic_set_trans_mode
+                0x0000000000000000       0x18 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.Spic_set_wait_clk
+                0x0000000000000000       0x10 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.Getpll6Clk
+                0x0000000000000000        0x8 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.SPINAND_GetClk
+                0x0000000000000000       0x28 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.SPINAND_Malloc
+                0x0000000000000000        0x6 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.get_power_source
+                0x0000000000000000        0x6 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.set_power_reset
+                0x0000000000000000        0x6 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.probe_power_key
+                0x0000000000000000       0x18 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.set_ddr4_2v5_voltage
+                0x0000000000000000        0x6 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.set_sys_voltage_ext
+                0x0000000000000000        0x6 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.set_pll_voltage
+                0x0000000000000000       0x18 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.set_efuse_voltage
+                0x0000000000000000       0x18 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.axp_reg_read
+                0x0000000000000000       0x18 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.axp_reg_write
+                0x0000000000000000       0x18 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.axp2101_probe_power_key
+                0x0000000000000000       0x40 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.axp2101_set_efuse_voltage
+                0x0000000000000000       0x10 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.axp2101_set_pll_voltage
+                0x0000000000000000       0x10 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.axp2101_reg_read
+                0x0000000000000000        0xa /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.axp2101_reg_write
+                0x0000000000000000        0xa /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.sid_read_work_status
+                0x0000000000000000       0x10 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.sid_sram_read
+                0x0000000000000000        0xc /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.sid_read_key
+                0x0000000000000000       0x50 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.sid_program_key
+                0x0000000000000000       0x68 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.sid_read_rotpk
+                0x0000000000000000       0x18 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.sid_set_security_mode
+                0x0000000000000000       0x2c /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.sid_disable_jtag
+                0x0000000000000000       0x10 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.sid_probe_security_mode
+                0x0000000000000000       0x10 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.sunxi_disable_sd_boot
+                0x0000000000000000       0x3c /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.sunxi_flashmap_bootparam_start
+                0x0000000000000000       0x24 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.sunxi_flashmap_toc1_start
+                0x0000000000000000       0x24 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.sunxi_flashmap_toc1_bak_start
+                0x0000000000000000       0x20 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text.sunxi_flashmap_info_dump
+                0x0000000000000000        0x4 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .text          0x0000000000000000        0x0 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/nboot/main/boot0_main.o
+ .data          0x0000000000000000        0x0 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/nboot/main/boot0_main.o
+ .bss           0x0000000000000000        0x0 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/nboot/main/boot0_main.o
+ .data          0x0000000000000000        0x0 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/tools/toolchain/gcc-linaro-7.2.1-2017.11-x86_64_arm-linux-gnueabi/bin/../lib/gcc/arm-linux-gnueabi/7.2.1/libgcc.a(_udivsi3.o)
+ .bss           0x0000000000000000        0x0 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/tools/toolchain/gcc-linaro-7.2.1-2017.11-x86_64_arm-linux-gnueabi/bin/../lib/gcc/arm-linux-gnueabi/7.2.1/libgcc.a(_udivsi3.o)
+ .data          0x0000000000000000        0x0 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/tools/toolchain/gcc-linaro-7.2.1-2017.11-x86_64_arm-linux-gnueabi/bin/../lib/gcc/arm-linux-gnueabi/7.2.1/libgcc.a(_divsi3.o)
+ .bss           0x0000000000000000        0x0 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/tools/toolchain/gcc-linaro-7.2.1-2017.11-x86_64_arm-linux-gnueabi/bin/../lib/gcc/arm-linux-gnueabi/7.2.1/libgcc.a(_divsi3.o)
+ .text          0x0000000000000000      0x21c /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/tools/toolchain/gcc-linaro-7.2.1-2017.11-x86_64_arm-linux-gnueabi/bin/../lib/gcc/arm-linux-gnueabi/7.2.1/libgcc.a(_arm_addsubsf3.o)
+ .data          0x0000000000000000        0x0 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/tools/toolchain/gcc-linaro-7.2.1-2017.11-x86_64_arm-linux-gnueabi/bin/../lib/gcc/arm-linux-gnueabi/7.2.1/libgcc.a(_arm_addsubsf3.o)
+ .bss           0x0000000000000000        0x0 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/tools/toolchain/gcc-linaro-7.2.1-2017.11-x86_64_arm-linux-gnueabi/bin/../lib/gcc/arm-linux-gnueabi/7.2.1/libgcc.a(_arm_addsubsf3.o)
+ .note.GNU-stack
+                0x0000000000000000        0x0 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/tools/toolchain/gcc-linaro-7.2.1-2017.11-x86_64_arm-linux-gnueabi/bin/../lib/gcc/arm-linux-gnueabi/7.2.1/libgcc.a(_arm_addsubsf3.o)
+ .debug_line    0x0000000000000000      0x1a2 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/tools/toolchain/gcc-linaro-7.2.1-2017.11-x86_64_arm-linux-gnueabi/bin/../lib/gcc/arm-linux-gnueabi/7.2.1/libgcc.a(_arm_addsubsf3.o)
+ .debug_info    0x0000000000000000      0x1cc /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/tools/toolchain/gcc-linaro-7.2.1-2017.11-x86_64_arm-linux-gnueabi/bin/../lib/gcc/arm-linux-gnueabi/7.2.1/libgcc.a(_arm_addsubsf3.o)
+ .debug_abbrev  0x0000000000000000       0x14 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/tools/toolchain/gcc-linaro-7.2.1-2017.11-x86_64_arm-linux-gnueabi/bin/../lib/gcc/arm-linux-gnueabi/7.2.1/libgcc.a(_arm_addsubsf3.o)
+ .debug_aranges
+                0x0000000000000000       0x20 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/tools/toolchain/gcc-linaro-7.2.1-2017.11-x86_64_arm-linux-gnueabi/bin/../lib/gcc/arm-linux-gnueabi/7.2.1/libgcc.a(_arm_addsubsf3.o)
+ .debug_frame   0x0000000000000000       0x4c /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/tools/toolchain/gcc-linaro-7.2.1-2017.11-x86_64_arm-linux-gnueabi/bin/../lib/gcc/arm-linux-gnueabi/7.2.1/libgcc.a(_arm_addsubsf3.o)
+ .ARM.attributes
+                0x0000000000000000       0x1f /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/tools/toolchain/gcc-linaro-7.2.1-2017.11-x86_64_arm-linux-gnueabi/bin/../lib/gcc/arm-linux-gnueabi/7.2.1/libgcc.a(_arm_addsubsf3.o)
+ .text          0x0000000000000000      0x2a0 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/tools/toolchain/gcc-linaro-7.2.1-2017.11-x86_64_arm-linux-gnueabi/bin/../lib/gcc/arm-linux-gnueabi/7.2.1/libgcc.a(_arm_muldivsf3.o)
+ .data          0x0000000000000000        0x0 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/tools/toolchain/gcc-linaro-7.2.1-2017.11-x86_64_arm-linux-gnueabi/bin/../lib/gcc/arm-linux-gnueabi/7.2.1/libgcc.a(_arm_muldivsf3.o)
+ .bss           0x0000000000000000        0x0 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/tools/toolchain/gcc-linaro-7.2.1-2017.11-x86_64_arm-linux-gnueabi/bin/../lib/gcc/arm-linux-gnueabi/7.2.1/libgcc.a(_arm_muldivsf3.o)
+ .note.GNU-stack
+                0x0000000000000000        0x0 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/tools/toolchain/gcc-linaro-7.2.1-2017.11-x86_64_arm-linux-gnueabi/bin/../lib/gcc/arm-linux-gnueabi/7.2.1/libgcc.a(_arm_muldivsf3.o)
+ .debug_line    0x0000000000000000      0x1c5 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/tools/toolchain/gcc-linaro-7.2.1-2017.11-x86_64_arm-linux-gnueabi/bin/../lib/gcc/arm-linux-gnueabi/7.2.1/libgcc.a(_arm_muldivsf3.o)
+ .debug_info    0x0000000000000000      0x1cc /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/tools/toolchain/gcc-linaro-7.2.1-2017.11-x86_64_arm-linux-gnueabi/bin/../lib/gcc/arm-linux-gnueabi/7.2.1/libgcc.a(_arm_muldivsf3.o)
+ .debug_abbrev  0x0000000000000000       0x14 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/tools/toolchain/gcc-linaro-7.2.1-2017.11-x86_64_arm-linux-gnueabi/bin/../lib/gcc/arm-linux-gnueabi/7.2.1/libgcc.a(_arm_muldivsf3.o)
+ .debug_aranges
+                0x0000000000000000       0x20 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/tools/toolchain/gcc-linaro-7.2.1-2017.11-x86_64_arm-linux-gnueabi/bin/../lib/gcc/arm-linux-gnueabi/7.2.1/libgcc.a(_arm_muldivsf3.o)
+ .debug_frame   0x0000000000000000       0x38 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/tools/toolchain/gcc-linaro-7.2.1-2017.11-x86_64_arm-linux-gnueabi/bin/../lib/gcc/arm-linux-gnueabi/7.2.1/libgcc.a(_arm_muldivsf3.o)
+ .ARM.attributes
+                0x0000000000000000       0x1f /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/tools/toolchain/gcc-linaro-7.2.1-2017.11-x86_64_arm-linux-gnueabi/bin/../lib/gcc/arm-linux-gnueabi/7.2.1/libgcc.a(_arm_muldivsf3.o)
+ .text          0x0000000000000000       0x4c /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/tools/toolchain/gcc-linaro-7.2.1-2017.11-x86_64_arm-linux-gnueabi/bin/../lib/gcc/arm-linux-gnueabi/7.2.1/libgcc.a(_arm_fixsfsi.o)
+ .data          0x0000000000000000        0x0 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/tools/toolchain/gcc-linaro-7.2.1-2017.11-x86_64_arm-linux-gnueabi/bin/../lib/gcc/arm-linux-gnueabi/7.2.1/libgcc.a(_arm_fixsfsi.o)
+ .bss           0x0000000000000000        0x0 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/tools/toolchain/gcc-linaro-7.2.1-2017.11-x86_64_arm-linux-gnueabi/bin/../lib/gcc/arm-linux-gnueabi/7.2.1/libgcc.a(_arm_fixsfsi.o)
+ .note.GNU-stack
+                0x0000000000000000        0x0 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/tools/toolchain/gcc-linaro-7.2.1-2017.11-x86_64_arm-linux-gnueabi/bin/../lib/gcc/arm-linux-gnueabi/7.2.1/libgcc.a(_arm_fixsfsi.o)
+ .debug_line    0x0000000000000000      0x102 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/tools/toolchain/gcc-linaro-7.2.1-2017.11-x86_64_arm-linux-gnueabi/bin/../lib/gcc/arm-linux-gnueabi/7.2.1/libgcc.a(_arm_fixsfsi.o)
+ .debug_info    0x0000000000000000      0x1cc /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/tools/toolchain/gcc-linaro-7.2.1-2017.11-x86_64_arm-linux-gnueabi/bin/../lib/gcc/arm-linux-gnueabi/7.2.1/libgcc.a(_arm_fixsfsi.o)
+ .debug_abbrev  0x0000000000000000       0x14 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/tools/toolchain/gcc-linaro-7.2.1-2017.11-x86_64_arm-linux-gnueabi/bin/../lib/gcc/arm-linux-gnueabi/7.2.1/libgcc.a(_arm_fixsfsi.o)
+ .debug_aranges
+                0x0000000000000000       0x20 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/tools/toolchain/gcc-linaro-7.2.1-2017.11-x86_64_arm-linux-gnueabi/bin/../lib/gcc/arm-linux-gnueabi/7.2.1/libgcc.a(_arm_fixsfsi.o)
+ .debug_frame   0x0000000000000000       0x24 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/tools/toolchain/gcc-linaro-7.2.1-2017.11-x86_64_arm-linux-gnueabi/bin/../lib/gcc/arm-linux-gnueabi/7.2.1/libgcc.a(_arm_fixsfsi.o)
+ .ARM.attributes
+                0x0000000000000000       0x1f /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/tools/toolchain/gcc-linaro-7.2.1-2017.11-x86_64_arm-linux-gnueabi/bin/../lib/gcc/arm-linux-gnueabi/7.2.1/libgcc.a(_arm_fixsfsi.o)
+ .data          0x0000000000000000        0x0 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/tools/toolchain/gcc-linaro-7.2.1-2017.11-x86_64_arm-linux-gnueabi/bin/../lib/gcc/arm-linux-gnueabi/7.2.1/libgcc.a(_dvmd_lnx.o)
+ .bss           0x0000000000000000        0x0 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/tools/toolchain/gcc-linaro-7.2.1-2017.11-x86_64_arm-linux-gnueabi/bin/../lib/gcc/arm-linux-gnueabi/7.2.1/libgcc.a(_dvmd_lnx.o)
+ .text          0x0000000000000000        0x0 main/boot0_head.o
+ .data          0x0000000000000000        0x0 main/boot0_head.o
+ .bss           0x0000000000000000        0x0 main/boot0_head.o
+ .data          0x0000000000000000        0x0 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/arch/arm/cpu/armv7/boot0_entry.o
+ .bss           0x0000000000000000        0x0 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/arch/arm/cpu/armv7/boot0_entry.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+LOAD /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/nboot/main/boot0_main.o
+LOAD /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/tools/toolchain/gcc-linaro-7.2.1-2017.11-x86_64_arm-linux-gnueabi/bin/../lib/gcc/arm-linux-gnueabi/7.2.1/libgcc.a
+                0x0000000000020000                . = 0x20000
+                0x0000000000020000                . = ALIGN (0x4)
+
+.head           0x0000000000020000      0x3c8
+ main/boot0_head.o(.rodata)
+ .rodata        0x0000000000020000      0x3c8 main/boot0_head.o
+                0x0000000000020000                BT0_head
+                0x00000000000203c8                . = ALIGN (0x1)
+
+.text           0x00000000000203c8      0xacc
+ /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/arch/arm/cpu/armv7/boot0_entry.o(.text)
+ .text          0x00000000000203c8       0x64 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/arch/arm/cpu/armv7/boot0_entry.o
+                0x00000000000203c8                _start
+ *(.text)
+ .text          0x000000000002042c      0x530 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x000000000002042c                __v7_flush_dcache_all
+                0x00000000000204c8                v7_flush_dcache_all
+                0x00000000000204f4                memset0
+                0x00000000000205ac                memcpy0
+ *fill*         0x000000000002095c        0x4 
+ .text          0x0000000000020960      0x278 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/tools/toolchain/gcc-linaro-7.2.1-2017.11-x86_64_arm-linux-gnueabi/bin/../lib/gcc/arm-linux-gnueabi/7.2.1/libgcc.a(_udivsi3.o)
+                0x0000000000020960                __udivsi3
+                0x0000000000020960                __aeabi_uidiv
+                0x0000000000020bbc                __aeabi_uidivmod
+ .text          0x0000000000020bd8      0x2b0 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/tools/toolchain/gcc-linaro-7.2.1-2017.11-x86_64_arm-linux-gnueabi/bin/../lib/gcc/arm-linux-gnueabi/7.2.1/libgcc.a(_divsi3.o)
+                0x0000000000020bd8                __aeabi_idiv
+                0x0000000000020bd8                __divsi3
+                0x0000000000020e6c                __aeabi_idivmod
+ .text          0x0000000000020e88        0xc /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/tools/toolchain/gcc-linaro-7.2.1-2017.11-x86_64_arm-linux-gnueabi/bin/../lib/gcc/arm-linux-gnueabi/7.2.1/libgcc.a(_dvmd_lnx.o)
+                0x0000000000020e88                __aeabi_ldiv0
+                0x0000000000020e88                __aeabi_idiv0
+
+.glue_7         0x0000000000020e94        0x0
+ .glue_7        0x0000000000020e94        0x0 linker stubs
+
+.glue_7t        0x0000000000020e94        0x0
+ .glue_7t       0x0000000000020e94        0x0 linker stubs
+
+.vfp11_veneer   0x0000000000020e94        0x0
+ .vfp11_veneer  0x0000000000020e94        0x0 linker stubs
+
+.v4_bx          0x0000000000020e94        0x0
+ .v4_bx         0x0000000000020e94        0x0 linker stubs
+
+.text.get_sys_ticks
+                0x0000000000020e94       0x14
+ .text.get_sys_ticks
+                0x0000000000020e94       0x14 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000020e94                get_sys_ticks
+
+.text.udelay    0x0000000000020ea8       0x24
+ .text.udelay   0x0000000000020ea8       0x24 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000020ea8                udelay
+
+.text.mdelay    0x0000000000020ecc        0xa
+ .text.mdelay   0x0000000000020ecc        0xa /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000020ecc                mdelay
+
+.text.__usdelay
+                0x0000000000020ed6        0x4
+ .text.__usdelay
+                0x0000000000020ed6        0x4 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000020ed6                __usdelay
+
+.text.mmu_enable
+                0x0000000000020eda       0x8c
+ .text.mmu_enable
+                0x0000000000020eda       0x8c /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000020eda                mmu_enable
+
+.text.mmu_disable
+                0x0000000000020f66       0x30
+ .text.mmu_disable
+                0x0000000000020f66       0x30 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000020f66                mmu_disable
+
+.text.data_sync_barrier
+                0x0000000000020f96        0xa
+ .text.data_sync_barrier
+                0x0000000000020f96        0xa /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000020f96                data_sync_barrier
+
+.text.boot0_jmp
+                0x0000000000020fa0        0xc
+ .text.boot0_jmp
+                0x0000000000020fa0        0xc /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000020fa0                boot0_jmp
+
+.text.boot0_jmp_optee
+                0x0000000000020fac        0xc
+ .text.boot0_jmp_optee
+                0x0000000000020fac        0xc /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000020fac                boot0_jmp_optee
+
+.text.boot0_jmp_monitor
+                0x0000000000020fb8        0x2
+ .text.boot0_jmp_monitor
+                0x0000000000020fb8        0x2 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000020fb8                boot0_jmp_monitor
+
+.text.boot0_jmp_opensbi
+                0x0000000000020fba        0x4
+ .text.boot0_jmp_opensbi
+                0x0000000000020fba        0x4 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000020fba                boot0_jmp_opensbi
+
+.text.sunxi_board_init
+                0x0000000000020fc0       0x78
+ .text.sunxi_board_init
+                0x0000000000020fc0       0x78 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000020fc0                sunxi_board_init
+
+.text.audioldo_check
+                0x0000000000021038       0x84
+ .text.audioldo_check
+                0x0000000000021038       0x84 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000021038                audioldo_check
+
+.text.sunxi_board_late_init
+                0x00000000000210bc        0xe
+ .text.sunxi_board_late_init
+                0x00000000000210bc        0xe /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x00000000000210bc                sunxi_board_late_init
+
+.text.sunxi_board_exit
+                0x00000000000210ca        0x4
+ .text.sunxi_board_exit
+                0x00000000000210ca        0x4 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x00000000000210ca                sunxi_board_exit
+
+.text.boot_e907
+                0x00000000000210ce       0x20
+ .text.boot_e907
+                0x00000000000210ce       0x20 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x00000000000210ce                boot_e907
+
+.text.sunxi_board_pll_init
+                0x00000000000210f0      0x170
+ .text.sunxi_board_pll_init
+                0x00000000000210f0      0x170 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x00000000000210f0                sunxi_board_pll_init
+
+.text.sunxi_board_clock_reset
+                0x0000000000021260       0x2c
+ .text.sunxi_board_clock_reset
+                0x0000000000021260       0x2c /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000021260                sunxi_board_clock_reset
+
+.text.sunxi_clock_init_uart
+                0x000000000002128c       0x30
+ .text.sunxi_clock_init_uart
+                0x000000000002128c       0x30 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x000000000002128c                sunxi_clock_init_uart
+
+.text.sunxi_e907_clock_init
+                0x00000000000212bc       0x34
+ .text.sunxi_e907_clock_init
+                0x00000000000212bc       0x34 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x00000000000212bc                sunxi_e907_clock_init
+
+.text.sunxi_e907_clock_reset
+                0x00000000000212f0       0x20
+ .text.sunxi_e907_clock_reset
+                0x00000000000212f0       0x20 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x00000000000212f0                sunxi_e907_clock_reset
+
+.text.strncmp   0x0000000000021310       0x22
+ .text.strncmp  0x0000000000021310       0x22 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000021310                strncmp
+
+.text.strlen    0x0000000000021332       0x10
+ .text.strlen   0x0000000000021332       0x10 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000021332                strlen
+
+.text.memset    0x0000000000021344        0xc
+ .text.memset   0x0000000000021344        0xc /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000021344                memset
+
+.text.memcpy    0x0000000000021350        0xc
+ .text.memcpy   0x0000000000021350        0xc /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000021350                memcpy
+
+.text.putc_outstr
+                0x000000000002135c        0xa
+ .text.putc_outstr
+                0x000000000002135c        0xa /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+
+.text.putc_normal
+                0x0000000000021366        0x6
+ .text.putc_normal
+                0x0000000000021366        0x6 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+
+.text.div_out   0x000000000002136c       0x32
+ .text.div_out  0x000000000002136c       0x32 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+
+.text._vprintf  0x00000000000213a0      0x1e4
+ .text._vprintf
+                0x00000000000213a0      0x1e4 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+
+.text.sunxi_set_printf_debug_mode
+                0x0000000000021584       0x28
+ .text.sunxi_set_printf_debug_mode
+                0x0000000000021584       0x28 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000021584                sunxi_set_printf_debug_mode
+
+.text.sunxi_get_debug_mode_for_uboot
+                0x00000000000215ac       0x18
+ .text.sunxi_get_debug_mode_for_uboot
+                0x00000000000215ac       0x18 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x00000000000215ac                sunxi_get_debug_mode_for_uboot
+
+.text.sprintf   0x00000000000215c4       0x2c
+ .text.sprintf  0x00000000000215c4       0x2c /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x00000000000215c4                sprintf
+
+.text.printf    0x00000000000215f0       0x54
+ .text.printf   0x00000000000215f0       0x54 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x00000000000215f0                printf
+
+.text.pr_emerg  0x0000000000021644       0x24
+ .text.pr_emerg
+                0x0000000000021644       0x24 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000021644                pr_emerg
+
+.text.verify_addsum
+                0x0000000000021668       0x60
+ .text.verify_addsum
+                0x0000000000021668       0x60 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000021668                verify_addsum
+
+.text.g_mod     0x00000000000216c8       0x22
+ .text.g_mod    0x00000000000216c8       0x22 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x00000000000216c8                g_mod
+
+.text.get_page_buf
+                0x00000000000216ec        0x8
+ .text.get_page_buf
+                0x00000000000216ec        0x8 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x00000000000216ec                get_page_buf
+
+.text.get_uart_input
+                0x00000000000216f4       0x24
+ .text.get_uart_input
+                0x00000000000216f4       0x24 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x00000000000216f4                get_uart_input
+
+.text.get_uboot_func_mask
+                0x0000000000021718        0xc
+ .text.get_uboot_func_mask
+                0x0000000000021718        0xc /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000021718                get_uboot_func_mask
+
+.text.sunxi_board_init_early
+                0x0000000000021724        0x4
+ .text.sunxi_board_init_early
+                0x0000000000021724        0x4 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000021724                sunxi_board_init_early
+
+.text.raise     0x0000000000021728        0x4
+ .text.raise    0x0000000000021728        0x4 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000021728                raise
+
+.text.malloc_init
+                0x000000000002172c       0x1c
+ .text.malloc_init
+                0x000000000002172c       0x1c /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x000000000002172c                malloc_init
+
+.text.malloc    0x0000000000021748       0x4c
+ .text.malloc   0x0000000000021748       0x4c /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000021748                malloc
+
+.text.free      0x0000000000021794       0x20
+ .text.free     0x0000000000021794       0x20 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000021794                free
+
+.text.sunxi_get_iobase
+                0x00000000000217b4        0x2
+ .text.sunxi_get_iobase
+                0x00000000000217b4        0x2 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x00000000000217b4                sunxi_get_iobase
+
+.text.LzmaDec_WriteRem
+                0x00000000000217b6       0x68
+ .text.LzmaDec_WriteRem
+                0x00000000000217b6       0x68 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+
+.text.LzmaDec_DecodeReal2
+                0x000000000002181e      0x9e4
+ .text.LzmaDec_DecodeReal2
+                0x000000000002181e      0x9e4 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+
+.text.LzmaDec_TryDummy
+                0x0000000000022202      0x3fa
+ .text.LzmaDec_TryDummy
+                0x0000000000022202      0x3fa /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+
+.text.LzmaDec_Init
+                0x00000000000225fc       0x14
+ .text.LzmaDec_Init
+                0x00000000000225fc       0x14 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x00000000000225fc                LzmaDec_Init
+
+.text.LzmaDec_DecodeToDic
+                0x0000000000022610      0x216
+ .text.LzmaDec_DecodeToDic
+                0x0000000000022610      0x216 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000022610                LzmaDec_DecodeToDic
+
+.text.LzmaDec_FreeProbs
+                0x0000000000022826       0x12
+ .text.LzmaDec_FreeProbs
+                0x0000000000022826       0x12 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000022826                LzmaDec_FreeProbs
+
+.text.LzmaDec_AllocateProbs2
+                0x0000000000022838       0x3e
+ .text.LzmaDec_AllocateProbs2
+                0x0000000000022838       0x3e /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+
+.text.LzmaProps_Decode
+                0x0000000000022878       0x68
+ .text.LzmaProps_Decode
+                0x0000000000022878       0x68 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000022878                LzmaProps_Decode
+
+.text.LzmaDec_AllocateProbs
+                0x00000000000228e0       0x30
+ .text.LzmaDec_AllocateProbs
+                0x00000000000228e0       0x30 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x00000000000228e0                LzmaDec_AllocateProbs
+
+.text.LzmaDecode
+                0x0000000000022910       0x80
+ .text.LzmaDecode
+                0x0000000000022910       0x80 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000022910                LzmaDecode
+
+.text.SzFree    0x0000000000022990        0x6
+ .text.SzFree   0x0000000000022990        0x6 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+
+.text.SzAlloc   0x0000000000022996        0x6
+ .text.SzAlloc  0x0000000000022996        0x6 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+
+.text.lzmaBuffToBuffDecompress
+                0x000000000002299c      0x118
+ .text.lzmaBuffToBuffDecompress
+                0x000000000002299c      0x118 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x000000000002299c                lzmaBuffToBuffDecompress
+
+.text.elf_get_entry_addr
+                0x0000000000022ab4        0x4
+ .text.elf_get_entry_addr
+                0x0000000000022ab4        0x4 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000022ab4                elf_get_entry_addr
+
+.text.load_elf_image
+                0x0000000000022ab8       0x4e
+ .text.load_elf_image
+                0x0000000000022ab8       0x4e /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000022ab8                load_elf_image
+
+.text.sunxi_serial_init
+                0x0000000000022b08       0x54
+ .text.sunxi_serial_init
+                0x0000000000022b08       0x54 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000022b08                sunxi_serial_init
+
+.text.sunxi_serial_putc
+                0x0000000000022b5c       0x14
+ .text.sunxi_serial_putc
+                0x0000000000022b5c       0x14 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000022b5c                sunxi_serial_putc
+
+.text.sunxi_serial_getc
+                0x0000000000022b70       0x14
+ .text.sunxi_serial_getc
+                0x0000000000022b70       0x14 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000022b70                sunxi_serial_getc
+
+.text.sunxi_serial_tstc
+                0x0000000000022b84       0x10
+ .text.sunxi_serial_tstc
+                0x0000000000022b84       0x10 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000022b84                sunxi_serial_tstc
+
+.text.boot_set_gpio
+                0x0000000000022b94      0x318
+ .text.boot_set_gpio
+                0x0000000000022b94      0x318 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000022b94                boot_set_gpio
+
+.text.rtc_write_data
+                0x0000000000022eac       0x18
+ .text.rtc_write_data
+                0x0000000000022eac       0x18 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000022eac                rtc_write_data
+
+.text.rtc_read_data
+                0x0000000000022ec4       0x14
+ .text.rtc_read_data
+                0x0000000000022ec4       0x14 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000022ec4                rtc_read_data
+
+.text._rtc_clear_data
+                0x0000000000022ed8       0x1c
+ .text._rtc_clear_data
+                0x0000000000022ed8       0x1c /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+
+.text.rtc_probe_fel_flag
+                0x0000000000022ef4       0x78
+ .text.rtc_probe_fel_flag
+                0x0000000000022ef4       0x78 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000022ef4                rtc_probe_fel_flag
+
+.text.rtc_clear_fel_flag
+                0x0000000000022f6c        0x6
+ .text.rtc_clear_fel_flag
+                0x0000000000022f6c        0x6 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000022f6c                rtc_clear_fel_flag
+
+.text.i2c_sendbyteaddr
+                0x0000000000022f74       0x38
+ .text.i2c_sendbyteaddr
+                0x0000000000022f74       0x38 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+
+.text.i2c_sendstart
+                0x0000000000022fac       0x40
+ .text.i2c_sendstart
+                0x0000000000022fac       0x40 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+
+.text.i2c_sendslaveaddr
+                0x0000000000022fec       0x4c
+ .text.i2c_sendslaveaddr
+                0x0000000000022fec       0x4c /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+
+.text.i2c_stop  0x0000000000023038       0x4c
+ .text.i2c_stop
+                0x0000000000023038       0x4c /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+
+.text.i2c_read  0x0000000000023084      0x15c
+ .text.i2c_read
+                0x0000000000023084      0x15c /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000023084                i2c_read
+
+.text.i2c_write
+                0x00000000000231e0       0xb0
+ .text.i2c_write
+                0x00000000000231e0       0xb0 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x00000000000231e0                i2c_write
+
+.text.i2c_set_clock
+                0x0000000000023290       0xdc
+ .text.i2c_set_clock
+                0x0000000000023290       0xdc /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000023290                i2c_set_clock
+
+.text.get_i2c_gpio
+                0x000000000002336c       0x28
+ .text.get_i2c_gpio
+                0x000000000002336c       0x28 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x000000000002336c                get_i2c_gpio
+
+.text.i2c_init  0x0000000000023394       0x98
+ .text.i2c_init
+                0x0000000000023394       0x98 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000023394                i2c_init
+
+.text.i2c_init_cpus
+                0x000000000002342c       0x40
+ .text.i2c_init_cpus
+                0x000000000002342c       0x40 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x000000000002342c                i2c_init_cpus
+
+.text.pmic_bus_init
+                0x000000000002346c        0xa
+ .text.pmic_bus_init
+                0x000000000002346c        0xa /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x000000000002346c                pmic_bus_init
+
+.text.pmic_bus_read
+                0x0000000000023476       0x14
+ .text.pmic_bus_read
+                0x0000000000023476       0x14 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000023476                pmic_bus_read
+
+.text.pmic_bus_write
+                0x000000000002348a       0x18
+ .text.pmic_bus_write
+                0x000000000002348a       0x18 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x000000000002348a                pmic_bus_write
+
+.text.super_standby_mode
+                0x00000000000234a4       0x10
+ .text.super_standby_mode
+                0x00000000000234a4       0x10 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x00000000000234a4                super_standby_mode
+
+.text.handler_super_standby
+                0x00000000000234b4       0xf2
+ .text.handler_super_standby
+                0x00000000000234b4       0xf2 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x00000000000234b4                handler_super_standby
+
+.text.wdt_stop  0x00000000000235a8       0x18
+ .text.wdt_stop
+                0x00000000000235a8       0x18 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x00000000000235a8                wdt_stop
+
+.text.wdt_start
+                0x00000000000235c0       0x38
+ .text.wdt_start
+                0x00000000000235c0       0x38 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x00000000000235c0                wdt_start
+
+.text.check_hardware_info
+                0x00000000000235f8      0x12c
+ .text.check_hardware_info
+                0x00000000000235f8      0x12c /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x00000000000235f8                check_hardware_info
+
+.text.crc_16    0x0000000000023724       0x22
+ .text.crc_16   0x0000000000023724       0x22 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000023724                crc_16
+
+.text.disturb_coding
+                0x0000000000023746       0x12
+ .text.disturb_coding
+                0x0000000000023746       0x12 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000023746                disturb_coding
+
+.text.id_judge_fun
+                0x0000000000023758       0x94
+ .text.id_judge_fun
+                0x0000000000023758       0x94 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000023758                id_judge_fun
+
+.text.set_ddr_voltage
+                0x00000000000237ec       0x2c
+ .text.set_ddr_voltage
+                0x00000000000237ec       0x2c /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x00000000000237f0                set_ddr_voltage
+
+.text.memcpy_self
+                0x0000000000023818       0x18
+ .text.memcpy_self
+                0x0000000000023818       0x18 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000023818                memcpy_self
+
+.text.dram_vol_set_pmu
+                0x0000000000023830       0x70
+ .text.dram_vol_set_pmu
+                0x0000000000023830       0x70 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000023830                dram_vol_set_pmu
+
+.text.dram_enable_all_master
+                0x00000000000238a0       0x20
+ .text.dram_enable_all_master
+                0x00000000000238a0       0x20 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x00000000000238a0                dram_enable_all_master
+
+.text.dram_disable_all_master
+                0x00000000000238c0       0x1c
+ .text.dram_disable_all_master
+                0x00000000000238c0       0x1c /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x00000000000238c0                dram_disable_all_master
+
+.text.eye_delay_compensation
+                0x00000000000238dc      0x14c
+ .text.eye_delay_compensation
+                0x00000000000238dc      0x14c /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x00000000000238dc                eye_delay_compensation
+
+.text.set_master_priority_pad
+                0x0000000000023a28       0x3c
+ .text.set_master_priority_pad
+                0x0000000000023a28       0x3c /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000023a28                set_master_priority_pad
+
+.text.auto_cal_timing
+                0x0000000000023a64       0x24
+ .text.auto_cal_timing
+                0x0000000000023a64       0x24 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000023a64                auto_cal_timing
+
+.text.auto_set_timing_para
+                0x0000000000023a88      0x788
+ .text.auto_set_timing_para
+                0x0000000000023a88      0x788 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000023a88                auto_set_timing_para
+
+.text.ccm_set_pll_sscg
+                0x0000000000024210       0x64
+ .text.ccm_set_pll_sscg
+                0x0000000000024210       0x64 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000024210                ccm_set_pll_sscg
+
+.text.ccm_set_pll_ddr_clk
+                0x0000000000024274       0x90
+ .text.ccm_set_pll_ddr_clk
+                0x0000000000024274       0x90 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000024274                ccm_set_pll_ddr_clk
+
+.text.mctl_sys_init
+                0x0000000000024304       0xa0
+ .text.mctl_sys_init
+                0x0000000000024304       0xa0 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000024304                mctl_sys_init
+
+.text.mctl_com_init
+                0x00000000000243a4      0x158
+ .text.mctl_com_init
+                0x00000000000243a4      0x158 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x00000000000243a4                mctl_com_init
+
+.text.mctl_phy_ac_remapping
+                0x00000000000244fc      0x178
+ .text.mctl_phy_ac_remapping
+                0x00000000000244fc      0x178 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x00000000000244fc                mctl_phy_ac_remapping
+
+.text.mctl_channel_init
+                0x0000000000024674      0x364
+ .text.mctl_channel_init
+                0x0000000000024674      0x364 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000024674                mctl_channel_init
+
+.text.DRAMC_get_dram_size
+                0x00000000000249d8       0x54
+ .text.DRAMC_get_dram_size
+                0x00000000000249d8       0x54 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x00000000000249d8                DRAMC_get_dram_size
+
+.text.dqs_gate_detect
+                0x0000000000024a2c       0xa4
+ .text.dqs_gate_detect
+                0x0000000000024a2c       0xa4 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000024a2c                dqs_gate_detect
+
+.text.dramc_simple_wr_test
+                0x0000000000024ad0       0x94
+ .text.dramc_simple_wr_test
+                0x0000000000024ad0       0x94 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000024ad0                dramc_simple_wr_test
+
+.text.mctl_vrefzq_init
+                0x0000000000024b64       0x30
+ .text.mctl_vrefzq_init
+                0x0000000000024b64       0x30 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000024b64                mctl_vrefzq_init
+
+.text.mctl_core_init
+                0x0000000000024b94       0x2a
+ .text.mctl_core_init
+                0x0000000000024b94       0x2a /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000024b94                mctl_core_init
+
+.text.auto_scan_dram_size
+                0x0000000000024bc0      0x284
+ .text.auto_scan_dram_size
+                0x0000000000024bc0      0x284 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000024bc0                auto_scan_dram_size
+
+.text.auto_scan_dram_rank_width
+                0x0000000000024e44       0x4c
+ .text.auto_scan_dram_rank_width
+                0x0000000000024e44       0x4c /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000024e44                auto_scan_dram_rank_width
+
+.text.auto_scan_dram_config
+                0x0000000000024e90       0x4c
+ .text.auto_scan_dram_config
+                0x0000000000024e90       0x4c /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000024e90                auto_scan_dram_config
+
+.text.init_DRAM
+                0x0000000000024edc      0x264
+ .text.init_DRAM
+                0x0000000000024edc      0x264 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000024edc                init_DRAM
+
+.text.crc_16_sd
+                0x0000000000025140       0x22
+ .text.crc_16_sd
+                0x0000000000025140       0x22 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000025140                crc_16_sd
+
+.text.disturb_coding_sd
+                0x0000000000025162       0x12
+ .text.disturb_coding_sd
+                0x0000000000025162       0x12 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000025162                disturb_coding_sd
+
+.text.bond_id_check
+                0x0000000000025174       0x46
+ .text.bond_id_check
+                0x0000000000025174       0x46 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000025174                bond_id_check
+
+.text.load_and_check_in_one_blk
+                0x00000000000251bc       0x54
+ .text.load_and_check_in_one_blk
+                0x00000000000251bc       0x54 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x00000000000251bc                load_and_check_in_one_blk
+
+.text.load_in_many_blks
+                0x0000000000025210       0x9c
+ .text.load_in_many_blks
+                0x0000000000025210       0x9c /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000025210                load_in_many_blks
+
+.text.NF_open   0x00000000000252ac       0x6c
+ .text.NF_open  0x00000000000252ac       0x6c /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x00000000000252ac                NF_open
+
+.text.NF_close  0x0000000000025318       0x12
+ .text.NF_close
+                0x0000000000025318       0x12 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000025318                NF_close
+
+.text.NF_read   0x000000000002532c       0xfc
+ .text.NF_read  0x000000000002532c       0xfc /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x000000000002532c                NF_read
+
+.text.NF_read_status
+                0x0000000000025428       0x3c
+ .text.NF_read_status
+                0x0000000000025428       0x3c /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000025428                NF_read_status
+
+.text.load_uboot_in_one_block_judge
+                0x0000000000025464       0x3c
+ .text.load_uboot_in_one_block_judge
+                0x0000000000025464       0x3c /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000025464                load_uboot_in_one_block_judge
+
+.text.NFB_GetFlashInfo
+                0x00000000000254a0       0x2c
+ .text.NFB_GetFlashInfo
+                0x00000000000254a0       0x2c /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x00000000000254a0                NFB_GetFlashInfo
+
+.text.NFB_PhyInit
+                0x00000000000254cc       0x44
+ .text.NFB_PhyInit
+                0x00000000000254cc       0x44 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x00000000000254cc                NFB_PhyInit
+
+.text.NFB_PhyExit
+                0x0000000000025510        0xa
+ .text.NFB_PhyExit
+                0x0000000000025510        0xa /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000025510                NFB_PhyExit
+
+.text.NFB_PhyRead
+                0x000000000002551a        0x4
+ .text.NFB_PhyRead
+                0x000000000002551a        0x4 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x000000000002551a                NFB_PhyRead
+
+.text._Get_PLL_PERI
+                0x0000000000025520       0x30
+ .text._Get_PLL_PERI
+                0x0000000000025520       0x30 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000025520                _Get_PLL_PERI
+
+.text._change_ndfc_clk_v1
+                0x0000000000025550      0x1f4
+ .text._change_ndfc_clk_v1
+                0x0000000000025550      0x1f4 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000025550                _change_ndfc_clk_v1
+
+.text._open_ndfc_ahb_gate_and_reset_v1
+                0x0000000000025744       0x3c
+ .text._open_ndfc_ahb_gate_and_reset_v1
+                0x0000000000025744       0x3c /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000025744                _open_ndfc_ahb_gate_and_reset_v1
+
+.text.NAND_ClkRequest
+                0x0000000000025780       0x44
+ .text.NAND_ClkRequest
+                0x0000000000025780       0x44 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000025780                NAND_ClkRequest
+
+.text.NAND_ClkRelease
+                0x00000000000257c4        0x2
+ .text.NAND_ClkRelease
+                0x00000000000257c4        0x2 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x00000000000257c4                NAND_ClkRelease
+
+.text.NAND_PIORequest
+                0x00000000000257c8       0x4c
+ .text.NAND_PIORequest
+                0x00000000000257c8       0x4c /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x00000000000257c8                NAND_PIORequest
+
+.text.NAND_PIORelease
+                0x0000000000025814        0x2
+ .text.NAND_PIORelease
+                0x0000000000025814        0x2 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000025814                NAND_PIORelease
+
+.text.NAND_WaitDmaFinish
+                0x0000000000025816        0x4
+ .text.NAND_WaitDmaFinish
+                0x0000000000025816        0x4 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000025816                NAND_WaitDmaFinish
+
+.text.NAND_Malloc
+                0x000000000002581a        0x6
+ .text.NAND_Malloc
+                0x000000000002581a        0x6 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x000000000002581a                NAND_Malloc
+
+.text.NAND_Free
+                0x0000000000025820        0x2
+ .text.NAND_Free
+                0x0000000000025820        0x2 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000025820                NAND_Free
+
+.text.NAND_IORemap
+                0x0000000000025822        0x2
+ .text.NAND_IORemap
+                0x0000000000025822        0x2 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000025822                NAND_IORemap
+
+.text._InitNandPhyInfo
+                0x0000000000025824       0x80
+ .text._InitNandPhyInfo
+                0x0000000000025824       0x80 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000025824                _InitNandPhyInfo
+
+.text._CheckNandID
+                0x00000000000258a4       0x2c
+ .text._CheckNandID
+                0x00000000000258a4       0x2c /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x00000000000258a4                _CheckNandID
+
+.text.BOOT_AnalyzeNandSystem
+                0x00000000000258d0       0xd8
+ .text.BOOT_AnalyzeNandSystem
+                0x00000000000258d0       0xd8 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x00000000000258d0                BOOT_AnalyzeNandSystem
+
+.text.NAND_Getlsbpage_type
+                0x00000000000259a8       0x10
+ .text.NAND_Getlsbpage_type
+                0x00000000000259a8       0x10 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x00000000000259a8                NAND_Getlsbpage_type
+
+.text.Nand_Is_lsb_page
+                0x00000000000259b8       0xd8
+ .text.Nand_Is_lsb_page
+                0x00000000000259b8       0xd8 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x00000000000259b8                Nand_Is_lsb_page
+
+.text.NAND_GetLsbblksize
+                0x0000000000025a90       0x38
+ .text.NAND_GetLsbblksize
+                0x0000000000025a90       0x38 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000025a90                NAND_GetLsbblksize
+
+.text.nfc_repeat_mode_enable
+                0x0000000000025ac8       0x28
+ .text.nfc_repeat_mode_enable
+                0x0000000000025ac8       0x28 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000025ac8                nfc_repeat_mode_enable
+
+.text.nfc_repeat_mode_disable
+                0x0000000000025af0       0x28
+ .text.nfc_repeat_mode_disable
+                0x0000000000025af0       0x28 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000025af0                nfc_repeat_mode_disable
+
+.text._wait_cmdfifo_free
+                0x0000000000025b18       0x2c
+ .text._wait_cmdfifo_free
+                0x0000000000025b18       0x2c /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000025b18                _wait_cmdfifo_free
+
+.text._wait_cmd_finish
+                0x0000000000025b44       0x44
+ .text._wait_cmd_finish
+                0x0000000000025b44       0x44 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000025b44                _wait_cmd_finish
+
+.text._dma_config_start
+                0x0000000000025b88       0x64
+ .text._dma_config_start
+                0x0000000000025b88       0x64 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000025b88                _dma_config_start
+
+.text._wait_dma_end
+                0x0000000000025bec       0x2c
+ .text._wait_dma_end
+                0x0000000000025bec       0x2c /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000025bec                _wait_dma_end
+
+.text._reset    0x0000000000025c18       0x44
+ .text._reset   0x0000000000025c18       0x44 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000025c18                _reset
+
+.text._check_ecc
+                0x0000000000025c5c       0xd4
+ .text._check_ecc
+                0x0000000000025c5c       0xd4 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000025c5c                _check_ecc
+
+.text._disable_ecc
+                0x0000000000025d30       0x20
+ .text._disable_ecc
+                0x0000000000025d30       0x20 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000025d30                _disable_ecc
+
+.text._enable_ecc
+                0x0000000000025d50       0x38
+ .text._enable_ecc
+                0x0000000000025d50       0x38 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000025d50                _enable_ecc
+
+.text._set_addr
+                0x0000000000025d88       0x48
+ .text._set_addr
+                0x0000000000025d88       0x48 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000025d88                _set_addr
+
+.text.ndfc_set_user_data_len
+                0x0000000000025dd0       0xb4
+ .text.ndfc_set_user_data_len
+                0x0000000000025dd0       0xb4 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000025dd0                ndfc_set_user_data_len
+
+.text._read_in_page_mode
+                0x0000000000025e84      0x1e4
+ .text._read_in_page_mode
+                0x0000000000025e84      0x1e4 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000025e84                _read_in_page_mode
+
+.text.NFC_Read  0x0000000000026068       0x28
+ .text.NFC_Read
+                0x0000000000026068       0x28 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000026068                NFC_Read
+
+.text.nfc_set_cmd_register
+                0x0000000000026090       0x78
+ .text.nfc_set_cmd_register
+                0x0000000000026090       0x78 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000026090                nfc_set_cmd_register
+
+.text.NFC_SetRandomSeed
+                0x0000000000026108       0x24
+ .text.NFC_SetRandomSeed
+                0x0000000000026108       0x24 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000026108                NFC_SetRandomSeed
+
+.text.NFC_RandomEnable
+                0x000000000002612c       0x24
+ .text.NFC_RandomEnable
+                0x000000000002612c       0x24 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x000000000002612c                NFC_RandomEnable
+
+.text.NFC_RandomDisable
+                0x0000000000026150       0x24
+ .text.NFC_RandomDisable
+                0x0000000000026150       0x24 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000026150                NFC_RandomDisable
+
+.text.NFC_GetId
+                0x0000000000026174       0x40
+ .text.NFC_GetId
+                0x0000000000026174       0x40 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000026174                NFC_GetId
+
+.text.NFC_GetFeature
+                0x00000000000261b4       0x40
+ .text.NFC_GetFeature
+                0x00000000000261b4       0x40 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x00000000000261b4                NFC_GetFeature
+
+.text.NFC_SetFeature
+                0x00000000000261f4       0xac
+ .text.NFC_SetFeature
+                0x00000000000261f4       0xac /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x00000000000261f4                NFC_SetFeature
+
+.text.NFC_Set_Legacy_Interface
+                0x00000000000262a0       0x24
+ .text.NFC_Set_Legacy_Interface
+                0x00000000000262a0       0x24 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x00000000000262a0                NFC_Set_Legacy_Interface
+
+.text.NFC_Set_Toggle_Interface
+                0x00000000000262c4       0x24
+ .text.NFC_Set_Toggle_Interface
+                0x00000000000262c4       0x24 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x00000000000262c4                NFC_Set_Toggle_Interface
+
+.text.NFC_GetStatus
+                0x00000000000262e8       0x34
+ .text.NFC_GetStatus
+                0x00000000000262e8       0x34 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x00000000000262e8                NFC_GetStatus
+
+.text.NFC_ResetChip
+                0x000000000002631c       0x16
+ .text.NFC_ResetChip
+                0x000000000002631c       0x16 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x000000000002631c                NFC_ResetChip
+
+.text.NFC_SelectChip
+                0x0000000000026334       0x2c
+ .text.NFC_SelectChip
+                0x0000000000026334       0x2c /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000026334                NFC_SelectChip
+
+.text.NFC_SelectRb
+                0x0000000000026360       0x2c
+ .text.NFC_SelectRb
+                0x0000000000026360       0x2c /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000026360                NFC_SelectRb
+
+.text.NFC_DeSelectChip
+                0x000000000002638c        0x4
+ .text.NFC_DeSelectChip
+                0x000000000002638c        0x4 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x000000000002638c                NFC_DeSelectChip
+
+.text.NFC_DeSelectRb
+                0x0000000000026390        0x4
+ .text.NFC_DeSelectRb
+                0x0000000000026390        0x4 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000026390                NFC_DeSelectRb
+
+.text.NFC_CheckRbReady
+                0x0000000000026394       0x28
+ .text.NFC_CheckRbReady
+                0x0000000000026394       0x28 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000026394                NFC_CheckRbReady
+
+.text.NFC_ChangMode
+                0x00000000000263bc       0xd8
+ .text.NFC_ChangMode
+                0x00000000000263bc       0xd8 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x00000000000263bc                NFC_ChangMode
+
+.text.NFC_SetEccMode
+                0x0000000000026494       0x28
+ .text.NFC_SetEccMode
+                0x0000000000026494       0x28 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000026494                NFC_SetEccMode
+
+.text.NFC_Init  0x00000000000264bc       0x5c
+ .text.NFC_Init
+                0x00000000000264bc       0x5c /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x00000000000264bc                NFC_Init
+
+.text.NFC_Exit  0x0000000000026518       0x30
+ .text.NFC_Exit
+                0x0000000000026518       0x30 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000026518                NFC_Exit
+
+.text._vender_get_param
+                0x0000000000026548       0x74
+ .text._vender_get_param
+                0x0000000000026548       0x74 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000026548                _vender_get_param
+
+.text._vender_set_param
+                0x00000000000265bc      0x12c
+ .text._vender_set_param
+                0x00000000000265bc      0x12c /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x00000000000265bc                _vender_set_param
+
+.text._vender_get_param_otp_hynix
+                0x00000000000266e8      0x260
+ .text._vender_get_param_otp_hynix
+                0x00000000000266e8      0x260 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x00000000000266e8                _vender_get_param_otp_hynix
+
+.text._major_check_byte
+                0x0000000000026948       0xb4
+ .text._major_check_byte
+                0x0000000000026948       0xb4 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000026948                _major_check_byte
+
+.text._get_read_retry_cfg
+                0x00000000000269fc      0x100
+ .text._get_read_retry_cfg
+                0x00000000000269fc      0x100 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x00000000000269fc                _get_read_retry_cfg
+
+.text._read_otp_info_hynix
+                0x0000000000026afc      0x21c
+ .text._read_otp_info_hynix
+                0x0000000000026afc      0x21c /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000026afc                _read_otp_info_hynix
+
+.text._get_rr_value_otp_hynix
+                0x0000000000026d18       0x70
+ .text._get_rr_value_otp_hynix
+                0x0000000000026d18       0x70 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000026d18                _get_rr_value_otp_hynix
+
+.text.NFC_ReadRetry
+                0x0000000000026d88      0x10c
+ .text.NFC_ReadRetry
+                0x0000000000026d88      0x10c /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000026d88                NFC_ReadRetry
+
+.text.NFC_ReadRetryInit
+                0x0000000000026e94      0x1ac
+ .text.NFC_ReadRetryInit
+                0x0000000000026e94      0x1ac /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000026e94                NFC_ReadRetryInit
+
+.text.NFC_GetOTPValue
+                0x0000000000027040       0x38
+ .text.NFC_GetOTPValue
+                0x0000000000027040       0x38 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000027040                NFC_GetOTPValue
+
+.text.NFC_GetDefaultParam
+                0x0000000000027078       0xe0
+ .text.NFC_GetDefaultParam
+                0x0000000000027078       0xe0 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000027078                NFC_GetDefaultParam
+
+.text.NFC_SetDefaultParam
+                0x0000000000027158       0x94
+ .text.NFC_SetDefaultParam
+                0x0000000000027158       0x94 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000027158                NFC_SetDefaultParam
+
+.text.NFC_ReadRetryExit
+                0x00000000000271ec        0x4
+ .text.NFC_ReadRetryExit
+                0x00000000000271ec        0x4 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x00000000000271ec                NFC_ReadRetryExit
+
+.text._cal_addr_in_chip
+                0x00000000000271f0       0x6c
+ .text._cal_addr_in_chip
+                0x00000000000271f0       0x6c /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x00000000000271f0                _cal_addr_in_chip
+
+.text._read_status
+                0x000000000002725c       0x26
+ .text._read_status
+                0x000000000002725c       0x26 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x000000000002725c                _read_status
+
+.text._wait_rb_ready
+                0x0000000000027282       0x1c
+ .text._wait_rb_ready
+                0x0000000000027282       0x1c /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000027282                _wait_rb_ready
+
+.text.PHY_Init  0x00000000000272a0       0x2c
+ .text.PHY_Init
+                0x00000000000272a0       0x2c /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x00000000000272a0                PHY_Init
+
+.text.check_nand_special_info
+                0x00000000000272cc       0x38
+ .text.check_nand_special_info
+                0x00000000000272cc       0x38 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x00000000000272cc                check_nand_special_info
+
+.text.PHY_SetDefaultParam
+                0x0000000000027304       0x28
+ .text.PHY_SetDefaultParam
+                0x0000000000027304       0x28 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000027304                PHY_SetDefaultParam
+
+.text.PHY_ChangeMode
+                0x000000000002732c       0xa4
+ .text.PHY_ChangeMode
+                0x000000000002732c       0xa4 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x000000000002732c                PHY_ChangeMode
+
+.text.PHY_Exit  0x00000000000273d0       0x28
+ .text.PHY_Exit
+                0x00000000000273d0       0x28 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x00000000000273d0                PHY_Exit
+
+.text.PHY_ResetChip
+                0x00000000000273f8       0x6c
+ .text.PHY_ResetChip
+                0x00000000000273f8       0x6c /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x00000000000273f8                PHY_ResetChip
+
+.text._read_single_page
+                0x0000000000027464      0x220
+ .text._read_single_page
+                0x0000000000027464      0x220 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000027464                _read_single_page
+
+.text.PHY_ReadNandId
+                0x0000000000027684       0x3e
+ .text.PHY_ReadNandId
+                0x0000000000027684       0x3e /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000027684                PHY_ReadNandId
+
+.text.PHY_GetFeature
+                0x00000000000276c2       0x3a
+ .text.PHY_GetFeature
+                0x00000000000276c2       0x3a /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x00000000000276c2                PHY_GetFeature
+
+.text.PHY_SetFeature
+                0x00000000000276fc       0x3c
+ .text.PHY_SetFeature
+                0x00000000000276fc       0x3c /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x00000000000276fc                PHY_SetFeature
+
+.text.Setup_Ddr_Nand_Force_To_Sdr_Para
+                0x0000000000027738       0x64
+ .text.Setup_Ddr_Nand_Force_To_Sdr_Para
+                0x0000000000027738       0x64 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000027738                Setup_Ddr_Nand_Force_To_Sdr_Para
+
+.text.PHY_SimpleRead
+                0x000000000002779c        0x6
+ .text.PHY_SimpleRead
+                0x000000000002779c        0x6 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x000000000002779c                PHY_SimpleRead
+
+.text.PHY_GetDefaultParam
+                0x00000000000277a4      0x17c
+ .text.PHY_GetDefaultParam
+                0x00000000000277a4      0x17c /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x00000000000277a4                PHY_GetDefaultParam
+
+.text.PHY_SynchBank
+                0x0000000000027920       0xc0
+ .text.PHY_SynchBank
+                0x0000000000027920       0xc0 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000027920                PHY_SynchBank
+
+.text.Wait_Tc_Complete
+                0x00000000000279e0       0x2c
+ .text.Wait_Tc_Complete
+                0x00000000000279e0       0x2c /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x00000000000279e0                Wait_Tc_Complete
+
+.text.Spic_init
+                0x0000000000027a0c       0x4c
+ .text.Spic_init
+                0x0000000000027a0c       0x4c /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000027a0c                Spic_init
+
+.text.Spic_exit
+                0x0000000000027a58       0x30
+ .text.Spic_exit
+                0x0000000000027a58       0x30 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000027a58                Spic_exit
+
+.text.Spic_sel_ss
+                0x0000000000027a88       0x18
+ .text.Spic_sel_ss
+                0x0000000000027a88       0x18 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000027a88                Spic_sel_ss
+
+.text.Spic_config_dual_mode
+                0x0000000000027aa0       0x14
+ .text.Spic_config_dual_mode
+                0x0000000000027aa0       0x14 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000027aa0                Spic_config_dual_mode
+
+.text.Spic_rw   0x0000000000027ab4       0xe4
+ .text.Spic_rw  0x0000000000027ab4       0xe4 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000027ab4                Spic_rw
+
+.text.BOOT_AnalyzeSpiNandSystem
+                0x0000000000027b98       0x80
+ .text.BOOT_AnalyzeSpiNandSystem
+                0x0000000000027b98       0x80 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000027b98                BOOT_AnalyzeSpiNandSystem
+
+.text.SpiNand_GetFlashInfo
+                0x0000000000027c18       0x32
+ .text.SpiNand_GetFlashInfo
+                0x0000000000027c18       0x32 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000027c18                SpiNand_GetFlashInfo
+
+.text.SpiNand_PhyExit
+                0x0000000000027c4a        0xc
+ .text.SpiNand_PhyExit
+                0x0000000000027c4a        0xc /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000027c4a                SpiNand_PhyExit
+
+.text.SpiNand_PhyInit
+                0x0000000000027c58       0x60
+ .text.SpiNand_PhyInit
+                0x0000000000027c58       0x60 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000027c58                SpiNand_PhyInit
+
+.text.SpiNand_Check_BadBlock
+                0x0000000000027cb8       0x48
+ .text.SpiNand_Check_BadBlock
+                0x0000000000027cb8       0x48 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000027cb8                SpiNand_Check_BadBlock
+
+.text.SpiNand_Read
+                0x0000000000027d00       0x90
+ .text.SpiNand_Read
+                0x0000000000027d00       0x90 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000027d00                SpiNand_Read
+
+.text.Spinand_Load_Boot1_Copy
+                0x0000000000027d90       0x6c
+ .text.Spinand_Load_Boot1_Copy
+                0x0000000000027d90       0x6c /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000027d90                Spinand_Load_Boot1_Copy
+
+.text.spi_nand_getsr
+                0x0000000000027dfc       0x30
+ .text.spi_nand_getsr
+                0x0000000000027dfc       0x30 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000027dfc                spi_nand_getsr
+
+.text.spi_wait_status
+                0x0000000000027e2c       0x40
+ .text.spi_wait_status
+                0x0000000000027e2c       0x40 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000027e2c                spi_wait_status
+
+.text.spi_nand_read_status
+                0x0000000000027e6c       0x70
+ .text.spi_nand_read_status
+                0x0000000000027e6c       0x70 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000027e6c                spi_nand_read_status
+
+.text.spi_nand_setecc
+                0x0000000000027edc       0x48
+ .text.spi_nand_setecc
+                0x0000000000027edc       0x48 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000027edc                spi_nand_setecc
+
+.text.spi_nand_setblocklock
+                0x0000000000027f24       0x48
+ .text.spi_nand_setblocklock
+                0x0000000000027f24       0x48 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000027f24                spi_nand_setblocklock
+
+.text.spi_nand_setotp
+                0x0000000000027f6c       0x48
+ .text.spi_nand_setotp
+                0x0000000000027f6c       0x48 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000027f6c                spi_nand_setotp
+
+.text.spi_nand_reset
+                0x0000000000027fb4       0x44
+ .text.spi_nand_reset
+                0x0000000000027fb4       0x44 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000027fb4                spi_nand_reset
+
+.text.spi_nand_read_x1
+                0x0000000000027ff8      0x1b4
+ .text.spi_nand_read_x1
+                0x0000000000027ff8      0x1b4 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000027ff8                spi_nand_read_x1
+
+.text.read_single_page
+                0x00000000000281ac       0x5c
+ .text.read_single_page
+                0x00000000000281ac       0x5c /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x00000000000281ac                read_single_page
+
+.text.SPINAND_GetIOBaseAddr
+                0x0000000000028208        0x8
+ .text.SPINAND_GetIOBaseAddr
+                0x0000000000028208        0x8 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000028208                SPINAND_GetIOBaseAddr
+
+.text.SPINAND_ClkRequest
+                0x0000000000028210       0x24
+ .text.SPINAND_ClkRequest
+                0x0000000000028210       0x24 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000028210                SPINAND_ClkRequest
+
+.text.SPINAND_ClkRelease
+                0x0000000000028234        0x2
+ .text.SPINAND_ClkRelease
+                0x0000000000028234        0x2 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000028234                SPINAND_ClkRelease
+
+.text.SPINAND_SetClk
+                0x0000000000028238       0x80
+ .text.SPINAND_SetClk
+                0x0000000000028238       0x80 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000028238                SPINAND_SetClk
+
+.text.SPINAND_PIORequest
+                0x00000000000282b8       0x40
+ .text.SPINAND_PIORequest
+                0x00000000000282b8       0x40 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x00000000000282b8                SPINAND_PIORequest
+
+.text.SPINAND_PIORelease
+                0x00000000000282f8        0x2
+ .text.SPINAND_PIORelease
+                0x00000000000282f8        0x2 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x00000000000282f8                SPINAND_PIORelease
+
+.text.set_sys_voltage
+                0x00000000000282fc       0x18
+ .text.set_sys_voltage
+                0x00000000000282fc       0x18 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x00000000000282fc                set_sys_voltage
+
+.text.axp_init  0x0000000000028314       0x1c
+ .text.axp_init
+                0x0000000000028314       0x1c /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000028314                axp_init
+
+.text.get_power_mode
+                0x0000000000028330        0xc
+ .text.get_power_mode
+                0x0000000000028330        0xc /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000028330                get_power_mode
+
+.text.pmu_set_vol
+                0x000000000002833c      0x154
+ .text.pmu_set_vol
+                0x000000000002833c      0x154 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+
+.text.axp2101_set_ddr_voltage
+                0x0000000000028490       0x10
+ .text.axp2101_set_ddr_voltage
+                0x0000000000028490       0x10 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000028490                axp2101_set_ddr_voltage
+
+.text.axp2101_set_sys_voltage
+                0x00000000000284a0       0x10
+ .text.axp2101_set_sys_voltage
+                0x00000000000284a0       0x10 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x00000000000284a0                axp2101_set_sys_voltage
+
+.text.axp2101_axp_init
+                0x00000000000284b0      0x1c8
+ .text.axp2101_axp_init
+                0x00000000000284b0      0x1c8 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x00000000000284b0                axp2101_axp_init
+
+.text.update_flash_para
+                0x0000000000028678       0x1c
+ .text.update_flash_para
+                0x0000000000028678       0x1c /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000028678                update_flash_para
+
+.text.load_toc1_from_rawnand
+                0x0000000000028694      0x144
+ .text.load_toc1_from_rawnand
+                0x0000000000028694      0x144 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000028694                load_toc1_from_rawnand
+
+.text.load_toc1_from_spinand
+                0x00000000000287d8      0x108
+ .text.load_toc1_from_spinand
+                0x00000000000287d8      0x108 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x00000000000287d8                load_toc1_from_spinand
+
+.text.BOOT_NandGetPara
+                0x00000000000288e0       0x14
+ .text.BOOT_NandGetPara
+                0x00000000000288e0       0x14 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x00000000000288e0                BOOT_NandGetPara
+
+.text.load_package
+                0x00000000000288f4       0x1c
+ .text.load_package
+                0x00000000000288f4       0x1c /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x00000000000288f4                load_package
+
+.text.update_opensbi_param
+                0x0000000000028910       0x2c
+ .text.update_opensbi_param
+                0x0000000000028910       0x2c /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+
+.text.toc1_flash_read
+                0x000000000002893c       0x22
+ .text.toc1_flash_read
+                0x000000000002893c       0x22 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x000000000002893c                toc1_flash_read
+
+.text.toc1_get_image_addr
+                0x000000000002895e       0x14
+ .text.toc1_get_image_addr
+                0x000000000002895e       0x14 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x000000000002895e                toc1_get_image_addr
+
+.text.load_image
+                0x0000000000028974      0x380
+ .text.load_image
+                0x0000000000028974      0x380 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000028974                load_image
+
+.iplt           0x0000000000028cf4        0x0
+ .iplt          0x0000000000028cf4        0x0 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+
+.text.startup.main
+                0x0000000000028cf4      0x244
+ .text.startup.main
+                0x0000000000028cf4      0x244 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/nboot/main/boot0_main.o
+                0x0000000000028cf4                main
+                0x0000000000028f40                . = ALIGN (0x10)
+
+.rodata         0x0000000000028f40      0x4cc
+ *(.rodata)
+ .rodata        0x0000000000028f40      0x4cc /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x0000000000028f40                _ctype
+                0x0000000000029252                para0
+                0x0000000000029282                para1
+                0x00000000000292b2                param0x40
+                0x00000000000292c6                param0x41
+                0x00000000000292de                random_seed
+
+.rodata.str1.1  0x000000000002940c     0x18d9
+ .rodata.str1.1
+                0x000000000002940c     0x17fb /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                                       0x184d (size before relaxing)
+ .rodata.str1.1
+                0x000000000002ac07       0xde /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/nboot/main/boot0_main.o
+
+.rel.dyn        0x000000000002ace8        0x0
+ .rel.iplt      0x000000000002ace8        0x0 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x000000000002acf0                . = ALIGN (0x10)
+
+.data           0x000000000002acf0      0x244
+ *(.data)
+ .data          0x000000000002acf0      0x244 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x000000000002acf4                i2c_gpio
+                0x000000000002af30                working_fdt
+
+.igot.plt       0x000000000002af34        0x0
+ .igot.plt      0x000000000002af34        0x0 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x000000000002af34                . = ALIGN (0x4)
+
+.bss            0x000000000002af34      0x2d4
+                0x000000000002af34                __bss_start = .
+ *(.bss)
+ .bss           0x000000000002af34      0x2d4 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                0x000000000002af64                i2c_has_init
+                0x000000000002af68                twi_gpio
+                0x000000000002af88                page_with_bad_block
+                0x000000000002af8c                NF_BLOCK_SIZE
+                0x000000000002af90                BOOT1_LAST_BLK_NUM
+                0x000000000002af94                BOOT1_START_BLK
+                0x000000000002af98                NF_PAGE_SIZE
+                0x000000000002af9c                NF_PG_SZ_WIDTH
+                0x000000000002afa0                NF_BLK_SZ_WIDTH
+                0x000000000002afa4                Two_Row_Addr_Flag
+                0x000000000002afa8                uboot_start_block
+                0x000000000002afac                uboot_next_block
+                0x000000000002afb0                nand_specialinfo_page
+                0x000000000002afb4                nand_specialinfo_offset
+                0x000000000002afb8                ddr_param
+                0x000000000002afd8                NandIOBase
+                0x000000000002afe0                NandIndex
+                0x000000000002afe4                pagesize
+                0x000000000002afe8                read_retry_mode
+                0x000000000002afe9                hynix16nm_read_retry_otp_value
+                0x000000000002b009                read_retry_cycle
+                0x000000000002b00a                read_retry_reg_num
+                0x000000000002b00b                read_retry_reg_adr
+                0x000000000002b013                read_retry_default_val
+                0x000000000002b01c                read_retry_val
+                0x000000000002b10c                hynix_read_retry_otp_value
+                0x000000000002b14c                NandStorageInfo
+                0x000000000002b1c4                RetryCount
+                0x000000000002b1c8                PageCachePool
+                0x000000000002b1dc                ndfc_dma_desc
+                0x000000000002b1e0                SPIC_IO_BASE
+                0x000000000002b1e4                OperationOpt
+                0x000000000002b1e8                UBOOT_START_BLK_NUM
+                0x000000000002b1ec                UBOOT_LAST_BLK_NUM
+                0x000000000002b1f0                page_for_bad_block
+                0x000000000002b1f4                SPN_BLOCK_SIZE
+                0x000000000002b1f8                SPN_PAGE_SIZE
+                0x000000000002b1fc                SPN_PG_SZ_WIDTH
+                0x000000000002b200                SPN_BLK_SZ_WIDTH
+                0x000000000002b208                . = ALIGN (0x4)
+                0x000000000002b208                __bss_end = .
+                0x000000000002b208                _end = .
+                0x0000000000000001                ASSERT ((. <= 0x30000), boot0 image has exceeded its limit.)
+OUTPUT(boot0_nand.elf elf32-littlearm)
+
+.comment        0x0000000000000000       0x2d
+ .comment       0x0000000000000000       0x2d /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+                                        0x844 (size before relaxing)
+ .comment       0x000000000000002d       0x2e /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/nboot/main/boot0_main.o
+ .comment       0x000000000000002d       0x2e main/boot0_head.o
+
+.note.GNU-stack
+                0x0000000000000000        0x0
+ .note.GNU-stack
+                0x0000000000000000        0x0 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .note.GNU-stack
+                0x0000000000000000        0x0 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/nboot/main/boot0_main.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/tools/toolchain/gcc-linaro-7.2.1-2017.11-x86_64_arm-linux-gnueabi/bin/../lib/gcc/arm-linux-gnueabi/7.2.1/libgcc.a(_udivsi3.o)
+ .note.GNU-stack
+                0x0000000000000000        0x0 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/tools/toolchain/gcc-linaro-7.2.1-2017.11-x86_64_arm-linux-gnueabi/bin/../lib/gcc/arm-linux-gnueabi/7.2.1/libgcc.a(_divsi3.o)
+ .note.GNU-stack
+                0x0000000000000000        0x0 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/tools/toolchain/gcc-linaro-7.2.1-2017.11-x86_64_arm-linux-gnueabi/bin/../lib/gcc/arm-linux-gnueabi/7.2.1/libgcc.a(_dvmd_lnx.o)
+ .note.GNU-stack
+                0x0000000000000000        0x0 main/boot0_head.o
+
+.ARM.attributes
+                0x0000000000000000       0x2f
+ .ARM.attributes
+                0x0000000000000000       0x2f /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/board/v853s/libsun8iw21p1_nand.a
+ .ARM.attributes
+                0x000000000000002f       0x2d /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/nboot/main/boot0_main.o
+ .ARM.attributes
+                0x000000000000005c       0x1f /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/tools/toolchain/gcc-linaro-7.2.1-2017.11-x86_64_arm-linux-gnueabi/bin/../lib/gcc/arm-linux-gnueabi/7.2.1/libgcc.a(_udivsi3.o)
+ .ARM.attributes
+                0x000000000000007b       0x1f /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/tools/toolchain/gcc-linaro-7.2.1-2017.11-x86_64_arm-linux-gnueabi/bin/../lib/gcc/arm-linux-gnueabi/7.2.1/libgcc.a(_divsi3.o)
+ .ARM.attributes
+                0x000000000000009a       0x1f /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/tools/toolchain/gcc-linaro-7.2.1-2017.11-x86_64_arm-linux-gnueabi/bin/../lib/gcc/arm-linux-gnueabi/7.2.1/libgcc.a(_dvmd_lnx.o)
+ .ARM.attributes
+                0x00000000000000b9       0x31 main/boot0_head.o
+ .ARM.attributes
+                0x00000000000000ea       0x21 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/arch/arm/cpu/armv7/boot0_entry.o
+
+.debug_info     0x0000000000000000     0x1c01
+ .debug_info    0x0000000000000000     0x1160 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/nboot/main/boot0_main.o
+ .debug_info    0x0000000000001160      0x1cb /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/tools/toolchain/gcc-linaro-7.2.1-2017.11-x86_64_arm-linux-gnueabi/bin/../lib/gcc/arm-linux-gnueabi/7.2.1/libgcc.a(_udivsi3.o)
+ .debug_info    0x000000000000132b      0x1cb /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/tools/toolchain/gcc-linaro-7.2.1-2017.11-x86_64_arm-linux-gnueabi/bin/../lib/gcc/arm-linux-gnueabi/7.2.1/libgcc.a(_divsi3.o)
+ .debug_info    0x00000000000014f6      0x1cb /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/tools/toolchain/gcc-linaro-7.2.1-2017.11-x86_64_arm-linux-gnueabi/bin/../lib/gcc/arm-linux-gnueabi/7.2.1/libgcc.a(_dvmd_lnx.o)
+ .debug_info    0x00000000000016c1      0x4a5 main/boot0_head.o
+ .debug_info    0x0000000000001b66       0x9b /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/arch/arm/cpu/armv7/boot0_entry.o
+
+.debug_abbrev   0x0000000000000000      0x388
+ .debug_abbrev  0x0000000000000000      0x269 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/nboot/main/boot0_main.o
+ .debug_abbrev  0x0000000000000269       0x14 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/tools/toolchain/gcc-linaro-7.2.1-2017.11-x86_64_arm-linux-gnueabi/bin/../lib/gcc/arm-linux-gnueabi/7.2.1/libgcc.a(_udivsi3.o)
+ .debug_abbrev  0x000000000000027d       0x14 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/tools/toolchain/gcc-linaro-7.2.1-2017.11-x86_64_arm-linux-gnueabi/bin/../lib/gcc/arm-linux-gnueabi/7.2.1/libgcc.a(_divsi3.o)
+ .debug_abbrev  0x0000000000000291       0x14 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/tools/toolchain/gcc-linaro-7.2.1-2017.11-x86_64_arm-linux-gnueabi/bin/../lib/gcc/arm-linux-gnueabi/7.2.1/libgcc.a(_dvmd_lnx.o)
+ .debug_abbrev  0x00000000000002a5       0xcf main/boot0_head.o
+ .debug_abbrev  0x0000000000000374       0x14 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/arch/arm/cpu/armv7/boot0_entry.o
+
+.debug_loc      0x0000000000000000      0x19b
+ .debug_loc     0x0000000000000000      0x19b /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/nboot/main/boot0_main.o
+
+.debug_aranges  0x0000000000000000       0xb8
+ .debug_aranges
+                0x0000000000000000       0x20 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/nboot/main/boot0_main.o
+ .debug_aranges
+                0x0000000000000020       0x20 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/tools/toolchain/gcc-linaro-7.2.1-2017.11-x86_64_arm-linux-gnueabi/bin/../lib/gcc/arm-linux-gnueabi/7.2.1/libgcc.a(_udivsi3.o)
+ .debug_aranges
+                0x0000000000000040       0x20 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/tools/toolchain/gcc-linaro-7.2.1-2017.11-x86_64_arm-linux-gnueabi/bin/../lib/gcc/arm-linux-gnueabi/7.2.1/libgcc.a(_divsi3.o)
+ .debug_aranges
+                0x0000000000000060       0x20 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/tools/toolchain/gcc-linaro-7.2.1-2017.11-x86_64_arm-linux-gnueabi/bin/../lib/gcc/arm-linux-gnueabi/7.2.1/libgcc.a(_dvmd_lnx.o)
+ .debug_aranges
+                0x0000000000000080       0x18 main/boot0_head.o
+ .debug_aranges
+                0x0000000000000098       0x20 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/arch/arm/cpu/armv7/boot0_entry.o
+
+.debug_ranges   0x0000000000000000       0x30
+ .debug_ranges  0x0000000000000000       0x30 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/nboot/main/boot0_main.o
+
+.debug_line     0x0000000000000000      0x751
+ .debug_line    0x0000000000000000      0x2d8 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/nboot/main/boot0_main.o
+ .debug_line    0x00000000000002d8      0x108 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/tools/toolchain/gcc-linaro-7.2.1-2017.11-x86_64_arm-linux-gnueabi/bin/../lib/gcc/arm-linux-gnueabi/7.2.1/libgcc.a(_udivsi3.o)
+ .debug_line    0x00000000000003e0      0x119 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/tools/toolchain/gcc-linaro-7.2.1-2017.11-x86_64_arm-linux-gnueabi/bin/../lib/gcc/arm-linux-gnueabi/7.2.1/libgcc.a(_divsi3.o)
+ .debug_line    0x00000000000004f9       0xee /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/tools/toolchain/gcc-linaro-7.2.1-2017.11-x86_64_arm-linux-gnueabi/bin/../lib/gcc/arm-linux-gnueabi/7.2.1/libgcc.a(_dvmd_lnx.o)
+ .debug_line    0x00000000000005e7      0x113 main/boot0_head.o
+ .debug_line    0x00000000000006fa       0x57 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/arch/arm/cpu/armv7/boot0_entry.o
+
+.debug_str      0x0000000000000000      0xa6e
+ .debug_str     0x0000000000000000      0xa61 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/nboot/main/boot0_main.o
+                                        0xb8a (size before relaxing)
+ .debug_str     0x0000000000000a61        0xd main/boot0_head.o
+                                        0x503 (size before relaxing)
+
+.debug_frame    0x0000000000000000       0xa4
+ .debug_frame   0x0000000000000000       0x3c /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/nboot/main/boot0_main.o
+ .debug_frame   0x000000000000003c       0x20 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/tools/toolchain/gcc-linaro-7.2.1-2017.11-x86_64_arm-linux-gnueabi/bin/../lib/gcc/arm-linux-gnueabi/7.2.1/libgcc.a(_udivsi3.o)
+ .debug_frame   0x000000000000005c       0x20 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/tools/toolchain/gcc-linaro-7.2.1-2017.11-x86_64_arm-linux-gnueabi/bin/../lib/gcc/arm-linux-gnueabi/7.2.1/libgcc.a(_divsi3.o)
+ .debug_frame   0x000000000000007c       0x28 /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/tools/toolchain/gcc-linaro-7.2.1-2017.11-x86_64_arm-linux-gnueabi/bin/../lib/gcc/arm-linux-gnueabi/7.2.1/libgcc.a(_dvmd_lnx.o)

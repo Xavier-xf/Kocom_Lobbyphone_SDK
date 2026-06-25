@@ -1,0 +1,62 @@
+if PACKAGE_flutter-sunxi
+
+config FLUTTER_USE_FBDEV
+	bool "flutter use fbdev"
+	default y
+		help
+		Whether use flutter_fbdev
+
+config FLUTTER_USE_EGLFS
+	bool "flutter use eglfs"
+	default n
+		help
+		Whether use flutter_eglfs
+
+config FLUTTER_USE_CILENT
+	bool "flutter use client"
+	default n
+		help
+		Whether use flutter-client
+
+config FLUTTER_USE_ELINUX_SO
+	bool "flutter use elinux so"
+	default n
+		help
+		Whether use flutter elinux so
+
+config FLUTTER_USE_PINYIN_IME_SO
+	bool "flutter use PINYIN_IME so"
+	default n
+		help
+		Whether use flutter PINYIN_IME so
+
+config FLUTTER_DEMO_COMPLEX_LAYOUT
+	bool "flutter demo complex layout"
+	select FLUTTER_USE_FBDEV
+	default n
+		help
+		Whether use flutter demo complex layout
+
+config FLUTTER_DEMO_GALLERY
+	bool "flutter demo gallery"
+	select FLUTTER_USE_FBDEV
+	default n
+		help
+		Whether use flutter demo complex gallery
+
+config FLUTTER_DEMO_VIDEO_PLAYER
+	bool "flutter demo video player"
+	select FLUTTER_USE_CILENT
+	default n
+		help
+		Whether use flutter demo video player
+
+config FLUTTER_DEMO_PINYIN_IME
+	bool "flutter demo pinyin ime"
+	select FLUTTER_USE_FBDEV
+	select FLUTTER_USE_PINYIN_IME_SO
+	default n
+		help
+		Whether use flutter demo pinyin ime
+
+endif

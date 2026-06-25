@@ -1,0 +1,595 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="tl_record">Record video</string>
+  <string name="tl_takepic">Take a photo</string>
+  <string name="tl_slowrec">Slow photography</string>
+  <string name="tl_playback">Video</string>
+  <string name="tl_setting">Settings</string>
+  <string name="tl_shutdown">Shut dwon</string> 
+  <string name="ml_record_resolution_tips">Tips:  More video frames saved will use more memory capacity.</string>
+  <string name="ml_record_resolution">Front Camera resolution</string>
+  <string name="ml_record_resolution_sub_head">Front Camera resolution</string>
+    <string-array name="ml_record_resolution">
+    <item>1080P</item>
+    <item>2K</item>
+    </string-array>
+  <string name="ml_vioce_record_function">Recording function</string>
+  <string-array name="ml_vioce_record_function">
+    <item>Off</item> 
+    <item>On</item> 
+  </string-array>
+  <string name="ml_vehicle_record_function">Video recording in vehicle</string>
+    <string-array name="ml_vehicle_record_function">
+    <item>Off</item> 
+    <item>On</item> 
+  </string-array>
+  <string name="ml_record_rear_resolution_tips">Tips:  More video frames saved will use more memory capacity.</string>
+  <string name="ml_record_rear_resolution">rear record</string>
+  <string name="ml_record_rear_resolution_sub_head">Rear view recorder image quality</string>
+    <string name="ml_screen_brightness">Brightness</string>
+	<string name="ml_screen_brightness_sub_head">Brightness</string>
+	<string name="ml_screen_brightness_level">  level</string>
+  <string-array name="ml_screen_brightness">
+    <item>Brightness:   </item>
+  </string-array>
+  <string name="ml_voice_photo_tips">Tips:"When you say 'Yi take a photo', the device will immediately take a photo and save it in the photo album when it recognizes your instructions."</string>
+  <string name="ml_voice_photo">Voice Take Photo</string>
+  <string name="ml_voice_photo_sub_head">Voice Take Photo Switch</string>
+  <string-array name="ml_voice_photo">
+    <item>Off</item> 
+    <item>On</item> 
+  </string-array>
+  <string name="ml_wifi_connect_tips">Tips:Wi-Fi connection is available after APP pairing.</string>
+  <string name="ml_wifi_connect">Wi-Fi</string>
+  <string name="ml_wifi_connect_sub_head">Wi-Fi</string>
+  <string name="ml_wifi_connect_info">Wi-Fi</string>
+  <string-array name="ml_wifi_connect">
+    <item>Off</item> 
+    <item>On</item> 
+	<item>Wi-Fi info</item> 
+    <item>Scan QR code to download APP.</item> 
+  </string-array>
+   <string name="ml_4g_network">Set 4G Network</string>
+   <string name="ml_4g_network_sub_head">Set 4G Network</string>
+  <string-array name="ml_4g_network">
+    <item>Off</item> 
+    <item>On</item> 
+	<item>SIM info</item> 
+  </string-array>
+  <string name="ml_system_acc">Device power Mode</string>
+  <string name="ml_system_acc_sub_head">Device power Mode</string>
+  <string-array name="ml_system_acc">
+    <item>ACC setp-down line power Mode </item> 
+    <item>Vehicle voltage supply Mode</item> 
+  </string-array>  
+  <string name="ml_system_voice">Sounds</string>
+  <string name="ml_system_voice_sub_head">Sounds</string>
+  <string name="ml_power_on_voice">System Sound</string>
+  <string-array name="ml_power_on_voice">
+    <item>Off</item> 
+    <item>On</item> 
+  </string-array>
+  <string name="ml_key_voice">Key Sound</string>
+  <string-array name="ml_key_voice">
+    <item>Off</item> 
+    <item>On</item> 
+  </string-array>
+  <string name="ml_driver_report">Driver Report</string>
+  <string name="ml_driver_report_sub_head">Driver Report</string>
+  <string-array name="ml_driver_report">
+    <item>Off</item> 
+    <item>On</item> 
+  </string-array>
+  <string name="ml_screen_disturb_mode">Not Disturb Mode</string>
+  <string-array name="ml_screen_disturb_mode">
+    <item>Off</item> 
+    <item>On</item> 
+  </string-array>
+  <string name="ml_record_adas_tips">Tips:Intelligent driving assistance function can be enabled after the optional ant driving recorder GPS module is selected and inserted</string>
+  <string name="ml_record_adas">ADAS</string>
+  <string name="ml_record_adas_sub_head">ADAS</string>
+  <string-array name="ml_record_adas">
+    <item>Forward collision warn</item> 
+    <item>Lane shift remind</item> 
+  </string-array>
+    <string name="ml_record_adas_forward_collision_warning">Forward collision warn</string>
+  <string-array name="ml_record_adas_forward_collision_warning">
+    <item>Off</item> 
+    <item>On</item> 
+  </string-array>
+  <string name="ml_record_adas_lane_shift_reminding">Lane shift remind</string>
+  <string-array name="ml_record_adas_lane_shift_reminding">
+    <item>Off</item> 
+    <item>On</item> 
+  </string-array>
+  <string name="ml_watch_dog">Watch  dog</string>
+  <string name="ml_watch_dog_sub_head">Watch  dog</string>
+  <string-array name="ml_watch_dog">
+	<item>Off</item> 
+    <item>On</item> 
+    <item>Beep volume: </item> 
+    <item>Update data</item>
+  </string-array>
+  <string name="ml_volume_select">System Volume</string>
+  <string-array name="ml_volume_select">
+    <item>High</item> 
+    <item>Middle</item> 
+	<item>Low</item> 
+  </string-array>
+  <string name="ml_probe_prompt">Probe prompt</string>
+  <string-array name="ml_probe_prompt">
+    <item>Off</item> 
+    <item>On</item> 
+  </string-array>
+    <string name="ml_speed_prompt">Speed prompt</string>
+  <string-array name="ml_speed_prompt">
+    <item>Off</item> 
+    <item>On</item>
+  </string-array>
+  <string name="ml_record_timewatermark_tips">Tips:Traffic data watermark, including "GPS coordinates, vehicle speed, license plate information, etc., can be set in detail in the "Small Ant Driving Recorder" APP"</string>
+  <string name="ml_record_timewatermark">Time water mark</string>
+  <string name="ml_record_timewatermark_sub_head">Driving date water mark</string>
+  <string-array name="ml_record_timewatermark">
+    <item>Off</item> 
+    <item>On</item> 
+  </string-array>
+  <string name="ml_record_emerrecord_tips">Tips:Automatically save 10 seconds of emergency video after collision</string>
+  <string name="ml_record_emerrecord">Emer record</string>
+  <string name="ml_record_emerrecord_sub_head">Emer record</string>
+  <string-array name="ml_record_emerrecord">
+    <item>Off</item> 
+    <item>On</item> 
+  </string-array>
+  <string name="ml_record_emerrecordsen">Collision sensitivity</string>
+  <string-array name="ml_record_emerrecordsen">
+    <item>High</item> 
+    <item>Middle</item> 
+	  <item>Low</item> 
+  </string-array>
+  <string name="ml_record_parkingmonitor">Parking monitor</string>
+  <string name="ml_record_parkingmonitor_sub_head">Packing warn lamp</string>
+	<string-array name="ml_record_parkingmonitor">
+	<item>Off</item> 
+	<item>On</item> 
+	</string-array>
+  <string name="ml_record_adas_switch">ADAS switch</string>
+  <string-array name="ml_record_adas_switch">
+    <item>Off</item> 
+    <item>On</item>
+  </string-array>
+  <string name="ml_record_adas_adjustment">ADAS adjust</string>
+  <string-array name="ml_record_adas_adjustment">
+    <item>Off</item> 
+    <item>On</item>
+  </string-array>
+  <string name="ml_packing_warn_lamp">Packing warn lamp</string>
+  <string-array name="ml_packing_warn_lamp">
+    <item>Off</item> 
+    <item>On</item> 
+  </string-array>
+  <string name="ml_packing_abnormal_monitor">Packing abnormal monitor</string>
+  <string-array name="ml_packing_abnormal_monitor">
+    <item>Off</item> 
+    <item>On</item> 
+  </string-array>
+  <string name="ml_packing_abnormal_notice">Packing abnormal notice</string>
+  <string-array name="ml_packing_abnormal_notice">
+    <item>Off</item> 
+    <item>On</item> 
+  </string-array>
+  <string name="ml_record_parkingloop_sw">Packing Loop</string>
+  <string-array name="ml_record_parkingloop_sw">
+    <item>Off</item> 
+    <item>On</item> 
+  </string-array>
+  <string name="ml_record_parkingloop_resolution">Packing Loop</string>
+  <string-array name="ml_record_parkingloop_resolution">
+    <item>1080P 5fps</item> 
+    <item>720P 15fps</item> 
+	<item>720P 5fps</item> 
+	<item>720P 2fps</item> 
+  </string-array>
+  <string name="ml_record_standby_clock_tips">Tips:When the "standby clock" function is turned on, the device displays the time on the screen</string>
+  <string name="ml_record_standby_clock">Standby Clock</string>
+  <string name="ml_record_standby_clock_sub_head">Standby Clock</string>
+  <string-array name="ml_record_standby_clock">
+    <item>Off</item> 
+    <item>On</item>
+  </string-array>
+  <string name="ml_record_encodingtype">Encode format</string>
+  <string-array name="ml_record_encodingtype">
+    <item>High compression</item>
+    <item>H264</item>
+  </string-array>
+  <string name="ml_record_time">Recording time</string>
+  <string-array name="ml_record_time">
+    <item>1 minutes</item>
+    <item>2 minutes</item>
+    <item>5 minutes</item>
+  </string-array>
+  <string name="ml_record_loop_switch">Loop record</string>
+  <string-array name="ml_record_loop_switch">
+    <item>Off</item>
+    <item>On</item>
+  </string-array>
+  <string name="ml_record_timelapse">Lapse record</string>
+  <string-array name="ml_record_timelapse">
+    <item>Off</item>
+    <item>0.5s</item>
+    <item>1s</item>
+    <item>2s</item>
+    <item>5s</item>
+    <item>10s</item>
+    <item>30s</item>
+    <item>60s</item>
+  </string-array> 
+  <string name="ml_record_volume">Sound switch</string>
+  <string name="ml_record_volume">Sound switch</string>
+  <string-array name="ml_record_volume">
+    <item>Off</item>
+    <item>On</item>
+    </string-array>
+  <string name="ml_motion_detect">Motion Detect</string>
+  <string name="ml_motion_detect_sub_head">Motion Detect</string>
+  <string-array name="ml_motion_detect">
+    <item>Off</item>
+    <item>On</item>
+    </string-array>
+   <string name="ml_record_eis">Electronic image stabilization</string>
+  <string-array name="ml_record_eis">
+    <item>Off</item>
+    <item>On</item>
+    </string-array>
+  <string name="ml_record_slowmotion">Slow photo</string>
+  <string-array name="ml_record_slowmotion">
+    <item>1080P120FPS</item>
+    <item>1080P60FPS</item>
+    <item>720P240FPS</item>
+    <item>720P120FPS</item>
+  </string-array>
+  <string name="ml_photo_resolution">Noraml Photo</string>
+  <string-array name="ml_photo_resolution">
+    <item>8M</item>
+    <item>13M</item>
+    <item>16M</item>
+  </string-array>
+   <string name="ml_photo_timed">Lapse Photo</string>
+  <string-array name="ml_photo_timed">
+    <item>Off</item>
+    <item>3S</item>
+    <item>5S</item>
+    <item>10S</item>
+    <item>20S</item>
+  </string-array>
+   <string name="ml_photo_auto">Auto Photo</string>
+  <string-array name="ml_photo_auto">
+    <item>Off</item>
+    <item>3S</item>
+    <item>10S</item>
+    <item>15S</item>
+    <item>20S</item>
+    <item>30S</item>
+  </string-array>
+   <string name="ml_photo_dramashot">Burst</string>
+  <string-array name="ml_photo_dramashot">
+    <item>Off</item>
+    <item>3P/S</item>
+    <item>5P/S</item>
+    <item>10P/S</item>
+  </string-array>
+  <string name="ml_camera_exposure">Exposure settings</string>
+  <string-array name="ml_camera_exposure">
+    <item>-3</item>
+    <item>-2</item>
+    <item>-1</item>
+    <item>0</item>
+    <item>1</item>
+    <item>2</item>
+    <item>3</item>
+  </string-array>
+  <string name="ml_camera_whitebalance">White balance</string>
+  <string-array name="ml_camera_whitebalance">
+    <item>Auto</item>
+    <item>Sunny</item>
+    <item>Cloudy</item>
+    <item>Incandescent</item>
+    <item>Fluorescent</item>
+  </string-array>
+   <string name="ml_camera_imagerotation">Image rotation</string>
+  <string-array name="ml_camera_imagerotation">
+    <item>Off</item>
+    <item>On</item>
+  </string-array>
+   <string name="ml_camera_lightsourcefrequency">Light source frequency</string>
+  <string-array name="ml_camera_lightsourcefrequency">
+    <item>50Hz</item>
+    <item>60Hz</item>
+  </string-array>
+  <string name="ml_camera_ledindicator">LED indicator</string>
+  <string-array name="ml_camera_ledindicator">
+    <item>Off</item>
+    <item>On</item>
+  </string-array>
+   <string name="ml_camera_autoscreensaver">Auto off LCD</string>
+   <string name="ml_camera_autoscreensaver_sub_head">Auto off LCD</string>
+  <string-array name="ml_camera_autoscreensaver">
+    <item>10s</item>
+    <item>30s</item>
+    <item>1min</item> 
+    <item>Close</item>
+  </string-array> 
+   <string name="ml_camera_timedshutdown">Auto power off</string>
+  <string-array name="ml_camera_timedshutdown">
+    <item>Off</item>
+    <item>3 minutes</item>
+    <item>5 minutes</item> 
+    <item>10 minutes</item>
+  </string-array>
+  <string name="ml_camera_timewatermark">Time watermark</string>
+  <string-array name="ml_camera_timewatermark">
+    <item>Off</item>
+    <item>On</item>
+  </string-array>
+ <string name="ml_voice_ctrl">Voice Ctrl</string>
+  <string-array name="ml_voice_ctrl">
+    <item>Off</item>
+    <item>On</item>
+  </string-array>
+  <string name="ml_wifi_select">Wi-Fi</string>
+  <string-array name="ml_wifi_select">
+    <item>Off</item>
+    <item>On</item>
+  </string-array>
+  <string name="ml_device_language">Language</string>
+  <string name="ml_device_language_sub_head">Language Settings</string>
+  <string-array name="ml_device_language">
+    <item>简体中文</item>
+    <item>English</item>   
+  </string-array> 
+  <string name="ml_device_datetime">Date-Time</string>
+  <string-array name="ml_device_datetime">
+    <item>/</item>
+    <item>/</item>
+    <item>:</item>
+    <item>:</item>
+  </string-array>
+    <string name="ml_device_date_config">Date Set</string>
+  <string name="date_year">year</string>
+  <string name="date_month">month</string>
+  <string name="date_day">day</string>
+  <string name="ml_device_time_config">Time Set</string>
+  <string name="time_hour">hour</string>
+  <string name="time_minute">minute</string>
+  <string name="time_second">second</string>
+  <string name="ml_device_time_save_tips">Device will use the local network time, if the time is not acurate,please click "refresh" to sync the network time.</string>
+  <string name="ml_device_time_save">Save time</string>
+  <string name="ml_device_time">Date and Time</string>
+  <string name="ml_device_time_sub_head">Date and Time</string>
+  <string name="ml_device_time_current">Current time                                        </string>
+  <string-array name="ml_device_time">
+    <item>Refresh network time</item>
+  </string-array>
+    <string name="ml_device_voicestatus">Sound</string>
+  <string-array name="ml_device_voicestatus">
+    <item>Off</item>
+    <item>30%</item>
+    <item>50%</item>
+    <item>80%</item>
+    <item>100%</item>
+  </string-array>
+   <string name="ml_device_resetfactory">Restore factory settings</string>
+  <string-array name="ml_device_resetfactory">
+    <item>OK</item> 
+    <item>Cancel</item>
+  </string-array>
+     <string name="ml_device_resetselection">Do you want to restore the device?</string>
+   <string name="ml_confirm_reboot">Sure to reboot?</string>
+   <string name="ml_confirm_ok">OK</string>
+   <string name="ml_confirm_no">Cancel</string>
+    <string name="ml_device_format">Format</string>
+  <string-array name="ml_device_format">
+    <item>OK</item> 
+    <item>Cancel</item>
+  </string-array>
+   <string name="ml_device_format_doing">Formatting...</string>
+  <string name="ml_device_format_failed">Formatting failed</string> 
+  <string name="ml_device_format_success">Formatted successfully</string> 
+  <string name="ml_turn_on">ON</string>
+  <string name="ml_turn_off">OFF</string>  
+  <string name="ml_quit_exit">Press OK to launch</string>   
+   <string name="ml_camera_wifiswitch">Wi-Fi info</string>
+   <string name="ml_camera_wifiswitch_ssid">SSID:  </string>
+   <string name="ml_camera_wifiswitch_passwd">Password: </string>
+   <string name="ml_camera_wifiswitch_tip">Press and hold the button to exit Wi-Fi</string>
+   <string name="ml_prompt">Tips</string>  
+   <string name="ml_prompt_tf_cap_no_support">Sd card is not supported.Please insert 32GB or 64GB SD card.</string> 
+   <string name="ml_prompt_tf_null">SD card not found.</string> 
+   <string name="ml_prompt_tf_full">TF card storage space is insufficient!</string>
+   <string name="ml_prompt_tf_fs_error">SD card error. Try reformatting it.</string>
+   <string name="ml_prompt_tf_crad_warning">SD card writing speed is down recommed to format the card</string>
+   <string name="ml_prompt_tf_crad_error">SD card is abnormal,recording has stopped.please format or replace the sd card</string>
+   <string name="ml_prompt_tf_low_speed">In order to ensure the normal operation of the driving recorder,please use class 10 hight speed memory card(recommended card with reading more than 80MB/s)</string>
+   <string name="ml_prompt_bat_full">The battery is fully charged!</string> 
+  <string name="ml_prompt_database_full">Database is full. Early records will be overwritten!</string> 
+  <string name="ml_prompt_camera_error">Image processing abnormal, will reboot!</string>
+  <string name="ml_prompt_unsupported_func">Don't support this function!</string>
+   <string name="ml_prompt_bat_low">Low battery voltage. Shut down soon!</string>  
+   <string name="ml_prompt_emergency_recording">Emergency recording shuold not interruptible!</string>
+  <string name="ml_prompt_power_disconnected">Power has been disconnected to Off auto</string>   
+  <string name="ml_prompt_sdcard_format">Formatting SD card…</string>
+  <string name="ml_prompt_wifi_connect_ok">Wi-Fi app has been connected,please operate on the app</string>
+  <string name="ml_prompt_videoplay_error">video play error!</string> 
+  <string name="ml_prompt_tf_formating">Formatting,please wait...</string>
+  <string name="ml_prompt_tf_format_finish">Formatted SD card complete</string>
+  <string name="ml_prompt_tf_format_failed">Formatted SD card failed</string>
+  <string name="ml_prompt_account_unbind_finish">Unbind account successfully</string>
+  <string name="ml_prompt_update_net_time">Synchronous network time is complete</string>
+  <string name="ml_prompt_update_net_time_fail">No 4G signal,Synchronization failed</string>
+  <string name="ml_prompt_reset_factory_ing">ReFactory settings,please wait...</string>
+  <string name="ml_prompt_reset_factory">ReFactory have been completed</string>
+  <string name="ml_prompt_standbymode">Power has been disconnected to power off</string>
+  <string name="ml_prompt_version_no_exist">No detected the new firmware</string>
+  <string name="ml_prompt_version_invalid">Firmware is invalid</string>
+  <string name="ml_prompt_resolution_ing">Switch resolution,please wait...</string>
+  <string name="ml_prompt_resolution_finish">Switch resolution completed</string>
+  <string name="ml_prompt_prepare_update">Ready to update,please wait...</string>
+  <string name="ml_firmware_downloading_text">The packet is downloading...</string>
+  <string name="ml_adas_left_ldw">Left lane departure warning</string>
+  <string name="ml_adas_right_ldw">Right lane departure warning</string> 
+  <string name="ml_adas_pcw">Front collision warning</string>
+  <string name="ml_adas_danger_driver_fatigue">Driving fatigue warning</string>
+  <string name="info_dialog">Info</string>
+  <string name="confirm">OK</string>
+  <string name="cancel">Cancel</string> 
+  <string name="tl_playlist">Please choose the file to be played</string>
+  <string name="delete_dialog">Delete</string>
+  <string name="delete_info">Sure to delete the current file</string>
+  <string name="delete_info_video">Delete the video file</string>
+  <string name="delete_info_error_video">  The video is corrupted.  Do you want to delete it?</string>
+  <string name="delete_info_photo">Delete the pohto file</string>
+  <string name="tl_usb_charge">Charging mode</string>
+  <string name="tl_usb_mass_storage">Mass storage mode</string>
+  <string name="tl_usb_webcam">Camera mode</string>
+  <string name="tl_usb_connect">USB connected</string>
+  <string name="update_dialog_title">System Upgrade</string> 
+  <string name="ml_device_deviceinfo">About</string>  
+  <string name="ml_device_deviceinfo_sub_head">About</string>  
+  <string name="ml_device_deviceinfo_name">Product Name : V533 cdr</string>
+  <string name="ml_device_deviceinfo_make">Manufacture : Allwinner</string>
+  <string name="ml_device_deviceinfo_sn">SN:  </string>
+  <string name="ml_device_deviceinfo_account_id">Account ID: </string> 
+  <string name="ml_device_deviceinfo_imei_id">IMEI: </string>  
+  <string name="ml_device_deviceinfo_sim">SIM Card ID: </string> 
+  <string name="ml_device_deviceinfo_view">Check the device and SIM info.</string>
+  <string name="ml_device_sdcard_info">Card Memory</string>
+  <string name="ml_device_sdcard_info_sub_head">SD Card info.</string>
+  <string name="ml_device_sdcard_capacity">SD Card info.</string>
+  <string name="ml_device_sdcard_format">Format SdCard</string>
+   <string name="ml_device_sdcard_capacity_used">Used: </string>
+   <string name="ml_device_sdcard_total_capacity">Total storage: </string>
+ <string name="ml_device_dash_camera_tips">Tips: if you turn on the in-vehicle recording function,when you record the driving record video,the in-vehicle camera also records the in-vehicle video</string>  
+   <string name="ml_account_bingding">Account binding</string>
+   <string name="ml_account_binging_sub_head">Account binding</string>
+   <string name="ml_account_info_id">ID: </string>
+   <string name="ml_account_unbinding_info_1">Some functions of this device need to be activated after binding UBER.</string>
+   <string name="ml_account_unbinding_info_2">Please click the bottom button to bind the UBER account.</string>
+   <string name="ml_account_bind_failed_info">Due to network problems.The device get bind code failed ! Please try again later!</string>
+   <string name="ml_account_binding_button">Bind account</string>
+   <string name="ml_account_unbind_button">Unbind</string>
+   <string name="ml_device_version_update">Firmware</string>
+   <string name="ml_device_version_update_sub_head">Firmware</string>
+   <string name="ml_device_version_info">There are currently new versions to upgrate</string>
+   <string name="ml_device_version_current">FirmwareVersion:</string>
+   <string name="ml_device_version_new">The current firmware version is the latest.</string>
+   <string name="ml_device_version_new_can_upgraded">A new version firmare can be updated </string>
+   <string name="ml_device_version_update_now">Update Now</string>
+   <string name="ml_device_version_update_detect">Check for update</string>
+   <string name="ml_device_4g_module_version_current">4G Module firmware version:</string>
+   <string name="all_letters">abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ</string>
+   <string name="all_digit_num">0123456789</string>
+   <string name="all_symbol"> !@#$%^&*():;"',/?[]</string>
+   <string name="save_dialog">Save</string>
+  <string name="save_info">Save the setting?</string>
+  <string name="ml_promptBox_record_voice_on">Sound has been opened</string>
+  <string name="ml_promptBox_record_voice_off">Sound has been closed</string> 
+  <string name="ml_promptBox_recording_on">Video record on</string>
+  <string name="ml_promptBox_recording_off">Video record off</string> 
+  <string name="ml_promptBox_mobile_connected">Mobile was connected</string>
+  <string name="ml_promptBox_mobile_disconnected">Mobile was disconnected</string> 
+  <string name="ml_promptBox_gps_connected">Gps was connected</string>
+  <string name="ml_promptBox_gps_disconnected">Gps was disconnected</string>
+  <string name="ml_promptBox_adas_on">ADAS open</string>
+  <string name="ml_promptBox_adas_off">ADAS close</string>  
+  <string name="ml_promptBox_device_recording">Recording continued…</string> 
+  <string name="ml_promptBox_standby">Ready to enter the standby mode</string>
+  <string name="ml_promptBox_last_video">Already the last video</string>
+  <string name="ml_promptBox_first_video">Already the first video</string>
+  <string name="ml_promptBox_tf_insert">SD card inserted</string>
+  <string name="ml_promptBox_tf_out">Please insert SD card</string>
+  <string name="ml_promptBox_park_video">Park video,prohibited this operation</string>
+  <string name="ml_wifi_app_download_qr_code">Scan QR code to download APP</string>
+  <string name="ml_traffic_info_query">Traffic Info Query</string> 
+  <string name="ml_traffic_surplus">Traffic surplus:</string> 
+  <string name="ml_traffic_total">Total flow rate:</string> 
+  <string name="ml_flow_recharge">Flow Recharge</string> 
+  <string name="ml_scan_qr_code_recharge">Scan to flow recharge</string>  
+  <string name="ml_sim_info_query">SIM info query</string>
+  <string name="ml_sim_card_id">SIM ID:xxxxx</string>
+  <string name="ml_sim_network_business">Network Business:China Mobile</string>
+  <string name="ml_button_dialog_refresh_network_time">Refresh network time?</string>
+  <string name="ml_button_dialog_manual_update_time">Manually adjust time?</string>
+  <string name="ml_account_dialog_unbind">Account unbinding</string>
+  <string name="ml_button_dialog_format_sdcard">Format sdcard</string>
+  <string name="ml_button_dialog_4g_network_open">Update data needs to open 4G network,whether to open?</string>
+  <string name="ml_button_dialog_record_loop_open">Packing record needs to open the packing abnormal,whether to open?</string>
+  <string name="ml_button_dialog_record_loop_open_fail">Sure YI packing monitor line is inserted and the abnormal monitor function is enabled,the packing cycle record function can be enabled</string>
+  <string name="ml_button_dialog_adas_open_fail">Sure the insert the GPS,retry</string>
+  <string name="ml_button_dialog_watchdog_open_fail">Sure the insert the GPS,retry</string>
+  <string name="ml_button_dialog_download_packet_version">Data package is downloading</string>
+  <string name="ml_button_dialog_download_packet_watchdog">Data package is downloading</string>
+  <string name="ml_button_dialog_install_packet_version">package is installing</string>
+  <string name="ml_button_dialog_install_packet_watchdog">package is installing</string>
+  <string name="ml_button_dialog_install_current_city_packet_finished">Install completed,current city data package has been updated</string>
+  <string name="ml_button_dialog_install_national_city_packet_finished">Install completed,national city data package has been updated</string>
+  <string name="ml_button_dialog_download_packet_fail_network_abnormal">Download failed,please check if the device network is normal</string>
+  <string name="ml_button_dialog_download_packet_fail_insufficient_flow">Download failed,your remaining traffic is insufficient</string>
+  <string name="ml_button_dialog_install_version_finish">Install completed,current system version has been updated</string>
+  <string name="ml_button_dialog_more_img">Check has more than one version,please make sure only one.</string>
+  <string name="ml_button_dialog_check_md5_fail">Failed to check md5 value,firmware is invalid</string>
+  <string name="ml_button_dialog_open_fail">Open failed</string>
+  <string name="ml_button_dialog_know">OK, GOT IT</string>
+  <string name="ml_button_dialog_open_now">Open now</string>
+  <string name="ml_button_dialog_retry">Retry</string>
+  <string name="ml_button_dialog_recharge_now">Recharge now</string>
+  <string name="ml_playback_front_camera_video">Front camera video</string>
+  <string name="ml_preview_record_front_rear">double record</string>
+  <string name="ml_preview_record_front">front record</string>
+  <string name="ml_preview_record_rear">rear record</string>
+  <string name="ml_preview_record_pause">Stop Recording</string>
+  <string name="ml_preview_recording">Recording</string>
+  <string name="ml_preview_drip_notice">Notice</string>
+  <string name="ml_ota_install_packet">Packet installation</string>
+  <string name="ml_ota_install_notice">Do not turn off the vehicle or break the device</string>
+  <string name="ml_ota_install_failed">Packet installation fialed,ready to reboot</string>
+  <string name="ml_ota_install_finsh">Update finished, device will be reboot.</string>
+  <string name="ml_ota_install_check_md5_fail">Failed to check md5 value,firmware is invalid</string>
+  <string name="ml_sdvcam_ota_fail">The upgrade is wrong. If reboot is ok ,please retry. If reboot fails,please use the card strong brush mode</string>
+  <string name="ml_ota_instal_found_img_fail">Failed to found the version.</string>
+  <string name="ml_playback_no_file">No File</string>
+  <string name="ml_playback_no_sdcard">SD card not found</string>
+  <string name="ml_promptBox_video_player">video play error</string>
+  <string name="ml_sdcard_update_version_new">SdCard has new version,do you want to update</string>
+  <string name="ml_sdcard_update_version_now">Upgrade now</string>
+  <string name="ml_sdcard_update_version_no">Not upgrate</string>
+  <string name="ml_bindwindow_title">Device activation & binging</string>
+  <string name="ml_bindwindow_text">The mobile phone scans the QR code to obtain the APP download link,and the downloaded user directly opens the "Drip DownWind Driving Recorder" APP scan for account bingding</string>
+  <string name="ml_bindwindow_uber_text">    It takes an UBER account to link the device to the UBER server.Please use DashScape APP to scan the left qr code (or enter six bit dynamic code below in the binding interface) to complete the binding.</string>
+  <string name="ml_setting_menu">Setting Menu</string>
+  <string name="ml_lock_current_file">lock current video file</string>
+  <string name="ml_unlock_current_file">unlock current video file</string>
+  <string name="ml_current_file_locked">current video file has been locked</string>
+  <string name="ml_promptBox_current_recording_off">Current video recorder is off,please turn on recording</string> 
+  <string name="ml_no_tf">No Sdcard</string>
+  <string name="ml_listview_mode_device">Recorder Setting</string>
+  <string name="ml_listview_mode_adas">ADAS Setting</string>
+  <string name="ml_listview_mode_general">General Setting</string>
+  <string name="ml_listview_return">Return</string>
+  <string name="ml_listview_home">Home</string>
+  <string name="ml_sublistview_tip">recommend</string>
+  <string name="ml_playback_delete_file">Delete current file</string>
+  <string name="ml_playback_delete_all_files">Delete all unlcok files</string>
+  <string name="ml_playback_lock_file">Lock current file</string>
+  <string name="ml_playback_unlock_file">Unlock current file</string>
+  <string name="ml_playback_unlock_all_files">Unlock all files</string>
+  <string name="ml_playback_front_filelist">Front</string>
+  <string name="ml_playback_rear_filelist">Rear</string>
+  <string name="ml_r_event_dir_full">R event dir is full,start R video record filed<string>
+  <string name="ml_f_event_dir_full">F event dir is full,Start Record filed</string>
+  <string name="ml_park_dir_full">Park dir is full,please deal with it</string>
+  <string name="ml_promptBox_tf_full">Recording file is full,stop recording</string>
+  <string name="ml_prompt_no_delete_lockfile">file lock，can't delete</string>
+  <string name="ml_prompt_not_support_adas">Not supported ADAS at this resolution!</string>
+  <string name="ml_promptBox_not_support_adas">Not supported ADAS at this resolution!</string>
+  <string name="ml_prompt_cpu_temp_high">Device temperature is too high,stop recording</string>
+  <string name="ml_promptBox_not_support_takepic">Open ADAS in video mode can not take pictures!</string>
+  </resources>

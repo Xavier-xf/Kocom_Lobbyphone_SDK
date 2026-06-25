@@ -1,0 +1,27 @@
+#!/bin/sh
+
+echo "------run rc.modules file-----"
+echo "------insmod audio modules start-----"
+MODULES_DIR="/lib/modules/`uname -r`"
+insmod $MODULES_DIR/soundcore.ko
+insmod $MODULES_DIR/snd.ko
+insmod $MODULES_DIR/snd-timer.ko
+insmod $MODULES_DIR/snd-pcm.ko
+insmod $MODULES_DIR/snd-pcm-dmaengine.ko
+insmod $MODULES_DIR/snd-soc-core.ko
+insmod $MODULES_DIR/snd_soc_sunxi_pcm.ko
+insmod $MODULES_DIR/snd_soc_sunxi_component_rxsync.ko
+insmod $MODULES_DIR/snd_soc_sunxi_aaudio.ko
+insmod $MODULES_DIR/snd_soc_sunxi_daudio.ko
+insmod $MODULES_DIR/snd_soc_sunxi_internal_codec.ko
+insmod $MODULES_DIR/snd_soc_sunxi_machine.ko
+echo "------insmod audio modules end-----"
+#insmod /lib/modules/4.9.191/fb.ko
+#insmod /lib/modules/4.9.191/disp.ko
+insmod /lib/modules/4.9.191/vipcore.ko
+insmod /lib/modules/4.9.191/g2d_sunxi.ko
+insmod /lib/modules/4.9.191/xr806.ko
+insmod /lib/modules/4.9.191/wireless_switch.ko
+insmod /lib/modules/4.9.191/xradio_mac.ko
+insmod /lib/modules/4.9.191/xradio_core.ko
+insmod /lib/modules/4.9.191/xradio_wlan.ko

@@ -1,0 +1,112 @@
+if PACKAGE_rt_media-AWVideoInputDemo
+
+# rt_media demo config
+config rt_media_demo
+	bool "select rt media demo"
+	default y
+	help
+	  select rt-media demo to be copy to /bin.
+
+config rt_media_demo_compile_static
+	bool "force to compile static libs"
+	default n
+	depends on rt_media_demo
+	help
+	  when compile rt-media demo, take precedence to link static libs.
+
+choice
+	prompt "select log tool for rt_media demos"
+	default rt_media_demo_log_use_printf
+
+config rt_media_demo_log_use_printf
+	bool "use printf() to log"
+	help
+	  using printf() can be compatible with all systems, but its function is very limited.
+
+config rt_media_demo_log_use_glog
+	bool "use glog library to log"
+	help
+	  using glog is recommended, but it depends on libglog.so
+endchoice
+
+config rt_media_demo_video_in
+	bool "demo video in"
+	depends on rt_media_demo
+	default y
+	help
+	  copy demo_video_in to /bin.
+
+config rt_media_demo_video_in_3chn
+	bool "demo video in 3ch"
+	depends on rt_media_demo
+	help
+	  copy demo_video_in_3chn to /bin.
+
+config rt_media_demo_roi
+	bool "demo roi"
+	depends on rt_media_demo
+	help
+	  copy demo_roi to /bin.
+
+config rt_media_demo_force_i_frame
+	bool "demo force i frame"
+	depends on rt_media_demo
+	help
+	  copy demo_force_i_frame to /bin.
+
+config rt_media_demo_motion_search
+	bool "demo motion search"
+	depends on rt_media_demo
+	help
+	  copy demo_motion_search to /bin.
+
+config rt_media_demo_encoder
+	bool "demo encoder"
+	depends on rt_media_demo
+	help
+	  copy demo_encoder to /bin.
+
+config rt_media_demo_get_yuv
+	bool "demo get yuv"
+	depends on rt_media_demo
+	help
+	  copy demo_get_yuv to /bin.
+
+config rt_media_demo_osd
+	bool "demo osd"
+	depends on rt_media_demo
+	help
+	  copy demo_osd to /bin.
+
+config rt_media_demo_orl
+	bool "demo orl"
+	depends on rt_media_demo
+	help
+	  copy demo_orl to /bin.
+
+config rt_media_demo_reset_size
+	bool "demo reset size"
+	depends on rt_media_demo
+	help
+	  copy demo_reset_size to /bin.
+
+config rt_media_demo_gdc
+	bool "demo gdc"
+	depends on rt_media_demo
+	help
+	  copy demo_gdc to /bin.
+
+config rt_media_demo_isp_api
+	bool "demo isp api"
+	depends on rt_media_demo
+	help
+	  copy demo_isp_api to /bin.
+
+
+config rt_media_demo_face_recognition
+	bool "demo face recognition"
+	depends on rt_media_demo
+	help
+	  copy demo_face_recognition to /bin.
+
+endif

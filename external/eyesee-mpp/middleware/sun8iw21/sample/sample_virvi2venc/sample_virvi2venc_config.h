@@ -1,0 +1,170 @@
+#ifndef __SAMPLE_VIRVI2VENC_CONF_H__
+#define __SAMPLE_VIRVI2VENC_CONF_H__
+
+#define CFG_VIPP_DEV_ID         "vipp_id"
+#define CFG_SRC_WIDTH           "src_width"
+#define CFG_SRC_HEIGHT          "src_height"
+#define CFG_SRC_FRAMERATE       "src_framerate"
+#define CFG_DST_VI_BUFFER_NUM   "vi_buffer_num"
+#define CFG_SRC_PIXFMT          "src_pixfmt"
+#define CFG_COLOR_SPACE         "color_space"
+#define CFG_DROP_FRAME_NUM      "drop_frm_num"
+#define CFG_SATURATION_CHANGE   "saturation_change"
+
+#define CFG_VENC_CH_ID          "venc_ch_id"
+#define CFG_DST_VIDEO_FILE_STR  "video_dst_file"
+#define CFG_DST_VIDEO_WIDTH     "video_width"
+#define CFG_DST_VIDEO_HEIGHT    "video_height"
+#define CFG_DST_VIDEO_FRAMERATE "video_framerate"
+#define CFG_DST_VIDEO_BITRATE   "video_bitrate"
+#define CFG_DST_VIDEO_ENCODER   "video_encoder"
+#define CFG_DST_ENCODE_PROFILE  "profile"
+#define CFG_PRODUCT_MODE        "product_mode"
+//#define CFG_SENSOR_TYPE         "sensor_type"
+#define CFG_KEY_FRAME_INTERVAL  "key_frame_interval"
+#define CFG_RC_MODE             "rc_mode"
+#define CFG_INIT_QP             "init_qp"
+#define CFG_MIN_I_QP            "min_i_qp"
+#define CFG_MAX_I_QP            "max_i_qp"
+#define CFG_MIN_P_QP            "min_p_qp"
+#define CFG_MAX_P_QP            "max_p_qp"
+#define CFG_MB_QP_LIMIT         "mb_qp_limit_en"
+#define CFG_MOVING_TH           "moving_th"
+#define CFG_QUALITY             "quality"
+#define CFG_P_BITS_COEF         "p_bits_coef"
+#define CFG_I_BITS_COEF         "i_bits_coef"
+
+#define CFG_VBR_OPT_ENABLE      "vbr_opt_en"
+
+#define CFG_GOP_MODE  "gop_mode"
+#define CFG_GOP_SIZE  "gop_size"
+
+#define CFG_AdvancedRef_Base        "AdvancedRef_Base"
+#define CFG_AdvancedRef_Enhance     "AdvancedRef_Enhance"
+#define CFG_AdvancedRef_RefBaseEn   "AdvancedRef_RefBaseEn"
+#define CFG_FAST_ENC  "enable_fast_enc"
+#define CFG_ENABLE_SMART  "enable_smart"
+#define CFG_SVC_LAYER  "svc_layer"
+#define CFG_ENCODE_ROTATE "encode_rotate"
+
+#define CFG_MIRROR          "mirror"
+#define CFG_COLOR2GREY      "color2grey"
+
+#define CFG_2DNR_EN          "2dnr_en"
+#define CFG_2DNR_STRENGTH_Y  "2dnr_strength_y"
+#define CFG_2DNR_STRENGTH_C  "2dnr_strength_c"
+#define CFG_2DNR_THRESHOLD_Y "2dnr_threshold_y"
+#define CFG_2DNR_THRESHOLD_C "2dnr_threshold_c"
+
+#define CFG_3DNR_EN                "3dnr_en"
+#define CFG_3DNR_PIX_LEVEL_EN      "3dnr_pix_level_en"
+#define CFG_3DNR_SMOOTH_EN         "3dnr_smooth_en"
+#define CFG_3DNR_PIX_DIFF_TH       "3dnr_pix_diff_th"
+#define CFG_3DNR_MAX_MV_TH         "3dnr_max_mv_th"
+#define CFG_3DNR_MAX_MAD_TH        "3dnr_max_mad_th"
+#define CFG_3DNR_MIN_COEF          "3dnr_min_coef"
+#define CFG_3DNR_MAX_COEF          "3dnr_max_coef"
+
+#define CFG_ROI_NUM         "roi_num"
+#define CFG_ROI_QP          "roi_qp"
+#define CFG_ROI_BgFrameRateEnable       "roi_BgFrameRateEnable"
+#define CFG_ROI_BgFrameRateAttenuation  "roi_BgFrameRateAttenuation"
+
+#define CFG_IntraRefresh_BlockNum  "IntraRefresh_BlockNum"
+#define CFG_ORL_NUM  "orl_num"
+
+#define CFG_vbvBufferSize  "vbvBufferSize"
+#define CFG_vbvThreshSize  "vbvThreshSize"
+
+#define CFG_MBSuminfoEnable "mbsuminfo_enable"
+
+#define CFG_CROP_ENABLE       "crop_en"
+#define CFG_CROP_RECT_X       "crop_rect_x"
+#define CFG_CROP_RECT_Y       "crop_rect_y"
+#define CFG_CROP_RECT_WIDTH   "crop_rect_w"
+#define CFG_CROP_RECT_HEIGHT  "crop_rect_h"
+
+#define CFG_vui_timing_info_present_flag  "vui_timing_info_present_flag"
+#define CFG_NalRefIdcNoneZeroValue "NalRefIdcNoneZeroValue"
+//#define CFG_Ve_Freq  "ve_freq"
+
+#define CFG_online_en  "online_en"
+#define CFG_online_share_buf_num  "online_share_buf_num"
+
+#define CFG_WDR_EN   "wdr_en"
+#define CFG_EnableGdc "enable_gdc"
+
+#define CFG_EncppEnable "encpp_enable"
+
+#define CFG_IspAndVeLinkageEnable       "isp_ve_linkage_enable"
+#define CFG_CameraAdaptiveMovingAndStaticEnable "camera_adaptive_moving_and_static_enable"
+#define CFG_VencLensMovingMaxQp         "ve_lens_moving_max_qp"
+
+#define CFG_SuperFrmMode "super_frm_mode"
+#define CFG_SuperMaxRencodeTimes "super_max_rencode_times"
+#define CFG_SuperMaxP2IFrameBitsRatio "super_max_p2i_frm_bitsratio"
+#define CFG_SuperIFrmBitsThr "super_i_frm_bits_thr"
+#define CFG_SuperPFrmBitsThr "super_p_frm_bits_thr"
+
+#define CFG_BitsClipDisDefault          "bits_clip_dis_default"
+#define CFG_BitsClipMode                "bits_clip_mode"
+#define CFG_BitsClipEnableGopClip       "bits_clip_en_gop_clip"
+#define CFG_BitsClipGopBitRatioTh0      "bits_clip_gop_bit_ratio_th[0]"
+#define CFG_BitsClipGopBitRatioTh1      "bits_clip_gop_bit_ratio_th[1]"
+#define CFG_BitsClipGopBitRatioTh2      "bits_clip_gop_bit_ratio_th[2]"
+#define CFG_BitsClipCoef00              "bits_clip_coef[0][0]"
+#define CFG_BitsClipCoef01              "bits_clip_coef[0][1]"
+#define CFG_BitsClipCoef10              "bits_clip_coef[1][0]"
+#define CFG_BitsClipCoef11              "bits_clip_coef[1][1]"
+#define CFG_BitsClipCoef20              "bits_clip_coef[2][0]"
+#define CFG_BitsClipCoef21              "bits_clip_coef[2][1]"
+#define CFG_BitsClipCoef30              "bits_clip_coef[3][0]"
+#define CFG_BitsClipCoef31              "bits_clip_coef[3][1]"
+#define CFG_BitsClipCoef40              "bits_clip_coef[4][0]"
+#define CFG_BitsClipCoef41              "bits_clip_coef[4][1]"
+
+#define CFG_EnIFrmMbRcMoveStatusEnable  "en_ifrm_mb_rc_move_status_enable"
+#define CFG_EnIFrmMbRcMoveStatus        "en_ifrm_mb_rc_move_status"
+
+#define CFG_IPTargetBitsRatioEnable     "i_p_target_bits_ratio_enable"
+#define CFG_IPTargetBitsRatioSceneCoef0 "i_p_target_bits_ratio_scene_coef[0]"
+#define CFG_IPTargetBitsRatioSceneCoef1 "i_p_target_bits_ratio_scene_coef[1]"
+#define CFG_IPTargetBitsRatioSceneCoef2 "i_p_target_bits_ratio_scene_coef[2]"
+#define CFG_IPTargetBitsRatioMoveCoef0  "i_p_target_bits_ratio_move_coef[0]"
+#define CFG_IPTargetBitsRatioMoveCoef1  "i_p_target_bits_ratio_move_coef[1]"
+#define CFG_IPTargetBitsRatioMoveCoef2  "i_p_target_bits_ratio_move_coef[2]"
+#define CFG_IPTargetBitsRatioMoveCoef3  "i_p_target_bits_ratio_move_coef[3]"
+#define CFG_IPTargetBitsRatioMoveCoef4  "i_p_target_bits_ratio_move_coef[4]"
+
+#define CFG_Req_IDR_Enable "req_idr_enable"
+
+#define CFG_DynamicSetVeRefFrameLbcModeEnable "dynamic_set_ve_ref_lbc_mode_en"
+
+#define CFG_RegionD3DEnable "region_d3d_en"
+#define CFG_RegionD3DResultEnable "region_d3d_result_en"
+
+#define CFG_ChromaQPOffsetEnable        "chroma_qp_offset_enable"
+#define CFG_ChromaQPOffset              "chroma_qp_offset"
+
+#define CFG_H264ConstraintFlagEnable    "h264_constraint_flag_enable"
+#define CFG_H264ConstraintFlagBit0      "h264_constraint_flag_bit0"
+#define CFG_H264ConstraintFlagBit1      "h264_constraint_flag_bit1"
+#define CFG_H264ConstraintFlagBit2      "h264_constraint_flag_bit2"
+#define CFG_H264ConstraintFlagBit3      "h264_constraint_flag_bit3"
+#define CFG_H264ConstraintFlagBit4      "h264_constraint_flag_bit4"
+#define CFG_H264ConstraintFlagBit5      "h264_constraint_flag_bit5"
+
+#define CFG_Ve2IspD2DLimitEnable        "ve2isp_d2d_limit_enable"
+#define CFG_Ve2IspD2DLimitD2DLevel0     "ve2isp_d2d_limit_d2d_level0"
+#define CFG_Ve2IspD2DLimitD2DLevel1     "ve2isp_d2d_limit_d2d_level1"
+#define CFG_Ve2IspD2DLimitD2DLevel2     "ve2isp_d2d_limit_d2d_level2"
+#define CFG_Ve2IspD2DLimitD2DLevel3     "ve2isp_d2d_limit_d2d_level3"
+#define CFG_Ve2IspD2DLimitD2DLevel4     "ve2isp_d2d_limit_d2d_level4"
+#define CFG_Ve2IspD2DLimitD2DLevel5     "ve2isp_d2d_limit_d2d_level5"
+
+#define CFG_VeRefFrameLbcMode           "ve_ref_lbc_mode"
+#define CFG_VeRecRefBufReduceEnable    "ve_rec_ref_buf_reduce_enable"
+
+#define CFG_TEST_DURATION  "test_duration"
+
+#endif //#define __SAMPLE_VIRVI2VENC_CONF_H__

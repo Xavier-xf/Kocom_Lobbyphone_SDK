@@ -1,0 +1,11 @@
+<RCC>
+    <qresource prefix="/usr/share/minigui/res/images">
+	<file>status_bar_bottom_lock.png</file>
+	<file>status_bar_bottom_mic.png</file>
+	<file>status_bar_bottom_setting.png</file>
+	<file>status_bar_bottom_adas.png</file>
+	<file>status_bar_bottom_photo.png</file>
+	<file>status_bar_bottom_playback.png</file>
+	<file>status_bar_bottom_rec.png</file>
+    </qresource>
+</RCC>

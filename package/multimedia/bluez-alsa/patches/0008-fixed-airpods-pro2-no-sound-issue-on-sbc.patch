@@ -1,0 +1,36 @@
+From 7c066214c1abb64cbd1c52f39082ef1b54d2af98 Mon Sep 17 00:00:00 2001
+From: luoyuyi <luoyuyi@allwinnertech.com>
+Date: Mon, 15 May 2023 21:05:46 +0800
+Subject: [PATCH] fixed airpods pro2 no sound issue on sbc
+
+---
+ src/io.c | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/src/io.c b/src/io.c
+index d8c3430..6be0235 100644
+--- a/src/io.c
++++ b/src/io.c
+@@ -163,8 +163,8 @@ static uint8_t *io_thread_init_rtp(void *s, rtp_header_t **hdr, rtp_media_header
+ 	memset(header, 0, RTP_HEADER_LEN);
+ 	header->paytype = 96;
+ 	header->version = 2;
+-	header->seq_number = random();
+-	header->timestamp = random();
++	header->seq_number = htons(0);
++	header->timestamp = htonl(0);
+ 
+ 	uint8_t *data = (uint8_t *)&header->csrc[header->cc];
+ 
+@@ -512,7 +512,7 @@ void *io_thread_a2dp_source_sbc(void *arg) {
+ 		/* keep data transfer at a constant bit rate, also
+ 		 * get a timestamp for the next RTP frame */
+ 		asrsync_sync(&asrs, pcm_frames);
+-		timestamp += pcm_frames * 10000 / samplerate;
++		timestamp += pcm_frames;
+ 		t->delay = asrs.ts_busy.tv_nsec / 100000;
+ 
+ 		/* If the input buffer was not consumed (due to codesize limit), we
+-- 
+2.29.0
+

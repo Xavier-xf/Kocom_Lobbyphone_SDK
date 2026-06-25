@@ -1,0 +1,13 @@
+ae_mode=0
+ae_expOffset=0
+ae_exposure=0
+gain=0
+awb_mode=0
+awb_coltmp=0
+brightness=0
+contrast=0
+saturation=0
+hue=0
+maxexp=0
+minexp=0
+sharpness=0

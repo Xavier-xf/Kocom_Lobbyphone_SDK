@@ -1,0 +1,435 @@
+/*
+ * Allwinner Technology CO., Ltd. sun8iw21p1 soc board.
+ *
+ * soc board support.
+ */
+
+/dts-v1/;
+
+#include "sun8iw21p1.dtsi"
+
+/{
+
+};
+
+&pio {
+	spi0_pins_a: spi0@0 {
+		allwinner,pins = "PF31", "PF24", "PF29",
+					 "PF26", "PF30";
+		allwinner,pname = "spi0_sclk", "spi0_mosi",
+					 "spi0_miso", "spi0_hold", "spi0_wp";
+		allwinner,function = "spi0";
+		allwinner,muxsel = <5>;
+		allwinner,drive = <1>;
+		allwinner,pull = <0>;
+	};
+
+	spi0_pins_b: spi0@1 {
+		allwinner,pins = "PF25";
+		allwinner,pname = "spi0_cs0";
+		allwinner,function = "spi0";
+		allwinner,muxsel = <5>;
+		allwinner,drive = <1>;
+		allwinner,pull = <1>;   // only CS should be pulled up
+	};
+
+	spi0_pins_c: spi0@2 {
+		allwinner,pins = "PF24", "PF25", "PF26", "PF29", "PF30", "PF31";
+		allwinner,function = "io_disabled";
+		allwinner,muxsel = <7>;
+		allwinner,drive = <1>;
+		allwinner,pull = <0>;
+	};
+
+	spi1_pins_a: spi1@0 {
+		allwinner,pins = "PF31", "PF24", "PF29",
+					 "PF26", "PF30";
+		allwinner,pname = "spi0_sclk", "spi0_mosi",
+					 "spi0_miso", "spi0_hold", "spi0_wp";
+		allwinner,function = "spi0";
+		allwinner,muxsel = <5>;
+		allwinner,drive = <1>;
+		allwinner,pull = <0>;
+	};
+
+	spi1_pins_b: spi1@1 {
+		allwinner,pins = "PF25";
+		allwinner,pname = "spi0_cs0";
+		allwinner,function = "spi0";
+		allwinner,muxsel = <5>;
+		allwinner,drive = <1>;
+		allwinner,pull = <1>;   // only CS should be pulled up
+	};
+
+	spi1_pins_c: spi1@2 {
+		allwinner,pins = "PF24", "PF25", "PF26", "PF29", "PF30", "PF31";
+		allwinner,function = "io_disabled";
+		allwinner,muxsel = <7>;
+		allwinner,drive = <1>;
+		allwinner,pull = <0>;
+	};
+
+	spif0_pins_a: spif0@0 {
+	/* aw1886 fpga PF11 can't be set */
+	allwinner,pins = "PF24", "PF29", "PF26", "PF30",
+						"PF31","PF20", "PF21", "PF22",
+						"PF23";
+/*
+		allwinner,pins = "PF24", "PF29", "PF26", "PF30",
+						"PF31","PF20", "PF21", "PF22",
+						"PF23","PF11";
+*/
+		allwinner,pname = "spif0_mosi", "spif0_miso", "spif0_hold", "spif0_wp",
+						"spif0_sck", "spif0_dq4", "spif0_dq5", "spif0_dq6",
+						"spif0_dq7", "spif0_dqs";
+		allwinner,function = "spif";
+		allwinner,muxsel = <3>;
+		allwinner,drive = <1>;
+		allwinner,pull = <0>;
+	};
+
+	spif0_pins_b: spif0@1 {
+		allwinner,pins = "PF25";
+		allwinner,pname = "spif0_cs0";
+		allwinner,function = "spif";
+		allwinner,muxsel = <3>;
+		allwinner,drive = <1>;
+		allwinner,pull = <1>;   // only CS should be pulled up
+	};
+
+	spif0_pins_c: spif0@2 {
+		allwinner,pins = "PF24", "PF29", "PF26", "PF30",
+						"PF31","PF20", "PF21", "PF22",
+						"PF23", "PF25", "PF11";
+		allwinner,pname = "spif0_mosi", "spif0_miso", "spif0_hold", "spif0_wp",
+						"spif0_sck", "spif0_dq4", "spif0_dq5", "spif0_dq6",
+						"spif0_dq7", "spif0_cs", "spif0_dqs";
+		allwinner,function = "io_disabled";
+		allwinner,muxsel = <0xF>;
+		allwinner,drive = <1>;
+		allwinner,pull = <0>;
+	};
+
+	twi0_pins_a: twi0@0 {
+		allwinner,pins = "PB0", "PB1";
+		allwinner,pname = "twi0_scl", "twi0_sda";
+		allwinner,function = "twi0";
+		allwinner,muxsel = <4>;
+		allwinner,drive = <0>;
+		allwinner,pull = <1>;
+	};
+
+	twi0_pins_b: twi0@1 {
+		allwinner,pins = "PB0", "PB1";
+		allwinner,function = "io_disabled";
+		allwinner,muxsel = <7>;
+		allwinner,drive = <0>;
+		allwinner,pull = <0>;
+	};
+
+	twi1_pins_a: twi1@0 {
+		allwinner,pins = "PB4", "PB5";
+		allwinner,pname = "twi1_scl", "twi1_sda";
+		allwinner,function = "twi1";
+		allwinner,muxsel = <2>;
+		allwinner,drive = <0>;
+		allwinner,pull = <1>;
+	};
+
+	twi1_pins_b: twi1@1 {
+		allwinner,pins = "PB4", "PB5";
+		allwinner,function = "io_disabled";
+		allwinner,muxsel = <7>;
+		allwinner,drive = <0>;
+		allwinner,pull = <0>;
+	};
+
+	dmic_pins_a: dmic@0 {
+		/* clk */
+		allwinner,pins = "PF9";
+		allwinner,function = "dmic";
+		allwinner,muxsel = <2>;
+		allwinner,drive = <1>;
+		allwinner,pull = <0>;
+	};
+
+	dmic_pins_b: dmic@1 {
+		/* din0 din1 din2 din3 */
+		allwinner,pins = "PF28", "PG30", "PG28", "PG26";
+		allwinner,function = "dmic";
+		allwinner,muxsel = <0>;
+		allwinner,drive = <1>;
+		allwinner,pull = <0>;
+	};
+
+	dmic_pins_c: dmic_sleep@0 {
+		allwinner,pins = "PF9", "PF28", "PG30", "PG28", "PG26";
+		allwinner,function = "io_disabled";
+		allwinner,muxsel = <0xf>;
+		allwinner,drive = <1>;
+		allwinner,pull = <0>;
+	};
+
+	daudio0_pins_a: daudio0@0 {
+		/* mclk lrck bclk */
+		allwinner,pins = "PB29", "PB24", "PB23";
+		allwinner,function = "i2s0";
+		allwinner,muxsel = <2>;
+		allwinner,drive = <1>;
+		allwinner,pull = <0>;
+	};
+
+	daudio0_pins_b: daudio0@1 {
+		/* din0 */
+		allwinner,pins = "PB22";
+		allwinner,function = "i2s0";
+		allwinner,muxsel = <0>;
+		allwinner,drive = <1>;
+		allwinner,pull = <0>;
+	};
+
+	daudio0_pins_c: daudio0@2 {
+		/* dout0 */
+		allwinner,pins = "PB25";
+		allwinner,function = "i2s0";
+		allwinner,muxsel = <2>;
+		allwinner,drive = <1>;
+		allwinner,pull = <0>;
+	};
+
+	daudio0_pins_d: daudio0_sleep@0 {
+		allwinner,pins = "PB29", "PB24", "PB23", "PB22", "PB25";
+		allwinner,function = "io_disabled";
+		allwinner,muxsel = <0xf>;
+		allwinner,drive = <1>;
+		allwinner,pull = <0>;
+	};
+
+	daudio1_pins_a: daudio1@0 {
+		allwinner,pins = "PB29", "PB24", "PB23";
+		allwinner,function = "i2s1";
+		allwinner,muxsel = <3>;
+		allwinner,drive = <1>;
+		allwinner,pull = <0>;
+	};
+
+	daudio1_pins_b: daudio1_sleep@0 {
+		allwinner,pins = "PB29", "PB24", "PB23";
+		allwinner,function = "io_disabled";
+		allwinner,muxsel = <0xf>;
+		allwinner,drive = <1>;
+		allwinner,pull = <0>;
+	};
+
+	wiegand_pins_a: wiegand@0 {
+		pins = "PD1", "PD2";
+		function = "wiegand";
+		drive-strength = <10>;
+		muxsel = <0>;
+		bias-pull-up;
+	};
+
+	wiegand_pins_b: wiegand@1 {
+		pins = "PD1", "PD2";
+		muxsel = <1>;
+		function = "io_disabled";
+	};
+};
+
+&twi0 {
+	clock-frequency = <400000>;
+	pinctrl-0 = <&twi0_pins_a>;
+	pinctrl-1 = <&twi0_pins_b>;
+	pinctrl-names = "default", "sleep";
+	status = "okay";
+	/* audio: add ac108 capture */
+	/*
+        ac108@3B {
+		compatible = "Allwinner,MicArray_0";
+		device_type = "MicArray_0";
+		reg = <0x3B>;
+		regulator_used = <0x0>;
+		power_gpio_used = <0x0>;
+		reset_gpio_used = <0x0>;
+		twi_bus = <0x1>;
+		pga_gain = <0x1F>;
+		slot_width = <0x20>;
+		lrck_period = <0x80>;
+		ref_pga_used = <0x1>;
+		ref_pga_gain = <0x10>;
+		ref_channel = <0x3>;
+		debug_mode = <0x0>;
+	};
+	*/
+};
+
+&spi0 {
+	clock-frequency = <100000000>;
+	pinctrl-0 = <&spi0_pins_a &spi0_pins_b>;
+	pinctrl-1 = <&spi0_pins_c>;
+	pinctrl-names = "default", "sleep";
+	spi_slave_mode = <0>;
+	spi_dbi_enable = <0>;
+	spi0_cs_number = <1>;
+	status = "disabled";
+
+	spi_board1@0 {
+		device_type = "spi_board1";
+		compatible = "rohm,dh2228fv";
+		spi-max-frequency = <0x5f5e100>;
+		reg = <0x0>;
+		spi-rx-bus-width = <0x4>;
+		spi-tx-bus-width = <0x4>;
+		status = "disabled";
+	};
+};
+
+&spi1 {
+	clock-frequency = <100000000>;
+	pinctrl-0 = <&spi1_pins_a &spi1_pins_b>;
+	pinctrl-1 = <&spi1_pins_c>;
+	pinctrl-names = "default", "sleep";
+	spi_slave_mode = <0>;
+	spi_dbi_enable = <1>;
+	spi1_cs_number = <1>;
+	status = "disabled";
+
+	spi_board1@0 {
+		device_type = "spi_dbi";
+		compatible = "sunxi,spidbi";
+		spi-max-frequency = <0x5f5e100>;
+		reg = <0x0>;
+		spi-rx-bus-width = <0x4>;
+		spi-tx-bus-width = <0x4>;
+		status = "disabled";
+	};
+};
+
+&spi5 {
+	clock-frequency = <10000000>;
+	pinctrl-0 = <&spif0_pins_a &spif0_pins_b>;
+	pinctrl-1 = <&spif0_pins_c>;
+	pinctrl-names = "default", "sleep";
+	//prefetch_read_mode_enabled;	/* choose prefect read mode */
+	//dtr_mode_enabled;				/* choose double edge trigger mode */
+	//dqs_mode_enabled;				/* choose dqs mode(nand provide clk mode) */
+	status = "disabled";
+
+	spi_board1@0 {
+		device_type = "spi_board1";
+		compatible = "rohm,dh2228fv";
+		spi-max-frequency = <0x5f5e100>;
+		reg = <0x0>;
+		spi-rx-bus-width = <0x4>;
+		spi-tx-bus-width = <0x4>;
+		status = "disabled";
+	};
+};
+
+&twi1 {
+	clock-frequency = <400000>;
+	pinctrl-0 = <&twi1_pins_a>;
+	pinctrl-1 = <&twi1_pins_b>;
+	pinctrl-names = "default", "sleep";
+	status = "disabled";
+};
+
+&dmic {
+	pinctrl-names = "default","sleep";
+	pinctrl-0 = <&dmic_pins_a>,<&dmic_pins_b>;
+	pinctrl-1 = <&dmic_pins_c>;
+	status = "okay";
+};
+
+&snddmic {
+	status = "okay";
+};
+
+&daudio0 {
+	mclk_div 	= <0x01>;
+	frametype 	= <0x00>;
+	tdm_config 	= <0x01>;
+	sign_extend 	= <0x00>;
+	tx_data_mode 	= <0x00>;
+	rx_data_mode 	= <0x00>;
+	msb_lsb_first 	= <0x00>;
+	pcm_lrck_period = <0x80>;
+	slot_width_select = <0x20>;
+	audio_format 	= <0x01>;
+	daudio_master 	= <0x04>;
+	signal_inversion  = <0x01>;
+	pinctrl-names = "default", "sleep";
+	pinctrl-0 = <&daudio0_pins_a>,<&daudio0_pins_b>,<&daudio0_pins_c>;
+	pinctrl-1 = <&daudio0_pins_d>;
+	status = "okay";
+};
+
+&snddaudio0 {
+	/*
+	sunxi,snddaudio-codec = "ac108.0-003b";
+	sunxi,snddaudio-codec-dai = "ac108-pcm0";
+	*/
+	status = "okay";
+};
+
+&daudio1 {
+	mclk_div 	= <0x01>;
+	frametype 	= <0x00>;
+	tdm_config 	= <0x01>;
+	sign_extend 	= <0x00>;
+	tx_data_mode 	= <0x00>;
+	rx_data_mode 	= <0x00>;
+	msb_lsb_first 	= <0x00>;
+	pcm_lrck_period = <0x80>;
+	slot_width_select = <0x20>;
+	audio_format 	= <0x01>;
+	daudio_master 	= <0x04>;
+	signal_inversion  = <0x01>;
+	pinctrl-names = "default", "sleep";
+	pinctrl-0 = <&daudio1_pins_a>;
+	pinctrl-1 = <&daudio1_pins_b>;
+	status = "disabled";
+};
+
+&snddaudio1 {
+	status = "disabled";
+};
+
+&usbc0 {
+	device_type = "usbc0";
+	usb_port_type = <0x2>;
+	usb_detect_type = <0x1>;
+	usb_detect_mode = <0x0>;
+	usb_regulator_io = "nocare";
+	usb_wakeup_suspend = <0x0>;
+	usb_luns = <0x3>;
+	usb_serial_unique = <0x0>;
+	usb_serial_number = "20080411";
+	status = "okay";
+};
+
+&udc {
+	status = "okay";
+};
+
+&ehci0 {
+	status = "okay";
+};
+
+&ohci0 {
+	status = "okay";
+};
+
+&wiegand {
+	protocol-type		= <0>;		/* select protocol-type; 0:26bit, 1:34bit */
+	signal-duration		= <110>;	/* duty cycle, range is determined by clock_div */
+	signal-period		= <1178>;	/* cycle length, range is determined by clock_div */
+	high-parity-polar	= <0x01>;	/* select high parity bit polarity 1:odd parity; 0:even parity */
+	low-parity-polar	= <0x00>;	/* select low parity bit polarity 1:odd parity; 0:even parity */
+	data-polar		= <0x01>;	/* select the bit polarity 0:normal; 1:inverse */
+	clock-div		= <0x18>;	/* set the clock division ratio, range: 0-48 */
+	pinctrl-names = "default", "sleep";
+	pinctrl-0 = <&wiegand_pins_a>;
+	pinctrl-1 = <&wiegand_pins_b>;
+	status = "okay";
+};

@@ -1,0 +1,45 @@
+From f131acd9cc105c1e2bc82c5c081ca3ab691a1e79 Mon Sep 17 00:00:00 2001
+From: luoyuyi <luoyuyi@allwinnertech.com>
+Date: Wed, 12 Apr 2023 15:38:17 +0800
+Subject: [PATCH] fix airpods connect back fail on aac
+
+---
+ src/bluez.c | 7 ++++++-
+ src/io.c    | 3 +++
+ 2 files changed, 9 insertions(+), 1 deletion(-)
+
+diff --git a/src/bluez.c b/src/bluez.c
+index 81368f1..5406241 100644
+--- a/src/bluez.c
++++ b/src/bluez.c
+@@ -405,7 +405,12 @@ static int bluez_endpoint_set_configuration(GDBusMethodInvocation *inv, void *us
+ 					goto fail;
+ 				}
+ 
+-				const a2dp_aac_t *cap = (a2dp_aac_t *)capabilities;
++				a2dp_aac_t *cap = (a2dp_aac_t *)capabilities;
++
++				if(cap->object_type == (AAC_OBJECT_TYPE_MPEG4_AAC_LC | AAC_OBJECT_TYPE_MPEG2_AAC_LC)) {
++					cap->object_type = AAC_OBJECT_TYPE_MPEG4_AAC_LC;
++					debug("** special treatment");
++				}
+ 
+ 				if (cap->object_type != AAC_OBJECT_TYPE_MPEG2_AAC_LC &&
+ 						cap->object_type != AAC_OBJECT_TYPE_MPEG4_AAC_LC &&
+diff --git a/src/io.c b/src/io.c
+index 9cf6e91..25dfb53 100644
+--- a/src/io.c
++++ b/src/io.c
+@@ -771,6 +771,9 @@ void *io_thread_a2dp_source_aac(void *arg) {
+ 	case AAC_OBJECT_TYPE_MPEG4_AAC_SCA:
+ 		aot = AOT_AAC_SCAL;
+ 		break;
++	default:
++		debug("***other object_type %d", cconfig->object_type);
++		aot = AOT_AAC_LC;
+ 	}
+ 
+ 	if ((err = aacEncoder_SetParam(handle, AACENC_AOT, aot)) != AACENC_OK) {
+-- 
+2.29.0
+

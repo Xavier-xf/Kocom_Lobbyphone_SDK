@@ -1,0 +1,4 @@
+LICHEE_BRANDY_VER:=2.0
+LICHEE_BRANDY_DEFCONF:=sun8iw21p1_ft_defconfig
+LICHEE_BRANDY_SPL:=spl
+LICHEE_KERN_DEFCONF:=sun8iw21p1smp_ft_defconfig

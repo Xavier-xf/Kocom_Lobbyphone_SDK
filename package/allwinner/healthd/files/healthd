@@ -1,0 +1,7 @@
+config healthd
+	option bat_temp_low             -10
+	option bat_temp_over            60
+	option ic_high_temp_warning     105
+	option ic_high_temp_shutdown    120
+	option bat_vol_low		3400000
+	option bat_cap_low		4
