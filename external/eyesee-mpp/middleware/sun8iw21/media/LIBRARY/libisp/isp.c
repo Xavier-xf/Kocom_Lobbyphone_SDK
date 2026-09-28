@@ -1401,7 +1401,7 @@ int isp_init(int dev_id)
 		media_params.mdev = NULL;
 	}
 
-	media_params.mdev = media_open(MEDIA_DEVICE, 0);
+	media_params.mdev = media_open_vin(MEDIA_DEVICE, 0);
 	if (media_params.mdev == NULL) {
 		ISP_ERR("isp%d update media entity and links failed!\n", dev_id);
 		return -1;

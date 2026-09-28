@@ -28,6 +28,7 @@
 #include <string.h>
 #include <fcntl.h>
 #include <errno.h>
+#include <dirent.h>
 
 #include <linux/videodev2.h>
 #include <linux/media.h>
@@ -445,6 +446,80 @@ struct media_device *media_open(const char *name, int verbose)
 	}
 
 	return media;
+}
+
+static struct media_device *media_try_open_vin(const char *name, int verbose)
+{
+    struct media_device_info info;
+    struct media_device *media;
+    struct media_entity *entity;
+    int fd;
+    int ret;
+
+    /* Check the model before asking the VIN parser to enumerate a graph. */
+    fd = open(name, O_RDONLY | O_CLOEXEC);
+    if (fd < 0)
+        return NULL;
+    memset(&info, 0, sizeof(info));
+    ret = ioctl(fd, MEDIA_IOC_DEVICE_INFO, &info);
+    close(fd);
+    if (ret < 0 || strncmp(info.model, "Allwinner Vin", sizeof(info.model)))
+        return NULL;
+
+    media = media_open(name, verbose);
+    if (media == NULL)
+        return NULL;
+    entity = media_get_entity_by_name(media, "vin_video0");
+    if (strncmp(media->info.model, "Allwinner Vin", sizeof(media->info.model)) ||
+        entity == NULL || entity->devname[0] == '\0') {
+        media_close(media);
+        return NULL;
+    }
+
+    ISP_PRINT("VIN media selected: %s, vin_video0: %s\n", name, entity->devname);
+    return media;
+}
+
+struct media_device *media_open_vin(const char *name, int verbose)
+{
+    struct media_device *media;
+    struct dirent *entry;
+    DIR *dir;
+    char path[64];
+    const char *suffix;
+    int length;
+
+    if (name == NULL) {
+        errno = EINVAL;
+        return NULL;
+    }
+
+    media = media_try_open_vin(name, verbose);
+    if (media != NULL)
+        return media;
+
+    dir = opendir("/dev");
+    if (dir != NULL) {
+        while ((entry = readdir(dir)) != NULL) {
+            if (strncmp(entry->d_name, "media", 5))
+                continue;
+            suffix = entry->d_name + 5;
+            if (*suffix == '\0' || strspn(suffix, "0123456789") != strlen(suffix))
+                continue;
+            length = snprintf(path, sizeof(path), "/dev/%s", entry->d_name);
+            if (length < 0 || (size_t)length >= sizeof(path) || !strcmp(path, name))
+                continue;
+            media = media_try_open_vin(path, verbose);
+            if (media != NULL) {
+                closedir(dir);
+                return media;
+            }
+        }
+        closedir(dir);
+    }
+
+    ISP_WARN("VIN media not found; using original device %s\n", name);
+    return media_open(name, verbose);
 }
 
 void media_close(struct media_device *media)

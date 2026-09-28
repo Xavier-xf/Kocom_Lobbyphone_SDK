@@ -68,6 +68,14 @@ struct media_device {
 struct media_device *media_open(const char *name, int verbose);
 
 /*
+ * Open the Allwinner VIN graph containing vin_video0, regardless of its node
+ * number. Prefer @name when it is VIN; fall back to media_open(@name, verbose)
+ * if discovery fails, preserving the caller's original missing-device behavior.
+ * Release the returned device with media_close().
+ */
+struct media_device *media_open_vin(const char *name, int verbose);
+
+/*
  * media_close - Close a media device
  * @media: Device instance
  *

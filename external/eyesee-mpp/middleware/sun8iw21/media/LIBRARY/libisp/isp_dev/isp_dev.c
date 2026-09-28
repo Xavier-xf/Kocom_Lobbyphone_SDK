@@ -471,7 +471,7 @@ struct hw_isp_media_dev *isp_md_open(const char *devname)
 	}
 
 	memset(isp_md, 0, sizeof *isp_md);
-	isp_md->mdev = media_open(devname, 0);
+	isp_md->mdev = media_open_vin(devname, 0);
 	if (isp_md->mdev == NULL) {
 		ISP_ERR("error: unable to open isp_md device %s\n", devname);
 		free(isp_md);
@@ -556,7 +556,7 @@ int isp_video_to_isp_id(int video_id)
 	if (video_id >= HW_VIDEO_DEVICE_NUM)
 		return -1;
 
-	mdev = media_open(MEDIA_DEVICE, 0);
+	mdev = media_open_vin(MEDIA_DEVICE, 0);
 	if (mdev == NULL) {
 		ISP_ERR("unable to open %s\n", MEDIA_DEVICE);
 		return -1;
@@ -586,7 +586,7 @@ int isp_video_to_sensor_name(int video_id, char *sensor_name)
 	if (video_id >= HW_VIDEO_DEVICE_NUM)
 		return -1;
 
-	mdev = media_open(MEDIA_DEVICE, 0);
+	mdev = media_open_vin(MEDIA_DEVICE, 0);
 	if (mdev == NULL) {
 		ISP_ERR("unable to open %s\n", MEDIA_DEVICE);
 		return -ENODEV;
