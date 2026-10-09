@@ -39,6 +39,8 @@
 
 #define AUDIOCODEC_FRAMESIZE (1024) //1024 alsaFrames make an AudioFrame.
 static void *AIChannel_ComponentThread(void *pThreadData);
+static void AIChannel_ClearAudioHwInfo(AI_CHN_DATA_S *pChnData);
+static ERRORTYPE AIChannel_PrepareAudioHwInfo(AI_CHN_DATA_S *pChnData);
 
 AudioCaptureFrameInfo* constructAudioCaptureFrameInfo(unsigned int id)
 {
@@ -742,6 +744,7 @@ static ERRORTYPE AIChannel_SetConfig(
         case COMP_IndexVendorMPPChannelInfo:
         {
             pChnData->mMppChnInfo = *(MPP_CHN_S*)pComponentConfigStructure;
+            eError = AIChannel_PrepareAudioHwInfo(pChnData);
             break;
         }
         case COMP_IndexVendorAIChnReleaseFrame:
@@ -1335,13 +1338,85 @@ static int audioEffectProc(AI_CHN_DATA_S *pChnData, AUDIO_FRAME_S *pInFrm)
 }
 
 
+static void AIChannel_ClearAudioHwInfo(AI_CHN_DATA_S *pChnData)
+{
+    if (!list_empty(&pChnData->mValidOutFrameList))
+    {
+        list_splice_tail_init(&pChnData->mValidOutFrameList, &pChnData->mIdleOutFrameList);
+    }
+    if (!list_empty(&pChnData->mIdleOutFrameList))
+    {
+        AudioCaptureFrameInfo *pEntry, *pTmp;
+        list_for_each_entry_safe(pEntry, pTmp, &pChnData->mIdleOutFrameList, mList)
+        {
+            list_del(&pEntry->mList);
+            destructAudioCaptureFrameInfo(pEntry);
+        }
+    }
+    pChnData->mFrameNodeNum = 0;
+    if (pChnData->mpCapMgr)
+    {
+        PCMBufferMgr_Destroy(pChnData->mpCapMgr);
+        pChnData->mpCapMgr = NULL;
+    }
+    pChnData->mpPcmCfg = NULL;
+    pChnData->mpAioAttr = NULL;
+    pChnData->mAudioHwOutputAlsaFrameBytes = 0;
+}
+
+static ERRORTYPE AIChannel_PrepareAudioHwInfo(AI_CHN_DATA_S *pChnData)
+{
+    int i;
+
+    if (pChnData->mpCapMgr)
+    {
+        return SUCCESS;
+    }
+
+    if (audioHw_AI_GetPcmConfig(pChnData->mMppChnInfo.mDevId, &pChnData->mpPcmCfg) != SUCCESS) {
+        aloge("audioHw_AI_GetPcmConfig error!");
+        return FAILURE;
+    }
+    if (audioHw_AI_GetAIOAttr(pChnData->mMppChnInfo.mDevId, &pChnData->mpAioAttr) != SUCCESS) {
+        aloge("audioHw_AI_GetAIOAttr error!");
+        return FAILURE;
+    }
+
+    int nAudioHwOutputChnNum = 0;
+    if(0 == pChnData->mpAioAttr->mbBypassAec)
+    {
+        nAudioHwOutputChnNum = judgeAudioChnNumBySoundMode(pChnData->mpAioAttr->enSoundmode, NULL, NULL);
+    }
+    else
+    {
+        nAudioHwOutputChnNum = pChnData->mpPcmCfg->chnCnt;
+    }
+    int nSampleBitWidth = map_AUDIO_BIT_WIDTH_E_to_BitWidth(pChnData->mpAioAttr->enBitwidth);
+    int nSampleRate = map_AUDIO_SAMPLE_RATE_E_to_SampleRate(pChnData->mpAioAttr->enSamplerate);
+    pChnData->mAudioHwOutputAlsaFrameBytes = nSampleBitWidth/8*nAudioHwOutputChnNum;
+    int nAudioHwOutputFrameBytes = pChnData->mpPcmCfg->chunkSize*pChnData->mAudioHwOutputAlsaFrameBytes;
+    pChnData->mpCapMgr = PCMBufferMgr_Create(AI_CHN_MAX_CACHE_FRAME, nAudioHwOutputFrameBytes, pChnData->mAudioHwOutputAlsaFrameBytes, nSampleRate);
+    if (pChnData->mpCapMgr == NULL)
+    {
+        aloge("BufMgrCreate error!");
+        AIChannel_ClearAudioHwInfo(pChnData);
+        return FAILURE;
+    }
+    for(i=0; i<AI_CHN_MAX_CACHE_FRAME; i++)
+    {
+        AudioCaptureFrameInfo *pNode = constructAudioCaptureFrameInfo(i);
+        list_add_tail(&pNode->mList, &pChnData->mIdleOutFrameList);
+        pChnData->mFrameNodeNum++;
+    }
+    return SUCCESS;
+}
+
 ERRORTYPE AIChannel_ComponentInit(PARAM_IN COMP_HANDLETYPE hComponent)
 {
     MM_COMPONENTTYPE *pComp;
     AI_CHN_DATA_S *pChnData;
     ERRORTYPE eError = SUCCESS;
     int err;
-    int i;
 
     pComp = (MM_COMPONENTTYPE*)hComponent;
 
@@ -1356,6 +1431,8 @@ ERRORTYPE AIChannel_ComponentInit(PARAM_IN COMP_HANDLETYPE hComponent)
     pComp->pComponentPrivate = (void*)pChnData;
     pChnData->state = COMP_StateLoaded;
     pChnData->hSelf = hComponent;
+    INIT_LIST_HEAD(&pChnData->mIdleOutFrameList);
+    INIT_LIST_HEAD(&pChnData->mValidOutFrameList);
 
     // Fill in function pointers
     pComp->SetCallbacks             = AIChannel_SetCallbacks;
@@ -1411,51 +1488,12 @@ ERRORTYPE AIChannel_ComponentInit(PARAM_IN COMP_HANDLETYPE hComponent)
     pChnData->sPortTunnelInfo[AI_CHN_PORT_INDEX_OUT_AO].eTunnelType = TUNNEL_TYPE_COMMON;
     pChnData->sPortParam.nPorts++;
 
-    if (audioHw_AI_GetPcmConfig(pChnData->mMppChnInfo.mDevId, &pChnData->mpPcmCfg) != SUCCESS) {
-        aloge("audioHw_AI_GetPcmConfig error!");
-        eError = FAILURE;
-        goto ERR_EXIT0;
-    }
-    if (audioHw_AI_GetAIOAttr(pChnData->mMppChnInfo.mDevId, &pChnData->mpAioAttr) != SUCCESS) {
-        aloge("audioHw_AI_GetAIOAttr error!");
-        eError = FAILURE;
-        goto ERR_EXIT0;
-    }
-
-    int nAudioHwOutputChnNum = 0;
-    if(0 == pChnData->mpAioAttr->mbBypassAec)
-    {
-        nAudioHwOutputChnNum = judgeAudioChnNumBySoundMode(pChnData->mpAioAttr->enSoundmode, NULL, NULL);
-    }
-    else
-    {
-        nAudioHwOutputChnNum = pChnData->mpPcmCfg->chnCnt;
-    }
-    int nSampleBitWidth = map_AUDIO_BIT_WIDTH_E_to_BitWidth(pChnData->mpAioAttr->enBitwidth);
-    int nSampleRate = map_AUDIO_SAMPLE_RATE_E_to_SampleRate(pChnData->mpAioAttr->enSamplerate);
-    pChnData->mAudioHwOutputAlsaFrameBytes = nSampleBitWidth/8*nAudioHwOutputChnNum;
-    int nAudioHwOutputFrameBytes = pChnData->mpPcmCfg->chunkSize*pChnData->mAudioHwOutputAlsaFrameBytes;
-    pChnData->mpCapMgr = PCMBufferMgr_Create(AI_CHN_MAX_CACHE_FRAME, nAudioHwOutputFrameBytes, pChnData->mAudioHwOutputAlsaFrameBytes, nSampleRate);
-    if (pChnData->mpCapMgr == NULL)
-    {
-        aloge("BufMgrCreate error!");
-        eError = FAILURE;
-        goto ERR_EXIT0;
-    }
-    INIT_LIST_HEAD(&pChnData->mIdleOutFrameList);
-    INIT_LIST_HEAD(&pChnData->mValidOutFrameList);
-    for(i=0; i<AI_CHN_MAX_CACHE_FRAME; i++)
-    {
-        AudioCaptureFrameInfo *pNode = constructAudioCaptureFrameInfo(i);
-        list_add_tail(&pNode->mList, &pChnData->mIdleOutFrameList);
-        pChnData->mFrameNodeNum++;
-    }
     err = pthread_mutex_init(&pChnData->mIgnoreDataLock, NULL);
     if(err != 0)
     {
         aloge("pthread mutex init fail!");
         eError = FAILURE;
-        goto ERR_EXIT3_3;
+        goto ERR_EXIT0;
     }
     err = pthread_mutex_init(&pChnData->mStateLock, NULL);
     if(err != 0)
@@ -1468,6 +1506,8 @@ ERRORTYPE AIChannel_ComponentInit(PARAM_IN COMP_HANDLETYPE hComponent)
     if(err != 0)
     {
         aloge("fatal error! pthread mutex init fail!");
+        eError = FAILURE;
+        goto ERR_EXIT3_5;
     }
  
     if (message_create(&pChnData->mCmdQueue) < 0){
@@ -1478,12 +1518,14 @@ ERRORTYPE AIChannel_ComponentInit(PARAM_IN COMP_HANDLETYPE hComponent)
     err = cdx_sem_init(&pChnData->mAllFrameRelSem, 0);
     if (err != 0) {
         aloge("cdx_sem_init AllFrameRelSem error!");
+        eError = FAILURE;
         goto ERR_EXIT5;
     }
 
     err = cdx_sem_init(&pChnData->mWaitOutFrameSem, 0);
     if (err != 0) {
         aloge("cdx_sem_init mWaitOutFrameSem error!");
+        eError = FAILURE;
         goto ERR_EXIT6;
     }
 
@@ -1516,23 +1558,13 @@ ERR_EXIT6:
 ERR_EXIT5:
     message_destroy(&pChnData->mCmdQueue);
 ERR_EXIT4:
+    pthread_mutex_destroy(&pChnData->mCapMgrLock);
+ERR_EXIT3_5:
     pthread_mutex_destroy(&pChnData->mStateLock);
 ERR_EXIT3:
     pthread_mutex_destroy(&pChnData->mIgnoreDataLock);
-ERR_EXIT3_3:
-ERR_EXIT2:
-ERR_EXIT1:
-    if(!list_empty(&pChnData->mIdleOutFrameList))
-    {
-        AudioCaptureFrameInfo *pEntry, *pTmp;
-        list_for_each_entry_safe(pEntry, pTmp, &pChnData->mIdleOutFrameList, mList)
-        {
-            list_del(&pEntry->mList);
-            destructAudioCaptureFrameInfo(pEntry);
-        }
-    }
-    PCMBufferMgr_Destroy(pChnData->mpCapMgr);
 ERR_EXIT0:
+    AIChannel_ClearAudioHwInfo(pChnData);
     free(pChnData);
     return eError;
 }

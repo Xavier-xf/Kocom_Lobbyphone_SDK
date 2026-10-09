@@ -73,6 +73,8 @@
 #define SOUND_CARD_SNDHDMI      "hw:1,0"
 //#define PCM_HANDLE_IDENTIFIER_CaptureDouble "CaptureDouble"
 #define SOUND_CARD_UAC1         "hw:UAC1Gadget"
+#define SOUND_CARD_AK7755_CAPTURE "AK7755Capture"
+#define SOUND_CARD_AK7755_PLAY    "AK7755Playback"
 
 #define SOUND_MIXER_AUDIOCODEC   "hw:0"
 #define SOUND_MIXER_SNDDAUDIO0   "hw:1"
@@ -1035,15 +1037,16 @@ ERRORTYPE audioHw_AI_Enable(AUDIO_DEV AudioDevId)
 //    }
     char strCaptureIdentifier[128]; // e.g. pcm.Capture1MicPlusAec
     GenerateCaptureIdentifier(strCaptureIdentifier, sizeof(strCaptureIdentifier), pCap->mAttr.mMicNum, pCap->mAttr.ai_aec_en, pCap->mCfg.sampleRate);
+    const char *pCaptureCard = strCaptureIdentifier;
+    if (AudioDevId == 1)
+    {
+        pCaptureCard = SOUND_CARD_AK7755_CAPTURE;
+    }
     if(pCap->mAttr.ai_aec_en)
     {
         pCap->mCfg.chnCnt += 1; //daudio0 data will be capture by multi-plugin, so channel count plus 1.
-        ret = alsaOpenPcm(&pCap->mCfg, strCaptureIdentifier, 0);
     }
-    else
-    {
-        ret = alsaOpenPcm(&pCap->mCfg, strCaptureIdentifier, 0);
-    }
+    ret = alsaOpenPcm(&pCap->mCfg, pCaptureCard, 0);
     if (ret != 0)
     {
         aloge("fatal error! open_pcm failed");
@@ -1776,7 +1779,11 @@ ERRORTYPE audioHw_AO_EnableChn(AUDIO_DEV AudioDevId,AO_CHN AoChn)
     //const char *pCardType = (pPlay->PlayChls[AoChn].mAttr.mPcmCardId==PCM_CARD_TYPE_AUDIOCODEC) ? SOUND_CARD_AUDIOCODEC_PLAY:SOUND_CARD_SNDHDMI;
     char *pCardType = NULL;
     char strDmixIdentifier[128]; // e.g., PlaybackRateDmix:16000,1,960
-    if(PCM_CARD_TYPE_AUDIOCODEC == pPlay->PlayChls[AoChn].mAttr.mPcmCardId)
+    if (AudioDevId == 1)
+    {
+        pCardType = SOUND_CARD_AK7755_PLAY;
+    }
+    else if(PCM_CARD_TYPE_AUDIOCODEC == pPlay->PlayChls[AoChn].mAttr.mPcmCardId)
     {
         GeneratePlaybackRateDmixIdentifier(strDmixIdentifier, sizeof(strDmixIdentifier), 0, 0, 0);//pPlay->mDmixSampleRate, pPlay->mDmixChnNum, pPlay->mDmixPeriodSize
         pCardType = strDmixIdentifier;

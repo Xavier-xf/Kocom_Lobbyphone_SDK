@@ -1,5 +1,5 @@
-#ifndef __home_leo_workspace_Kocom_Lobbyphone_sdk_V85X_Tina_V1_3_lichee_brandy_2_0_spl_pub_include_config_h_
-#define __home_leo_workspace_Kocom_Lobbyphone_sdk_V85X_Tina_V1_3_lichee_brandy_2_0_spl_pub_include_config_h_
+#ifndef __home_xiaoxiao_workspace_Kocom_Lobbyphone_sdk_V85X_Tina_V1_3_lichee_brandy_2_0_spl_pub_include_config_h_
+#define __home_xiaoxiao_workspace_Kocom_Lobbyphone_sdk_V85X_Tina_V1_3_lichee_brandy_2_0_spl_pub_include_config_h_
 #include<sun8iw21p1.h>
 #define CFG_AXP2101_POWER 1
 #define CFG_BOOT0_LOGO_TO_KERNEL 1
@@ -30,5 +30,5 @@
 #define CFG_SUNXI_WATCHDOG 1
 #define CFG_SYS_INIT_RAM_SIZE 0x10000
 #define PLATFORM_CHOICES r853s v553 v837s v851s3 v851s v851se v853 v853s
-#define PLATFORM_LIBGCC -L /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/tools/toolchain/gcc-linaro-7.2.1-2017.11-x86_64_arm-linux-gnueabi/bin/../lib/gcc/arm-linux-gnueabi/7.2.1 -lgcc
+#define PLATFORM_LIBGCC -L /home/xiaoxiao/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/tools/toolchain/gcc-linaro-7.2.1-2017.11-x86_64_arm-linux-gnueabi/bin/../lib/gcc/arm-linux-gnueabi/7.2.1 -lgcc
 #endif

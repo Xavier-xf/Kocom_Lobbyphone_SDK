@@ -1200,7 +1200,8 @@ static int ilitek_read_data_and_report_3XX(void) {
 		tp_log_info("Mist mode enable\n");
 	}
 	if (mode_status & 0x01) {
-		tp_log_info("Normal mode\n");
+		/* Suppress frequent IRQ-path log spam during normal touch reporting. */
+		//tp_log_info("Normal mode\n");
 	}
 	packet = buf[0];
 	if (packet == 2) {

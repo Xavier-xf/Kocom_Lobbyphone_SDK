@@ -11,7 +11,7 @@ SECTIONS
  }
  .text :
  {
-  /home/leo/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/arch/arm/cpu/armv7/fes1_entry.o (.text)
+  /home/xiaoxiao/workspace/Kocom_Lobbyphone/sdk/V85X_Tina_V1.3/lichee/brandy-2.0/spl-pub/arch/arm/cpu/armv7/fes1_entry.o (.text)
   *(.text)
  }
  . = ALIGN(16);

@@ -448,7 +448,7 @@
 	pinctrl-0 = <&uart2_pins_active>;
 	pinctrl-1 = <&uart2_pins_sleep>;
 	uart-supply = <&reg_dcdc1>;
-	status = "disabled";
+	status = "okay";
 };
 
 &uart3 {
@@ -495,29 +495,29 @@
 	};
 
 	uart2_pins_active: uart2@0 {
-		allwinner,pins = "PE12", "PE13", "PE10", "PE11";
+		allwinner,pins = "PH5", "PH6";
 		allwinner,function = "uart2";
-		allwinner,muxsel = <6>;
-		allwinner,drive = <1>;
-		allwinner,pull = <1>;
-	};
-
-	uart2_pins_sleep: uart2@1 {
-		allwinner,pins = "PE12", "PE13", "PE10", "PE11";
-		allwinner,function = "gpio_in";
-		allwinner,muxsel = <0>;
-	};
-
-	uart3_pins_active: uart3@0 {
-		allwinner,pins = "PH0", "PH1";
-		allwinner,function = "uart3";
 		allwinner,muxsel = <5>;
 		allwinner,drive = <1>;
 		allwinner,pull = <1>;
 	};
 
+	uart2_pins_sleep: uart2@1 {
+		allwinner,pins = "PH5", "PH6";
+		allwinner,function = "gpio_in";
+		allwinner,muxsel = <0>;
+	};
+
+	uart3_pins_active: uart3@0 {
+		allwinner,pins = "PE12", "PE13";
+		allwinner,function = "uart3";
+		allwinner,muxsel = <7>;
+		allwinner,drive = <1>;
+		allwinner,pull = <1>;
+	};
+
 	uart3_pins_sleep: uart3@1 {
-		allwinner,pins = "PH0", "PH1";
+		allwinner,pins = "PE12", "PE13";
 		allwinner,function = "gpio_in";
 		allwinner,muxsel = <0>;
 	};
@@ -618,16 +618,16 @@
 	};
 
 	twi0_pins_a: twi0@0 {
-		allwinner,pins = "PA16", "PA17";
+		allwinner,pins = "PI3", "PI4";
 		allwinner,pname = "twi0_scl", "twi0_sda";
 		allwinner,function = "twi0";
-		allwinner,muxsel = <4>;
+		allwinner,muxsel = <5>;
 		allwinner,drive = <0>;
 		allwinner,pull = <1>;
 	};
 
 	twi0_pins_b: twi0@1 {
-		allwinner,pins = "PA16", "PA17";
+		allwinner,pins = "PI3", "PI4";
 		allwinner,function = "io_disabled";
 		allwinner,muxsel = <0xf>;
 		allwinner,drive = <0>;
@@ -723,7 +723,7 @@
 		allwinner,function = "i2s0";
 		allwinner,muxsel = <3>;
 		allwinner,drive = <1>;
-		allwinner,pull = <0>;
+		allwinner,pull = <1>;
 	};
 
 	daudio0_pins_b: daudio0_sleep@0 {
@@ -795,8 +795,7 @@
 	gmac0_pins_a: gmac0@0 {
 		allwinner,pins = "PE0", "PE1", "PE2", "PE3",
 				"PE4", "PE5", "PE6", "PE7",
-				"PE8", "PE9", "PE10", "PE11",
-				"PE12", "PE13", "PE14", "PE15";
+				"PE8", "PE9", "PE10";
 		allwinner,function = "rgmii";
 		allwinner,drive = <1>;
 		allwinner,muxsel = <3>;
@@ -806,8 +805,7 @@
 	gmac0_pins_b: gmac0@1 {
 		allwinner,pins = "PE0", "PE1", "PE2", "PE3",
 				"PE4", "PE5", "PE6", "PE7",
-				"PE8", "PE9", "PE10", "PE11",
-				"PE12", "PE13", "PE14", "PE15";
+				"PE8", "PE9", "PE10";
 		allwinner,function = "gpio_in";
 		allwinner,drive = <0>;
 		allwinner,muxsel = <0>;
@@ -1254,10 +1252,10 @@
 	/* lineout-single; */
 	/* mic1-single; */
 	/* mic2-single; */
-	pa-pin-max	= <1>;		/* set pa */
-	pa-pin-0	= <&pio PH 4 1 1 1 1>;
-	pa-pin-level-0	= <1>;
-	pa-pin-msleep-0	= <0>;
+	pa-pin-max	= <0>;		/* PH4 is I2S0_DIN0 for AK7755 */
+	/* pa-pin-0	= <&pio PH 4 1 1 1 1>; */
+	/* pa-pin-level-0	= <1>; */
+	/* pa-pin-msleep-0	= <0>; */
 	tx-hub-en;
 	rx-sync-en;
 	status		= "okay";
@@ -1305,10 +1303,10 @@
 	tdm-num		= <0>;
 	tx-pin		= <0>;
 	rx-pin		= <0>;
-	/* pinctrl-used; */
-	/* pinctrl-names= "default","sleep"; */
-	/* pinctrl-0	= <&daudio0_pins_a>; */
-	/* pinctrl-1	= <&daudio0_pins_b>; */
+	pinctrl-used;
+	pinctrl-names= "default","sleep";
+	pinctrl-0	= <&daudio0_pins_a>;
+	pinctrl-1	= <&daudio0_pins_b>;
 	tx-hub-en;
 	rx-sync-en;
 	status		= "okay";
@@ -1316,8 +1314,8 @@
 
 &daudio0_mach {
 	soundcard-mach,format		= "i2s";
-	soundcard-mach,frame-master	= <&daudio0_cpu>;
-	soundcard-mach,bitclock-master	= <&daudio0_cpu>;
+	soundcard-mach,frame-master	= <&daudio0_codec>;
+	soundcard-mach,bitclock-master	= <&daudio0_codec>;
 	/* soundcard-mach,frame-inversion; */
 	/* soundcard-mach,bitclock-inversion; */
 	soundcard-mach,slot-num		= <2>;
@@ -1329,6 +1327,8 @@
 		soundcard-mach,mclk-fs	= <0>; /* mclk freq = pcm rate * mclk-fs */
 	};
 	daudio0_codec: soundcard-mach,codec {
+		sound-dai = <&ak7755>;
+		soundcard-mach,pll-fs	= <1>;
 	};
 };
 
@@ -1336,8 +1336,8 @@
 	tdm-num		= <1>;
 	tx-pin		= <0>;
 	rx-pin		= <0>;
-	/* pinctrl-used; */
-	/* pinctrl-names= "default","sleep"; */
+	pinctrl-used;
+	pinctrl-names= "default","sleep";
 	/* pinctrl-0	= <&daudio1_pins_a>; */
 	/* pinctrl-1	= <&daudio1_pins_b>; */
 	tx-hub-en;
@@ -1455,7 +1455,7 @@
 	pinctrl-0 = <&gmac0_pins_a>;
 	pinctrl-1 = <&gmac0_pins_b>;
 	pinctrl-names = "default", "sleep";
-	phy-rst = <&pio PE 16 1 1 1 0>;
+	phy-rst = <&pio PE 11 1 1 1 0>;
 	tx-delay = <7>;
 	rx-delay = <31>;
 	status = "okay";
@@ -1593,7 +1593,7 @@
 	lcd_pwm_used        = <1>;
 	lcd_pwm_ch          = <9>;
 	lcd_pwm_freq        = <50000>;
-	lcd_pwm_pol         = <1>;
+	lcd_pwm_pol         = <0>;
 	lcd_pwm_max_limit   = <255>;
 
 	lcd_hbp             = <20>;
@@ -1642,6 +1642,16 @@
 		ilitek,irq-gpio = <&pio PH 7 6 1 3 0xffffffff>;
 		ilitek,reset-gpio =<&pio PH 8 1 1 3 0xffffffff>;
 	};
+
+	ak7755: ak7755@19 {
+		compatible = "akm,ak7755";
+		reg = <0x18>;
+		#sound-dai-cells = <0>;
+		ak7755,pdn-gpio = <&pio PA 8 1 0 3 0xffffffff>;
+		ak7755,amp-mute-gpio = <&pio PA 7 1 0 3 0xffffffff>;
+		ak7755,pdn-active-high;
+		status = "okay";
+	};
 	/*
 	da380 {
 		status = "okay";
@@ -1653,7 +1663,8 @@
 };
 
 &twi2 {
-	status = "okay";
+	status = "disabled";
+
 	/*goodix {
 	*	status = "okay";
 	*	compatible = "goodix,gt911";

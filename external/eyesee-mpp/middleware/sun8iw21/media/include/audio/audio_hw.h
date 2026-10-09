@@ -35,7 +35,7 @@
 #if (MPPCFG_AEC == OPTION_AEC_ENABLE)
 #define AIO_DEV_MAX_NUM (2)
 #else
-#define AIO_DEV_MAX_NUM (1)
+#define AIO_DEV_MAX_NUM (2)
 #endif
 
 #define MAX_AO_CHLS (16) //match to AIO_MAX_CHN_NUM, the maximum number of ao channels that open alsa in the same time (mainly for mixer)
