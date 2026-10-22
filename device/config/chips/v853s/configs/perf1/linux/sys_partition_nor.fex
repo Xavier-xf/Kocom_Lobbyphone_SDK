@@ -40,7 +40,7 @@ size = 16
 
 [partition]
    name         = boot
-    size         = 6144
+    size         = 8192
     downloadfile = "boot.fex"
     user_type    = 0x8000
 
@@ -52,24 +52,24 @@ size = 16
 
 [partition]
     name         = rootfs
-    size         = 4096
+    size         = 7168
     downloadfile = "rootfs.fex"
     user_type    = 0x8000
 
 [partition]
     name         = app
-    size         = 10240
+    size         = 14336
     downloadfile = "application.fex"
     user_type    = 0x8000
 
 [partition]
     name         = resource
-    size         = 4096
+    size         = 8192
     downloadfile = "resource.fex"
     user_type    = 0x8000
 
 [partition]
     name         = data
-    size         = 6016
+    size         = 24576
     downloadfile = "data.fex"
     user_type    = 0x8000
