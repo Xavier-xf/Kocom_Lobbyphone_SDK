@@ -11,6 +11,9 @@
  */
 
 #include <common.h>
+#ifdef CONFIG_SUNXI_INTERNAL_UPGRADE
+#include <device_upgrade.h>
+#endif
 #include <dm.h>
 #include <mmc.h>
 #include <axp_pmic.h>
@@ -515,6 +518,9 @@ int ft_board_setup(void *blob, bd_t *bd)
 	 * ethernet aliases the u-boot copy does not have.
 	 */
 	setup_environment(blob);
+#ifdef CONFIG_SUNXI_INTERNAL_UPGRADE
+	device_upgrade_fdt(blob);
+#endif
 
 #ifdef CONFIG_VIDEO_DT_SIMPLEFB
 	r = sunxi_simplefb_setup(blob);

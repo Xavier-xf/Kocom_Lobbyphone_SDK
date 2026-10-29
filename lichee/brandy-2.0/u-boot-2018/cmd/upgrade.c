@@ -1,6 +1,7 @@
 #include <ata.h>
 #include <command.h>
 #include <common.h>
+#include <linux/ctype.h>
 #include <fat.h>
 #include <fs.h>
 #include <net.h>
@@ -11,6 +12,9 @@
 #include <sunxi_flash.h>
 #include <sprite_download.h>
 #include <sys_partition.h>
+#ifdef CONFIG_SUNXI_INTERNAL_UPGRADE
+#include <device_upgrade.h>
+#endif
 
 int sprite_cartoon_upgrade(int rate);
 uint sprite_cartoon_create(int op);
@@ -37,13 +41,13 @@ static int find_between_spaces(const char* str, char** next, char* val, int len)
 	if (!e) {
 		return -1;
 	}
-	if ((e - s) > len) {
+	if (e == s || (e - s) >= len) {
 		printf("parttion val over fill (src:%d,len:%d)\n", e - s, len);
 		return -1;
 	}
 	memset(val, 0, len);
 	strncpy(val, s, e - s);
-	*next = e + 1;
+	*next = *e ? e + 1 : e;
 	return 0;
 }
 static int check_firmware_exist(const char* filename){
@@ -85,14 +89,17 @@ static loff_t fat_fs_read(const char *filename, void *buf, int offset, int len)
 }
 
 
-static unsigned long read_firmware_file(char* file, char* buffer, long offset, int size) {	
-	return  fat_fs_read(file, buffer, offset,	size);
+static long read_firmware_file(char* file, char* buffer, long offset, int size) {
+	if (offset < 0 || size <= 0) return -1;
+	return fat_fs_read(file, buffer, offset, size);
 }
 
-static unsigned long  read_firmware_line(char* file, char* buffer, long offset, int size) {
-	unsigned long read_len = read_firmware_file(file, buffer, offset, size);
+static long read_firmware_line(char* file, char* buffer, long offset, int size) {
+	long read_len;
+	if (offset < 0 || offset >= 65536 || size <= 0) return 0;
+	read_len = read_firmware_file(file, buffer, offset, min(size, 65536 - (int)offset));
 	if (read_len > 0) {
-		char* space = strstr(buffer, "\n");
+		char* space = memchr(buffer, '\n', read_len);
 		if (!space) {
 			return 0;
 		}
@@ -112,14 +119,16 @@ static int firmware_version_compare(const char* buffer, char* new_version, int s
 		return -1;
 	}
 	version += strlen("#<upgrade_bin_version=");
+	if (strlen(version) != 14 || size < 15) return -1;
+	for (int i = 0; i < 14; ++i) if (!isdigit(version[i])) return -1;
 	env_version = env_get(ENV_FIRMWARE_VERSION);
 	memset(new_version, 0, size);
-	strncpy(new_version, version, size);
+	memcpy(new_version, version, 14);
 	printf("upgarde version:%s cur version:%s\n", version, env_version);
 	if (env_version == NULL) {
 		return 1;
 	}
-	return strncmp(version, env_version, strlen(env_version)) ? 1 : 0;
+	return strcmp(version, env_version) ? 1 : 0;
 }
 
 static long firmware_base_find(char* file, char* buffer, int size) {
@@ -228,6 +237,9 @@ static int firmware_parttion_check(char* file, long firmware_base, char* buffer,
 		return -1;
 	}
 	*upgrade_total += size;
+#ifdef CONFIG_SUNXI_INTERNAL_UPGRADE
+	device_upgrade_sd_checked(name);
+#endif
 	printf("parttion %s check valid ok\n", name);
 	return 0;
 }
@@ -259,6 +271,10 @@ static int frimware_partition_write(const char*name,long partition_sectors,char*
 	const long write_one_sector = (64*1024)>>9;
 	long write_sector = 0;
 	long total_write_sectors = 0;
+	char *chunk = memalign(ARCH_DMA_MINALIGN, 64 * 1024);
+	char *verify = memalign(ARCH_DMA_MINALIGN, 64 * 1024);
+	int result = -1;
+	if (!chunk || !verify) goto done;
 	while (remain_sector > 0) {
 		if (remain_sector < write_one_sector) {
 			write_sector = remain_sector;
@@ -267,9 +283,14 @@ static int frimware_partition_write(const char*name,long partition_sectors,char*
 			write_sector = write_one_sector;
 		}
 		
-		if(sunxi_sprite_phywrite(partition_sectors + total_write_sectors, write_sector,&data[total_write_sectors*512]) != write_sector){
-			printf("write %s partition failed\n",name);
-			break;
+		memset(chunk, 0xff, write_sector * 512);
+		memcpy(chunk, data + total_write_sectors * 512,
+		       min(size - total_write_sectors * 512, write_sector * 512));
+		if (sunxi_sprite_phywrite(partition_sectors + total_write_sectors, write_sector, chunk) != write_sector ||
+		    sunxi_sprite_phyread(partition_sectors + total_write_sectors, write_sector, verify) != write_sector ||
+		    memcmp(chunk, verify, write_sector * 512)) {
+			printf("write/readback %s partition failed\n", name);
+			goto done;
 		}
 		//printf("%s write secotrs:%#lx size:%#lx\n", name, partition_sectors + total_write_sectors,write_sector);
 
@@ -277,12 +298,17 @@ static int frimware_partition_write(const char*name,long partition_sectors,char*
 		remain_sector -= write_sector;
 		
 		cur_progress += write_sector*512;
-		printf("\r upgrade proress%3ld%%", cur_progress * 100 / total_progress);
-		
-		sprite_cartoon_upgrade(15+ cur_progress * 100 / total_progress);
+		long percentage = (u64)cur_progress * 100 / total_progress;
+		printf("\r upgrade proress%3ld%%", percentage);
+
+		sprite_cartoon_upgrade(15 + percentage);
 	}
 	* pcur_progress = cur_progress;
-	return 0;
+	result = 0;
+done:
+	free(verify);
+	free(chunk);
+	return result;
 }
 
 static int firmware_parttion_upgrade(char* file, long firmware_base, char* data, int size, long upgrade_total, long* current_upgrade) {
@@ -363,7 +389,7 @@ static int firmware_upgrade(char* file, long firmware_base, char* buffer, long o
 			}
 		}
 	}
-	return  0;
+	return -1;
 }
 
 int do_sd_upgrade(cmd_tbl_t* cmdtp, int flag, int argc, char* const argv[]) {
@@ -372,6 +398,9 @@ int do_sd_upgrade(cmd_tbl_t* cmdtp, int flag, int argc, char* const argv[]) {
 	char new_version[20] = { 0 };
 	long read_len = 0, firmware_base = 0, offset = 0, upgrade_total = 0;
 	long progress = 0;
+#ifdef CONFIG_SUNXI_INTERNAL_UPGRADE
+	device_upgrade_sd_begin();
+#endif
 	upgrade_filename = env_get(ENV_FIRMWARE_NAME);
 	if (upgrade_filename == NULL) {
 		upgrade_filename = "KCMLobbyPhone.IMG";
@@ -384,19 +413,29 @@ int do_sd_upgrade(cmd_tbl_t* cmdtp, int flag, int argc, char* const argv[]) {
 		if(check_firmware_exist(FULL_FIRMWARE)){
 			return run_command("auto_update_check 1",0);
 		}
+#ifdef CONFIG_SUNXI_INTERNAL_UPGRADE
+		device_upgrade_internal();
+#endif
 		return 0;
 	}
 
 	//version
 	printf("read firmware head data\n");
 	read_len = read_firmware_line(upgrade_filename, buffer, offset, 1024);
-	if (read_len <= 0) {
-		return 0;
-	}
+	if (read_len <= 0) goto sd_rejected;
 	offset += read_len;
 	printf("check firmware version\n");
-	if (firmware_version_compare(buffer, new_version, sizeof(new_version)) == 0) {
+	int version_changed = firmware_version_compare(buffer, new_version, sizeof(new_version));
+	if (version_changed < 0) goto sd_rejected;
+	if (version_changed == 0
+#ifdef CONFIG_SUNXI_INTERNAL_UPGRADE
+	    && !device_upgrade_sd_recovery_required()
+#endif
+	) {
 		printf("firmware version same:%s\n", new_version);
+#ifdef CONFIG_SUNXI_INTERNAL_UPGRADE
+		device_upgrade_internal();
+#endif
 		return 0;
 	}
 
@@ -408,23 +447,35 @@ int do_sd_upgrade(cmd_tbl_t* cmdtp, int flag, int argc, char* const argv[]) {
 	firmware_base = firmware_base_find(upgrade_filename, buffer, 1024);
 	if (firmware_base == 0) {
 		printf("not find firmware end str\n");
-		return 0;
+		goto sd_rejected;
 	}
 	
 	printf("start check parttion md5\n");
 	if (firmware_data_valid_check(upgrade_filename, firmware_base, buffer, offset, 1024, &upgrade_total)) {
 		printf("firame data check vaild failed\n");
-		return 0;
+		goto sd_rejected;
 	}
+	if (upgrade_total <= 0) goto sd_rejected;
+#ifdef CONFIG_SUNXI_INTERNAL_UPGRADE
+	if (device_upgrade_sd_ready()) goto sd_rejected;
+#endif
 	sprite_cartoon_upgrade(10);
 	printf("start upgrade firmware\n");
 	if ((upgrade_total > 0) && firmware_upgrade(upgrade_filename, firmware_base, buffer, offset, 1024*64,upgrade_total)) {
-		printf("firmware upgrade failed\n");
-		return 0;
+		printf("firmware upgrade failed; restart with the SD recovery package\n");
+		while (1) mdelay(500);
 	}
 	env_load();
-	env_set(ENV_FIRMWARE_VERSION, new_version);
-	env_save();
+#ifdef CONFIG_SUNXI_INTERNAL_UPGRADE
+	if (device_upgrade_sd_complete()) {
+		printf("cannot retire internal upgrade request; keep SD recovery inserted\n");
+		while (1) mdelay(500);
+	}
+#endif
+	if (env_set(ENV_FIRMWARE_VERSION, new_version) || env_save()) {
+		printf("cannot save upgrade completion; keep SD recovery inserted\n");
+		while (1) mdelay(500);
+	}
 	progress = 100;
 	sprite_cartoon_upgrade(progress);
 	printf("finish ...\n");
@@ -434,6 +485,10 @@ int do_sd_upgrade(cmd_tbl_t* cmdtp, int flag, int argc, char* const argv[]) {
 		sprite_cartoon_upgrade(0);
 		mdelay(500);
 	}
+sd_rejected:
+#ifdef CONFIG_SUNXI_INTERNAL_UPGRADE
+	device_upgrade_internal();
+#endif
 	return 0;
 }
 U_BOOT_CMD(

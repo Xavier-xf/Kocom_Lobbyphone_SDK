@@ -55,6 +55,11 @@ obj-$(CONFIG_SHA1) += sha1.o
 obj-$(CONFIG_SHA256) += sha256.o
 
 obj-$(CONFIG_$(SPL_)ZLIB) += zlib/
+ifndef CONFIG_SPL_BUILD
+ifneq ($(CONFIG_ZLIB),y)
+obj-$(CONFIG_SUNXI_INTERNAL_UPGRADE) += zlib/
+endif
+endif
 obj-$(CONFIG_$(SPL_)GZIP) += gunzip.o
 obj-$(CONFIG_$(SPL_)LZO) += lzo/
 

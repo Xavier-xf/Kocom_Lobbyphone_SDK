@@ -200,6 +200,7 @@ endif # !CONFIG_SPL_BUILD
 obj-y += nvedit.o
 
 obj-y += upgrade.o
+obj-$(CONFIG_SUNXI_INTERNAL_UPGRADE) += upgrade_jffs2.o device_upgrade.o
 
 obj-$(CONFIG_ARCH_MVEBU) += mvebu/
 obj-$(CONFIG_TI_COMMON_CMD_OPTIONS) += ti/

@@ -1850,6 +1850,16 @@ config UBI_OFFLINE_BURN
 endmenu
 
 menu "Sunxi cmd"
+config SUNXI_INTERNAL_UPGRADE
+	bool "Device internal-storage upgrade"
+	depends on MACH_SUN8IW21 && SUNXI_SPINOR
+	default y if SUNXI_NOR_IMG
+	select SHA256
+	help
+	  Read the committed /upgrade request from the data JFFS2 partition.
+	  Validate and update existing application/system partitions before boot.
+	  Data, environment, bootloader and partition-table updates use SD recovery.
+
 config CMD_SUNXI_TIMER
 	bool "timer test"
 	help
