@@ -9,6 +9,8 @@
 #include <s_record.h>
 #include <u-boot/md5.h>
 #include <environment.h>
+#include <kocom_boot.h>
+#include <u-boot/sha256.h>
 #include <sunxi_flash.h>
 #include <sprite_download.h>
 #include <sys_partition.h>
@@ -392,12 +394,33 @@ static int firmware_upgrade(char* file, long firmware_base, char* buffer, long o
 	return -1;
 }
 
+/* Hash the real package before writes can overwrite the header buffer. */
+static int boot_package_identity(char *file, char *buffer, char digest[65]) {
+    sha256_context context;
+    unsigned char bytes[32];
+    long offset = 0, count;
+    unsigned int i;
+    digest[0] = 0;
+    sha256_starts(&context);
+    while ((count = read_firmware_file(file, buffer, offset, 65536)) > 0) {
+        if (count > 65536 || offset > 64 * 1024 * 1024 - count) return -1;
+        sha256_update(&context, (unsigned char *)buffer, count);
+        offset += count;
+    }
+    if (count < 0 || offset <= 0) return -1;
+    sha256_finish(&context, bytes);
+    for (i = 0; i < 32; ++i) sprintf(digest + i * 2, "%02x", bytes[i]);
+    return 0;
+}
+
 int do_sd_upgrade(cmd_tbl_t* cmdtp, int flag, int argc, char* const argv[]) {
 	char* buffer = NULL;
 	char* upgrade_filename = NULL;
 	char new_version[20] = { 0 };
+	char boot_digest[65] = { 0 };
 	long read_len = 0, firmware_base = 0, offset = 0, upgrade_total = 0;
 	long progress = 0;
+	kocom_boot_init();
 #ifdef CONFIG_SUNXI_INTERNAL_UPGRADE
 	device_upgrade_sd_begin();
 #endif
@@ -460,12 +483,23 @@ int do_sd_upgrade(cmd_tbl_t* cmdtp, int flag, int argc, char* const argv[]) {
 	if (device_upgrade_sd_ready()) goto sd_rejected;
 #endif
 	sprite_cartoon_upgrade(10);
+	if (boot_package_identity(upgrade_filename, buffer, boot_digest))
+		boot_digest[0] = 0; /* Logging metadata must not change upgrade acceptance. */
+	if (kocom_boot_ota_begin()) {
+		printf("cannot retire prior boot completion; no partition writes\n");
+		while (1) mdelay(500);
+	}
 	printf("start upgrade firmware\n");
 	if ((upgrade_total > 0) && firmware_upgrade(upgrade_filename, firmware_base, buffer, offset, 1024*64,upgrade_total)) {
 		printf("firmware upgrade failed; restart with the SD recovery package\n");
 		while (1) mdelay(500);
 	}
 	env_load();
+	/* The package may itself replace env: never inherit a bundled receipt. */
+	if (kocom_boot_ota_begin()) {
+		printf("cannot retire restored boot completion; keep SD recovery inserted\n");
+		while (1) mdelay(500);
+	}
 #ifdef CONFIG_SUNXI_INTERNAL_UPGRADE
 	if (device_upgrade_sd_complete()) {
 		printf("cannot retire internal upgrade request; keep SD recovery inserted\n");
@@ -476,6 +510,8 @@ int do_sd_upgrade(cmd_tbl_t* cmdtp, int flag, int argc, char* const argv[]) {
 		printf("cannot save upgrade completion; keep SD recovery inserted\n");
 		while (1) mdelay(500);
 	}
+	if (boot_digest[0] && kocom_boot_ota_complete(boot_digest))
+		printf("boot reason: SD completion handoff unavailable\n");
 	progress = 100;
 	sprite_cartoon_upgrade(progress);
 	printf("finish ...\n");

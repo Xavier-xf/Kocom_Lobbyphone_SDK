@@ -48,3 +48,5 @@ obj-y += sunxi_challenge.o
 obj-y += sunxi_cmdline_helper.o
 
 subdir-ccflags-$(CONFIG_SUNXI_TRACE) += -finstrument-functions
+
+obj-$(CONFIG_MACH_SUN8IW21) += kocom_boot.o

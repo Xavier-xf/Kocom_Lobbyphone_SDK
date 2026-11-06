@@ -11,6 +11,7 @@
  */
 
 #include <common.h>
+#include <kocom_boot.h>
 #ifdef CONFIG_SUNXI_INTERNAL_UPGRADE
 #include <device_upgrade.h>
 #endif
@@ -217,6 +218,7 @@ int board_init(void)
 	gd->bd->bi_boot_params = (PHYS_SDRAM_0 + 0x100);
 
 	sunxi_plat_init();
+	kocom_boot_init();
 
 	int work_mode = get_boot_work_mode();
 
@@ -225,6 +227,7 @@ int board_init(void)
 		return ret;
 #ifdef CONFIG_SUNXI_POWER
 	if (!axp_probe()) {
+		kocom_boot_power_sample();
 		axp_set_dcdc_mode();
 		axp_set_power_supply_output();
 #if defined CONFIG_SUNXI_BMU && !defined CONFIG_AXP_LATE_INFO
@@ -518,6 +521,7 @@ int ft_board_setup(void *blob, bd_t *bd)
 	 * ethernet aliases the u-boot copy does not have.
 	 */
 	setup_environment(blob);
+	kocom_boot_fdt(blob);
 #ifdef CONFIG_SUNXI_INTERNAL_UPGRADE
 	device_upgrade_fdt(blob);
 #endif

@@ -207,3 +207,5 @@ CONFIG_DISP2_SUNXI=y
 # CONFIG_SUNXI_TV_FASTLOGO is not set
 # CONFIG_SUNXI_FASTLOGO_JPEG is not set
 
+# SYS_BOOT SD completion identity uses the existing streaming SHA256 API.
+CONFIG_SHA256=y

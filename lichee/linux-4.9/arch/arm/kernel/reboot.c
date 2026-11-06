@@ -10,6 +10,7 @@
 #include <linux/cpu.h>
 #include <linux/delay.h>
 #include <linux/reboot.h>
+#include <linux/kocom_boot.h>
 
 #include <asm/cacheflush.h>
 #include <asm/idmap.h>
@@ -168,6 +169,8 @@ void machine_restart(char *cmd)
 	 * out to the console drivers */
 	arm_machine_flush_console();
 
+	/* Common boundary covers both PSCI and watchdog restart handlers. */
+	kocom_boot_handoff_restart(cmd);
 	if (arm_pm_restart)
 		arm_pm_restart(reboot_mode, cmd);
 	else

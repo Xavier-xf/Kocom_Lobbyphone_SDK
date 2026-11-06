@@ -24,3 +24,5 @@ endif
 endif
 endif
 
+
+obj-$(CONFIG_ARCH_SUN8IW21) += kocom_boot.o

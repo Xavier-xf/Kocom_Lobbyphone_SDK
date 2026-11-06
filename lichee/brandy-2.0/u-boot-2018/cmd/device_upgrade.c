@@ -14,6 +14,7 @@
 #include <u-boot/crc.h>
 #include <u-boot/sha256.h>
 #include <device_upgrade.h>
+#include <kocom_boot.h>
 #include <upgrade_jffs2.h>
 
 #define PACKAGE_LIMIT (12U * 1024U * 1024U)
@@ -312,7 +313,7 @@ int device_upgrade_internal(void)
         printf("internal upgrade: validation failed; no flash writes\n");
         goto out;
     }
-    if (save_result(id, hash, "writing")) {
+    if (kocom_boot_ota_begin() || save_result(id, hash, "writing")) {
         printf("internal upgrade: cannot save intent; no partition writes\n");
         if (interrupted) recovery_required();
         goto out;
@@ -326,6 +327,8 @@ int device_upgrade_internal(void)
         printf("internal upgrade failed; package retained. Restart to retry, or use SD recovery.\n");
         recovery_required();
     }
+    if (kocom_boot_ota_complete(hash))
+        printf("boot reason: OTA completion handoff unavailable\n");
     sprite_cartoon_upgrade(100);
     printf("internal upgrade: verified; restarting\n");
     run_command("reset", 0);
