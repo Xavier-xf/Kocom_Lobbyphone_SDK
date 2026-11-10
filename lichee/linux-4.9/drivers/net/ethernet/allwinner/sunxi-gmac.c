@@ -195,7 +195,6 @@ rtk_mode_ext_t mode;
 struct net_device *ndev = NULL;
 struct geth_priv *priv;
 #endif
-#define LOOPBACK_DEBUG
 static u64 geth_dma_mask = DMA_BIT_MASK(32);
 static struct mii_reg_dump mii_reg;
 
@@ -944,6 +943,9 @@ static int geth_mdio_reset(struct mii_bus *bus)
 	return sunxi_mdio_reset(priv->base);
 }
 
+/* Leave PHY state transitions to phylib so cable changes update carrier
+ * and linkwatch notifications, not only the MAC settings and status log.
+ */
 static void geth_adjust_link(struct net_device *ndev)
 {
 	struct geth_priv *priv = netdev_priv(ndev);
@@ -987,10 +989,6 @@ static void geth_adjust_link(struct net_device *ndev)
 
 		if (new_state)
 			sunxi_set_link_mode(priv->base, priv->duplex, priv->speed);
-
-#ifdef LOOPBACK_DEBUG
-		phydev->state = PHY_FORCING;
-#endif
 
 	} else if (priv->link != phydev->link) {
 		new_state = 1;
