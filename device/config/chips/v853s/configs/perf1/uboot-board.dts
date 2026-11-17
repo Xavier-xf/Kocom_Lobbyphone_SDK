@@ -587,12 +587,22 @@
     lcd_gpio_0          = <&pio PD 20 1 0 3 1>;
    // pinctrl-0           = <&dsi4lane_pins_a>;
     //pinctrl-1           = <&dsi4lane_pins_b>;
-    pinctrl-0           = <&rgb24_pins_a>;
+    pinctrl-0           = <&rgb24_pins_a &rgb24_low_pins_a>;
    // pinctrl-1           = <&rgb24_pins_b>;
     base_config_end     = <1>;
 };
 
 &pio{
+
+	/* LCD B0/B1, G0/G1 and R0/R1 use PG mux 3, not PD mux 2. */
+	rgb24_low_pins_a: rgb24-low@0 {
+		allwinner,pins = "PG0", "PG1", "PG2", "PG3", "PG4", "PG5";
+		allwinner,pname = "PG0", "PG1", "PG2", "PG3", "PG4", "PG5";
+		allwinner,function = "lcd";
+		allwinner,muxsel = <3>;
+		allwinner,drive = <3>;
+		allwinner,pull = <0>;
+	};
 	rgb24_pins_a: rgb24@0 {
 		allwinner,pins = "PD0", "PD1", "PD2", "PD3", "PD4", "PD5", "PD6", "PD7", "PD8", "PD9", \
 		"PD10", "PD11", "PD12", "PD13", "PD14", "PD15", "PD16", "PD17", "PD18", "PD19", \
